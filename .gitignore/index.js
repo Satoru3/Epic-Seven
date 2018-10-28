@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setActivity("*help | V 1.1 | Commande *avatar en patch");
+    bot.user.setActivity("*help | V 1.0 | Commande *avatar en patch");
     console.log("Je suis connecté !");
 });
 
