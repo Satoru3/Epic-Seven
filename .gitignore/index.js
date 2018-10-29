@@ -82,12 +82,6 @@ bot.on('message', message => {
     message.channel.send(botembed)
 	    
     }
-	
-        // Commande tout à fait inutile.
-    if (message.content === "Salut"){
-        message.reply("Bonjour à toi ! =)");
-        console.log("La commande Salut à été effectuée.");  
-    }
     
 });
 
