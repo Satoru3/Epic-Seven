@@ -61,7 +61,7 @@ bot.on('message', message => {
     let args = message.content.slice(prefix.length).trim().split(' ');
     let command = args.shift().toLowerCase();
 	
-    if (command === prefix + "say") {
+    if (command === 'say') {
 
       let say = args.join(' ');
       message.delete();
