@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("*help | V 1.0 | Commande *avatar en patch");
+    bot.user.setActivity("$help | V 1.0 | Commande *avatar en patch");
     console.log("Je suis connecté !");
 });
 
@@ -21,28 +21,8 @@ bot.on('message', message => {
             .addField("__**Jeux**__","~~*help e7~~", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
-            .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
+            .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
         message.channel.sendEmbed(embed);
-	    
-    }
-	
-	//Knights Chronicle Héros = Ruby.
-    if (message.content === prefix + "ruby"){
-        var embed = new Discord.RichEmbed()
-	    .setTitle(":black_small_square: Combattante téméraire - Ruby :black_small_square: SSR :black_small_square: Attaquante Vent :black_small_square: Vitesse de  base 599 :black_small_square: Unité Gacha :black_small_square: CV. Hiyori Kono")
-	    .setDescription("Fille au sang chaud élevée par son père, le gérant d'un dojo dans une petite ville du Grand duché de Delcart. L'irritation que suscite chez elle l'injustice l'a poussée à se proclamer «médiatrice citoyenne». C'est vraiment super... mais attendez-vous tout de même à ce que ce soient ses poings plus que ses paroles qui règlent les différends ! Son père doit souvent rembourser les dégâts qu'elle cause, mais le fringant maître de dojo préfère tout prendre avec le sourire.")
-	    .addField(":speech_balloon: **Compétence de chef: Nous sommes les meilleurs !**","Augmente de 60% l'ATQ des alliés de vent si le groupe est constitué de 5 héros de vent.", true)
-            .addField(":thought_balloon: **Passif: C'est parti !**","80% de chances de supprimer les renforcements d'attaque et de défense au début du tour.", true)
-	    .addField(":cyclone: **Passif Héroïque: C'est parti !**","50% de chances de réduire tous les temps de recharge des compétences de 1 tour en cas d'attaque. Rétablit 20% des PV lorsque le temps de recharge est réduit.", true)
-	    .addField(":crossed_swords: **Compétence 1: Coup de pied rapide !**","Inflige des dégâts équivalents à 100% de l'ATQ à 1 cible. 40% de chances de réduire le temps de recharge de la compétence n°2 de 1 tour.", true)
-	    .addField(":crossed_swords: **Compétence 2: Coup de pied rotatif !** :hourglass: **3 tours**","Inflige des dégâts équivalents à 200% de l'ATQ à 1 cible. 65% de chances de réduire le temps de recharge de la compétence n°3 de 1 tour.", true)
-	    .addField(":crossed_swords: **Compétence 3: Coup de pied volant !** :hourglass: **5 tours**","Inflige des dégâts équivalents à 300% de l'ATQ à 1 cible.", true)
-            .addField(":comet: **Visuel de l'animation de la compétence 3 :**",":arrow_down:", true)
-            .setImage("https://images-ext-2.discordapp.net/external/nNTMTK1VA8FW7d1xBGTuKI_c9SLRkfSdvYEX7vYl6pQ/http/image.mobirum.com/GAME/knightschronicle_en/2018/06/28/1530154512052.gif")
-            .setColor("RANDOM")
-	    .setFooter("Toutes les compétences sont basées sur le Niv.1. Les skills Niv.2 à 6 arriveront ultérieurement. Le Héros est 6*." + " " + "Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username + "." + " " + "Fiche mise à jour le 28/10")
-	    .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/505159626459840512/H6rbMsZcmISiAAAAAElFTkSuQmCC.png")
-	message.channel.sendEmbed(embed);
 	    
     }
 	
