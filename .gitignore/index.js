@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("*")
+var prefix = ("$")
 
 bot.on('ready', function() {
     bot.user.setActivity("*help | V 1.0 | Commande *avatar en patch");
@@ -18,9 +18,9 @@ bot.on('message', message => {
             .addField("__**Modération**__","~~*kick~~", true)
             .addField("__**Utilitaires**__","`*help` `*infosbot`", true)
             .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
-            .addField("__**Jeux**__","~~*help kc~~", true)
+            .addField("__**Jeux**__","~~*help e7~~", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
 	    
