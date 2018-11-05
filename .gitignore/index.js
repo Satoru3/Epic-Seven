@@ -66,7 +66,7 @@ bot.on('message', message => {
       let say = args.join(' ');
       message.delete();
       message.channel.send(say);    
-
+      console.log("La commande Say viens d'être effectué par " + message.author.username)
     }
 
     if (message.content === prefix + "infosbot"){
