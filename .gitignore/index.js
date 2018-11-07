@@ -36,7 +36,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
         message.channel.sendEmbed(embed);
-        console.log("Page de personnage générée suite à une demande de " + message.author.username");
+        console.log("Page de personnage générée suite à une demande de " + message.author.username);
 
     }
 	
