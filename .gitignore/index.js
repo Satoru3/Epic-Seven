@@ -130,30 +130,38 @@ bot.on("message", function(message) {
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.reply("Pose moi une question ! :8ball:")};
+            return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
 
             var replys = [
-                "Oui"+" " + message.author.username,
-                "Non"+" " + message.author.username,
-                "Peut-être"+" " + message.author.username,
-                "Je ne sais pas"+" " + message.author.username + "!",
-                "Sûrement"+" " + message.author.username + "...",
-                "Bien sûr"+" " + message.author.username + "!",
-		"Bien entendu"+" " + message.author.username,
-		"Es-tu fou"+" " + message.author.username + "?!",
-                "Absolument pas"+" " + message.author.username + "!",
+                "Oui.",
+                "Non.",
+                "Peut-être.",
+                "Je ne sais pas...",
+                "Sûrement...",
+                "Bien sûr.",
+		"Bien entendu.",
+		"Es-tu fou ?!",
+                "Absolument pas !!",
+                "Sérieusement... t'es qui en fait ?!",
+                "..Je n'ai même pas envie de te répondre !",
+                "Dois-je te dire la vérité ?",
+                "Tu sais quoi ? Ferme-la !",
+                "Je suis fatigué de te répondre...",
+                "Tu es si magnifique... Tu m'éblouis !",
+                
             ];
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball")
-            .addField("Question :", tte)
-            .addField("Réponse :", reponse)
+            .setDescription(":8ball: 8ball :8ball:")
+            .addField(message.author.username + " :", tte)
+            .addField("Epic Bot :", reponse)
             .setThumbnail(message.author.avatarURL)
-	    .setFooter("Demandé par "+" "+ message.author.username)
+            .setTimestamp()
+	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
             
 
-
         message.channel.sendEmbed(bembed)
+        console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
 
 }})
