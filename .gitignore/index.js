@@ -78,7 +78,7 @@ bot.on('message', message => {
 	    
     }
 	
-	// Commande d'avatar (A patch, mention bugué)
+	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
        let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
