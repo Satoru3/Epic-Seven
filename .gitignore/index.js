@@ -31,7 +31,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
             .setDescription("Voici les différentes commande de personnages.")
-            .addField("__**Personnages**__","`$e7 ras`", true)
+            .addField("__**Personnages**__","`$e7 ras` `e7 yuna`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
