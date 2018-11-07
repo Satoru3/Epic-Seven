@@ -15,15 +15,27 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
-            .addField("__**Modération**__","~~*kick~~", true)
-            .addField("__**Utilitaires**__","`*help` `*infosbot`", true)
-            .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
-            .addField("__**Jeux**__","~~*help e7~~", true)
+            .addField("__**Modération**__","~~$kick~~", true)
+            .addField("__**Utilitaires**__","`$help` `$infosbot`", true)
+            .addField("__**Fun**__","`$8ball` `$avatar` `$say`", true)
+            .addField("__**Epic Seven**__","`$personnages`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
         message.channel.sendEmbed(embed);
 	    
+    }
+
+    if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
+        var embed = new Discord.RichEmbed()
+            .setTitle(":black_small_square: **Personnages** :black_small_square:")
+            .setDescription("Voici les différentes commande de personnages.")
+            .addField("__**Personnages**__","`$e7 ras`", true)
+            .setColor("RANDOM")
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
+            .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
+        message.channel.sendEmbed(embed);
+
     }
 	
         // Epic Seven Héros = Ras
