@@ -23,6 +23,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
         message.channel.sendEmbed(embed);
+        console.log("Page d'aide générée suite à la demande de " + message.author.username");
 	    
     }
 
@@ -35,6 +36,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
         message.channel.sendEmbed(embed);
+        console.log("Page de personnage générée suite à une demande de " + message.author.username");
 
     }
 	
@@ -44,7 +46,7 @@ bot.on('message', message => {
             .setTitle("Ras Elclare :black_small_square: Feu :black_small_square: Chevalier :black_small_square: Balance ")
             .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de Ras.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Ras générée suite à une demande de"+" "+ message.author.username + "." + " " + "Fiche mise à jour le 28/10.")
+            .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 28/10.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/rass/rass_0000.png")
             .setImage("https://j.gifs.com/YvzDMp.gif")
             .addField(":speech_balloon: Citation :", "C'est mon devoir. De protéger la vie à la place de la Déesse !", false)
@@ -54,6 +56,25 @@ bot.on('message', message => {
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed);
 	console.log("La commande du Héros Ras viens d'être effectuée.");
+
+    }
+
+        // Epic Seven Héros = Yuna
+    if (message.content === prefix + "e7 yuna"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Yuna Woo :black_small_square: Eau :black_small_square: Ranger :black_small_square: Lion ")
+            .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, Yuna a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité Yuna préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
+            .setColor("RANDOM")
+            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 07/11.")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
+            .setImage("https://imgur.com/rkW8HYC")
+            .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
+            .addField(":crossed_swords: Compétence 1: Homing Laser", "Attaque tous les ennemis avec un drone. L'état 'Préparation au combat' augmente de 6% par rapport aux nombres d'ennemis. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
+            .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
+            .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Attaque tous les ennemis avec un puissant canon géant infligeant d'énormes dégâts. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
+            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+	message.channel.sendEmbed(embed);
+	console.log("La commande de l'Héroïne Yuna viens d'être effectuée.");
 	    
     }
 	
