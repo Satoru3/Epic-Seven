@@ -109,10 +109,10 @@ bot.on('message', message => {
             .addField(":speech_balloon: Citation :", "Je vais te traîner dans l'abysse.", false)
             .addField(":crossed_swords: Compétence 1: Dark Shadow", "Pénètre l'ennemi avec une énergie sombre. 50% de chances de rendre l'ennemi impossible a heal pendant 1 tour. Moins la cible a de santé, plus les dégâts infligés sont importants.", false)
             .addField(":crossed_swords: Compétence 2: Encroach", "Si la santé d'un ennemi est inférieure à 50% après avoir été attaqué avec 'Dark Shadow', le lanceur effectue une seconde attaque qui frappe tous les ennemis. L'attaque supplémentaire a 50% de chances de rendre les cibles impossible a heal pendant 1 tour. Cet effet ne peut être activé qu'une seule fois au tour du lanceur.", false)
-            .addField(":crossed_swords: Compétence 3: Death Sentence", "Attaque tous les ennemis avec un puissant canon géant infligeant d'énormes dégâts. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
+            .addField(":crossed_swords: Compétence 3: Death Sentence", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed);
-	console.log("La commande de l'Héroïne Sez viens d'être effectuée.");
+	console.log("La commande de l'Héros Sez viens d'être effectuée.");
 	    
     }
 	
