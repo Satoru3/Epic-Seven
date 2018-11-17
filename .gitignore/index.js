@@ -121,7 +121,7 @@ bot.on('message', message => {
        let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
                .setColor("RANDOM")
-               .setTitle("Avatar de :" + " " + user.username)
+               .setTitle("Avatar de" + " " + user.username)
                .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
 	    
