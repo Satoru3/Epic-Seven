@@ -18,7 +18,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` `$infosbot`", true)
             .addField("__**Fun**__","`$8ball` `$avatar` `$say`", true)
-            .addField("__**Epic Seven**__","`$personnages` `$site` `$tierlist`", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` `$tierlist`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
