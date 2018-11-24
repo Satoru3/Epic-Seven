@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1");
+    bot.user.setActivity("$help | V 1.1.2 | Multiples corrections / ajouts");
     console.log("Je suis connecté !");
 });
 
@@ -30,7 +30,7 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("__**Personnages**__","Liste des commandes de personnages disponible", true)
+	    .addBlank()
             .addField("**$e7 sez**","Fais apparaître la commande relative a Sez.", true)
             .addField("**$e7 ras**","Fais apparaître la commande relative a Ras.", true)
             .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna.", true)
