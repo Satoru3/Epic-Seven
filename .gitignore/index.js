@@ -141,9 +141,11 @@ bot.on('message', message => {
 
     }
 
-    if (message.content === prefix + "tierlist"){
-       message.channel.send("Voici le lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
+    if (message.content === prefix + "tierlist"){ // Tier List
+       message.channel.send("Lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
 
+    if (message.content = prefix + "site"){ //Site Epic 7 guide
+       message.channel.send("Lien du site : <http://epic7guide.pcriot.com>")
     }
 
     if (message.content === prefix + "infosbot"){
