@@ -21,7 +21,7 @@ bot.on('message', message => {
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
-            .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
         message.channel.sendEmbed(embed);
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	    
@@ -30,13 +30,13 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	    .addBlank()
+	    .setBlank()
             .addField("**$e7 sez**","Fais apparaître la commande relative a Sez.", true)
             .addField("**$e7 ras**","Fais apparaître la commande relative a Ras.", true)
             .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna.", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
-            .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
 
