@@ -56,11 +56,11 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Command Strike", "Attaque l'ennemi à plusieurs reprises, et déclenche une attaque simultanée avec l'allié le plus fort.", false)
             .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed);
-        message.react('❤');
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤');
 	console.log("La commande du Héros Ras viens d'être effectuée.");
 
-    }
+    }}
 
         // Epic Seven Héros = Yuna
     if (message.content === prefix + "e7 yuna"){
