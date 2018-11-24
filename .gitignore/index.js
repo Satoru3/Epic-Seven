@@ -147,7 +147,7 @@ bot.on('message', message => {
     }
 
 
-    if (message.content = prefix + "site"){ //Site Epic 7 guide
+    if (message.content === prefix + "site"){ //Site Epic 7 guide
        message.channel.send("Lien du site : <http://epic7guide.pcriot.com>")
     }
 
