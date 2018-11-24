@@ -60,7 +60,7 @@ bot.on('message', message => {
         msg.react('❤');
 	console.log("La commande du Héros Ras viens d'être effectuée.");
 
-    }})
+    )}}
 
         // Epic Seven Héros = Yuna
     if (message.content === prefix + "e7 yuna"){
