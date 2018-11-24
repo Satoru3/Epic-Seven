@@ -142,7 +142,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){
-       message.channelsend("Voici le lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
+       message.channel.send("Voici le lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
 
     }
 
