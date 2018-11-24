@@ -37,7 +37,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
-        message.channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
 
     }
@@ -48,7 +48,7 @@ bot.on('message', message => {
             .setTitle("Ras Elclare :black_small_square: Feu :black_small_square: Chevalier :black_small_square: Balance ")
             .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de __Ras__.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 28/10.")
+            .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/rass/rass_0000.png")
             .setImage("https://j.gifs.com/YvzDMp.gif")
             .addField(":speech_balloon: Citation :", "C'est mon devoir. De protéger la vie à la place de la Déesse !", false)
@@ -71,7 +71,7 @@ bot.on('message', message => {
             .setTitle("Yuna Woo :black_small_square: Eau :black_small_square: Ranger :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 07/11.")
+            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
             .setImage("https://nsa39.casimages.com/img/2018/11/07/181107071807674654.gif")
             .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
@@ -79,7 +79,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
             .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Attaque tous les ennemis avec un puissant canon géant infligeant d'énormes dégâts. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤')
+        msg.react('💔');
 	console.log("La commande de l'Héroïne Yuna viens d'être effectuée.");
 
     }
@@ -90,7 +92,7 @@ bot.on('message', message => {
             .setTitle("Iseria Arisophodel :black_small_square: Eau :black_small_square: Ranger :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 07/11.")
+            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
             .setImage("https://nsa39.casimages.com/img/2018/11/07/181107071807674654.gif")
             .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
@@ -98,7 +100,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
             .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤')
+        msg.react('💔');
 	console.log("La commande de l'Héroïne Iseria viens d'être effectuée.");
 
     }
@@ -109,7 +113,7 @@ bot.on('message', message => {
             .setTitle("Sez Gaien :black_small_square: Eau :black_small_square: Assassin :black_small_square: Vierge ")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 17/11.")
+            .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/sez/sez_0000.png")
             .setImage("https://j.gifs.com/kZGmrv.gif")
             .addField(":speech_balloon: Citation :", "Je vais te traîner dans l'abysse.", false)
@@ -117,7 +121,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Encroach", "Si la santé d'un ennemi est inférieure à 50% après avoir été attaqué avec 'Dark Shadow', le lanceur effectue une seconde attaque qui frappe tous les ennemis. L'attaque supplémentaire a 50% de chances de rendre les cibles impossible a heal pendant 1 tour. Cet effet ne peut être activé qu'une seule fois au tour du lanceur.", false)
             .addField(":crossed_swords: Compétence 3: Death Sentence", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤')
+        msg.react('💔');
 	console.log("La commande de l'Héros Sez viens d'être effectuée.");
 	    
     }
@@ -129,7 +135,9 @@ bot.on('message', message => {
                .setColor("RANDOM")
                .setTitle("Avatar de " + user.username)
                .setImage(user.displayAvatarURL)
-      message.channel.sendEmbed(embed);
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤')
+        msg.react('💔');
 	    
     }
 	
