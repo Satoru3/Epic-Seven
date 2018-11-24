@@ -30,7 +30,6 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	    .addBlank
             .addField("**$e7 sez**","Fais apparaître la commande relative a Sez.", true)
             .addField("**$e7 ras**","Fais apparaître la commande relative a Ras.", true)
             .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna.", true)
