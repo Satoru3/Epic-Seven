@@ -138,6 +138,12 @@ bot.on('message', message => {
       message.delete();
       message.channel.send(say);    
       console.log("La commande Say viens d'être effectué par " + message.author.username)
+
+    }
+
+    if (message.content === prefix + "tierlist"){
+       message.channelsend("Voici le lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
+
     }
 
     if (message.content === prefix + "infosbot"){
