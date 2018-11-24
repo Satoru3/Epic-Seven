@@ -84,6 +84,8 @@ bot.on('message', message => {
         msg.react('💔');
 	console.log("La commande de l'Héroïne Yuna viens d'être effectuée.");
 
+	})
+
     }
 
         // Epic Seven Héros = Iseria
@@ -105,6 +107,8 @@ bot.on('message', message => {
         msg.react('💔');
 	console.log("La commande de l'Héroïne Iseria viens d'être effectuée.");
 
+	})
+
     }
 
         // Epic Seven Héros = Sez
@@ -125,7 +129,9 @@ bot.on('message', message => {
         msg.react('❤')
         msg.react('💔');
 	console.log("La commande de l'Héros Sez viens d'être effectuée.");
-	    
+
+	})	    
+
     }
 	
 	// Commande d'avatar
@@ -138,7 +144,9 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed).then(msg => {
         msg.react('❤')
         msg.react('💔');
-	    
+	 
+	})
+   
     }
 	
         // Commande de say
