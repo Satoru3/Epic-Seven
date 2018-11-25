@@ -30,10 +30,10 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez [5 :star: <:e7assassin:506111331473031188>]", true)
+            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez [5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>]", true)
             .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. [3 :star:]", true)
             .addField("**$e7 iseria**","Fais apparaître la commande relative a Iseria. [5 :star: <:e7tireur:506111368135442435>]", true)
-            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. [5 :star: <:e7tireur:506111368135442435>]", true)
+            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. [5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>]", true)
             .addField("**$e7 tywin**","En cours", true)
             .addField("**$e7 karin**","En cours", true)
             .setColor("RANDOM")
@@ -116,7 +116,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Sez
     if (message.content === prefix + "e7 sez"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: Eau<:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
+            .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
