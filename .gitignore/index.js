@@ -70,7 +70,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Yuna
     if (message.content === prefix + "e7 yuna"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Yuna Woo :black_small_square: Eau :black_small_square: Ranger :black_small_square: Lion ")
+            .setTitle("Yuna Woo :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
@@ -116,7 +116,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Sez
     if (message.content === prefix + "e7 sez"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: Eau :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
+            .setTitle("Sez Gaien :black_small_square: Eau<:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
