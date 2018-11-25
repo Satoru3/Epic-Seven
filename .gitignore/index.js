@@ -16,7 +16,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
-            .addField("__**Utilitaires**__","`$help` \n `$botinfos`", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n `$userinfos`", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say`", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist`", true)
             .setColor("RANDOM")
