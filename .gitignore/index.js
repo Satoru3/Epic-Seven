@@ -184,7 +184,7 @@ bot.on('message', message => {
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
-	    .addField("Bot créé par : @Vanitas#7248")
+	    .addField("Bot créé par : ","@Vanitas", true)
 
     message.channel.send(botembed)
 	    
