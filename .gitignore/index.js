@@ -248,7 +248,7 @@ bot.on('message', message => {
             .addField("Discriminant :", user.discriminator)
             .addField("A rejoint Discord le : ", user.createdAt)
             .addField("Statut :", user.presence.status)
-	    .addField("Joue à : ", user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.')
+	    .addField("Joue à : ", user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.');
 
     message.channel.send(membed)
 	    
