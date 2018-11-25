@@ -165,7 +165,7 @@ bot.on('message', message => {
             .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion ")
             .setDescription("En traduction.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Tywin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
+            .setFooter("Fiche de l'Héroïne Karin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/karin/karin_0000.png")
             .setImage("https://j.gifs.com/kZGmrv.gif")
             .addField(":speech_balloon: Citation :", "Sa Citation n'a pas été dévoilée.", false)
