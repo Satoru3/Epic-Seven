@@ -16,7 +16,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
-            .addField("__**Utilitaires**__","`$help` \n `$infosbot`", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos`", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say`", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist`", true)
             .setColor("RANDOM")
@@ -221,7 +221,7 @@ bot.on('message', message => {
        message.channel.send("Lien du site : <http://epic7guide.pcriot.com>")
     }
 
-    if (message.content === prefix + "infosbot"){
+    if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
         let boticon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
             .setDescription("Informations du bot")
@@ -233,6 +233,26 @@ bot.on('message', message => {
 	    .addField("Bot créé par : ","@Vanitas#7248", true)
 
     message.channel.send(botembed)
+	    
+    }
+
+    if (message.content === prefix + "userinfos"){ //Commande d'infos sur les joueurs
+        let micon = user.displayAvatarURL;
+        let membed = new Discord.RichEmbed()
+        let user = message.mentions.users.first || message.author;
+	if(!user) return message.reply("Hey ! Qui est l'utilisateur ? N'oubliez pas de mentionner ;)"
+            .setTitle(`Infos de $(user.tag)`)
+            .setColor("RANDOM")
+            .setThumbnail(micon)
+            .addField("Pseudo :", user.username)
+            .addField("Discriminant :", `#${user.discriminator}`)
+            .addField("A rejoint Discord le : ", user.createdAt)
+            .addField("Statut :", user.presence.status)
+	    .addField("Joue à : ", `${user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.'}`)
+            .setFooter(`ID : $(user.id)`)
+	    .setTimestamp()
+
+    message.channel.send(membed)
 	    
     }
     
