@@ -250,7 +250,7 @@ bot.on('message', message => {
             .addField("Pseudo :", user.username)
             .addField("Discriminant :", user.discriminator)
             .addField("A rejoint Discord le : ", user.createdAt)
-            .addField("Statut :", user.presence.status)
+            .addField("ID :", user.id)
 	    .addField("Joue à : ", user.presence.game)
 
     message.channel.send(membed)
