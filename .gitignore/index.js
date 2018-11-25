@@ -158,6 +158,29 @@ bot.on('message', message => {
 	})	    
 
     }
+
+        // Epic Seven Héros = Karin
+    if (message.content === prefix + "e7 karin"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion ")
+            .setDescription("En traduction.")
+            .setColor("RANDOM")
+            .setFooter("Fiche de l'Héros Tywin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/karin/karin_0000.png")
+            .setImage("https://j.gifs.com/kZGmrv.gif")
+            .addField(":speech_balloon: Citation :", "Sa Citation n'a pas été dévoilée.", false)
+            .addField(":crossed_swords: Compétence 1: Sequential Cutter", "En traduction.", false)
+            .addField(":crossed_swords: Compétence 2: Blade Art: Flash", "En traduction.", false)
+            .addField(":crossed_swords: Compétence 3: Blade Art: Thunder", "En traduction.", false)
+            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+	message.channel.sendEmbed(embed).then(msg => {
+        msg.react('❤')
+        msg.react('💔');
+	console.log("La commande de l'Héroïne Karin viens d'être effectuée.");
+
+	})	    
+
+    }
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
