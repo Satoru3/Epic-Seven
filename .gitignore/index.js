@@ -30,10 +30,10 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
-            .addField("**$e7 iseria**","Fais apparaître la commande relative a Iseria. 5 :star: <:e7tireur:506111368135442435>", true)
-            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
+            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
+            .addField("**$e7 iseria**","Fais apparaître la commande relative a Iseria. | 5 :star: <:e7tireur:506111368135442435>", true)
+            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. | 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
             .addField("**$e7 tywin**","En cours", true)
             .addField("**$e7 karin**","En cours", true)
             .setColor("RANDOM")
@@ -93,10 +93,10 @@ bot.on('message', message => {
         // Epic Seven Héros = Iseria
     if (message.content === prefix + "e7 iseria"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Iseria Arisophodel :black_small_square: Eau :black_small_square: Ranger :black_small_square: Lion ")
+            .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
+            .setFooter("Fiche de l'Héroïne Iseria générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
             .setImage("https://nsa39.casimages.com/img/2018/11/07/181107071807674654.gif")
             .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
