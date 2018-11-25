@@ -139,16 +139,16 @@ bot.on('message', message => {
         // Epic Seven Héros = Tywin
     if (message.content === prefix + "e7 tywin"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Vierge ")
-            .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
+            .setTitle("Tywin Herad :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Vierge ")
+            .setDescription("En traduction.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Tywin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/taiwin/taiwin_0000.png")
             .setImage("https://j.gifs.com/kZGmrv.gif")
-            .addField(":speech_balloon: Citation :", "Je vais te traîner dans l'abysse.", false)
-            .addField(":crossed_swords: Compétence 1: Dark Shadow", "Pénètre l'ennemi avec une énergie sombre. 50% de chances de rendre l'ennemi impossible a heal pendant 1 tour. Moins la cible a de santé, plus les dégâts infligés sont importants.", false)
-            .addField(":crossed_swords: Compétence 2: Encroach", "Si la santé d'un ennemi est inférieure à 50% après avoir été attaqué avec 'Dark Shadow', le lanceur effectue une seconde attaque qui frappe tous les ennemis. L'attaque supplémentaire a 50% de chances de rendre les cibles impossible a heal pendant 1 tour. Cet effet ne peut être activé qu'une seule fois au tour du lanceur.", false)
-            .addField(":crossed_swords: Compétence 3: Death Sentence", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
+            .addField(":speech_balloon: Citation :", "Je te suivrai de tout mon coeur.", false)
+            .addField(":crossed_swords: Compétence 1: Sword Storm", "En traduction.", false)
+            .addField(":crossed_swords: Compétence 2: Commanding Shout", "En traduction.", false)
+            .addField(":crossed_swords: Compétence 3: Full-Scale Attack", "En traduction.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed).then(msg => {
         msg.react('❤')
