@@ -30,10 +30,10 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez [5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>]", true)
-            .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. [3 :star:]", true)
-            .addField("**$e7 iseria**","Fais apparaître la commande relative a Iseria. [5 :star: <:e7tireur:506111368135442435>]", true)
-            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. [5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>]", true)
+            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
+            .addField("**$e7 iseria**","Fais apparaître la commande relative a Iseria. 5 :star: <:e7tireur:506111368135442435>", true)
+            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
             .addField("**$e7 tywin**","En cours", true)
             .addField("**$e7 karin**","En cours", true)
             .setColor("RANDOM")
@@ -47,7 +47,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Ras
     if (message.content === prefix + "e7 ras"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Ras Elclare :black_small_square: Feu :black_small_square: Chevalier :black_small_square: Balance ")
+            .setTitle("Ras Elclare :black_small_square: <:elementfeu:506109794608742401> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Balance ")
             .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de __Ras__.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
