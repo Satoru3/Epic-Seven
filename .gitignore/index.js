@@ -245,11 +245,11 @@ bot.on('message', message => {
             .setColor("RANDOM")
             .setThumbnail(micon)
             .addField("Pseudo :", user.username)
-            .addField("Discriminant :", `#${user.discriminator}`)
+            .addField("Discriminant :", user.discriminator)
             .addField("A rejoint Discord le : ", user.createdAt)
             .addField("Statut :", user.presence.status)
-	    .addField("Joue à : ", `${user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.'}`)
-            .setFooter(`ID : $(user.id)`)
+	    .addField("Joue à : ", user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.')
+            .setFooter("ID : " user.id)
 
     message.channel.send(membed)
 	    
