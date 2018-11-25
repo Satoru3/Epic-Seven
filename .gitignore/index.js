@@ -37,7 +37,7 @@ bot.on('message', message => {
             .addField("**$e7 tywin**","En cours de construction", true)
             .addField("**$e7 karin**","En cours de construction", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + "Ajout des éléments, et des étoiles.")
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Ajout des éléments, et des étoiles.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
