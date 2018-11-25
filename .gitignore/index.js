@@ -33,8 +33,8 @@ bot.on('message', message => {
             .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
             .addField("**$e7 iseria**","Commande relative a Iseria. En cours. | 5 :star: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
             .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. | 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
-            .addField("**$e7 tywin**","Commande relative a Iseria. En cours.", true)
-            .addField("**$e7 karin**","Commande relative a Iseria. En cours.", true)
+            .addField("**$e7 tywin**","Commande relative a Tywin. En cours.", true)
+            .addField("**$e7 karin**","Commande relative a Karin. En cours.", true)
             .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Ajout des éléments, et des étoiles.")
@@ -184,6 +184,7 @@ bot.on('message', message => {
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
+	    .addField("Bot créé par : @Vanitas#7248")
 
     message.channel.send(botembed)
 	    
