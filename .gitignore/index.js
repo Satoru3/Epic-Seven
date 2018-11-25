@@ -116,7 +116,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Sez
     if (message.content === prefix + "e7 sez"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: Eau :black_small_square: Assassin :black_small_square: Vierge ")
+            .setTitle("Sez Gaien :black_small_square: Eau :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
