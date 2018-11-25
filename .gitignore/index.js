@@ -238,9 +238,11 @@ bot.on('message', message => {
 
     if (message.content === prefix + "userinfos"){ //Commande d'infos sur les joueurs
         let micon = user.displayAvatarURL;
-        let membed = new Discord.RichEmbed()
         let user = message.mentions.users.first || message.author;
 	if(!user) return message.reply("Hey ! Qui est l'utilisateur ? N'oubliez pas de mentionner ;)"
+
+        let membed = new Discord.RichEmbed()
+
             .setTitle(`Infos de $(user.tag)`)
             .setColor("RANDOM")
             .setThumbnail(micon)
