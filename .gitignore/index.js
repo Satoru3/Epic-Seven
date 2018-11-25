@@ -249,8 +249,8 @@ bot.on('message', message => {
             .addField("A rejoint Discord le : ", user.createdAt)
             .addField("Statut :", user.presence.status)
 	    .addField("Joue à : ", `${user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.'}`)
+            .setTimestamp()
             .setFooter(`ID : $(user.id)`)
-            .setTimestamp();
 
     message.channel.send(membed)
 	    
