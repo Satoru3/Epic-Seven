@@ -16,7 +16,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
-            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n `$userinfos`", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say`", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist`", true)
             .setColor("RANDOM")
@@ -236,27 +236,6 @@ bot.on('message', message => {
 	    
     }
 
-    if (message.content === prefix + "userinfos"){ //Commande d'infos sur les joueurs
-        let user = message.mentions.users.first || message.author;
-	if(!user) return message.reply("Hey ! Qui est l'utilisateur ? N'oubliez pas de mentionner ;)")
-
-        let micon = user.displayAvatarURL;
-
-        let membed = new Discord.RichEmbed()
-
-            .setTitle(`Infos de $(user.tag)`)
-            .setColor("RANDOM")
-            .setThumbnail(micon)
-            .addField("Pseudo :", user.username)
-            .addField("Discriminant :", user.discriminator)
-            .addField("A rejoint Discord le : ", user.createdAt)
-            .addField("ID :", user.id)
-	    .addField("Joue à : ", `${user.presence.game ? user.presence.game.name: 'Ne joue pas actuellement.'}`)
-
-    message.channel.send(membed)
-	    
-    }
-    
 });
 
 bot.on("message", function(message) {
