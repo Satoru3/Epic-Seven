@@ -24,42 +24,8 @@ bot.on('message', message => {
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
         message.channel.sendEmbed(embed);
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
-	    
-    }
-       const moment = require("moment");
-       const m = require("moment-duration-format");
-       const { version } = require("discord.js");
-       const ms = require("ms")
 
-       let os = require('os')
-       let cpuStat = require("cpu-stat")
-      exports.run = (bot, message, args) => {
-       let cpuLol;
-       cpuStat.usagePercent(function(err, percent, seconds) {
-        if (err) {
-            return console.log(err);
-        }
-        const duration = moment.duration(bot.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
-        const embedStats = new Discord.RichEmbed()
-            .setAuthor(bot.user.username)
-            .setTitle("***BOT Stats***")
-            .setColor("RANDOM")
-            .addField("• Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
-            .addField("• Uptime ", `${duration}`, true)
-            .addField("• Users", `${bot.users.size.toLocaleString()}`, true)
-            .addField("• Servers", `${bot.guilds.size.toLocaleString()}`, true)
-            .addField("• Channels ", `${bot.channels.size.toLocaleString()}`, true)
-            .addField("• Discord.js", `v${version}`, true)
-            .addField("• Node", `${process.version}`, true)
-            .addField("• CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
-            .addField("• CPU usage", `\`${percent.toFixed(2)}%\``, true)
-            .addField("• Arch", `\`${os.arch()}\``, true)
-            .addField("• Platform", `\`\`${os.platform()}\`\``, true)
-            .addField("API Latency", `${Math.round(bot.ping)}ms`)  
-        message.channel.send(embedStats)
-    });
-};
- 
+    }
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
@@ -265,6 +231,7 @@ bot.on('message', message => {
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
 	    .addField("Bot créé par : ","@Vanitas#7248", true)
+            .addField("• CPU utilisé", `\`${percent.toFixed(2)}%\``, true)
 
     message.channel.send(botembed)
 	    
