@@ -27,27 +27,20 @@ bot.on('message', message => {
 	    
     }
 
-if(command === "play") {
-    if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign: Please join a voice channel.');
-    if (message.guild.me.voiceChannel) return message.channel.send(':no_entry_sign: Error, the bot is already connected to another music channel or a song is playing.');
-    if (!args[0]) return message.channel.send(':no_entry_sign: Error, please enter a **URL** following the command.');
+module.exports.run = async (bot, message, args) => {
 
-    let validate = await ytdl.validateURL(args[0]);
-   
-    if (!validate) return message.channel.send(':no_entry_sign: Error, please input a __valid__ url following the command.');
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":x: **Tu dois préciser le nombre de messages à supprimer .**");
+  if(!args[0]) return message.channel.send(":x: **Tu dois préciser le nombre de messages à supprimer .**");
+  message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(`:pencil2: ${args[0]} messages on été supprimer.`).then(msg => msg.delete(2000));
+});
 
-    let info = await ytdl.getInfo(args[0]);
-   
-    let connection = await message.member.voiceChannel.join();
-    let dispatcher = await connection.playStream(ytdl(args[0], {
-        filter: 'audioonly'
-    }));
+}
 
-    let playembed = new Discord.RichEmbed()
-    .setTitle("Now playing")
-    .setDescription(`${info.title}`)
-    
-    message.channel.send(playembed);
+module.exports.help = {
+  name: "clear"
+}
+
 }
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
