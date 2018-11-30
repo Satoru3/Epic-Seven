@@ -27,7 +27,7 @@ bot.on('message', message => {
 
     }
 
-    if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
+    if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven.
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
             .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
