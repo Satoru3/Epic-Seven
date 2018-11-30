@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { version } = require("discord.js");
-const ms = require("ms");
 
 var prefix = ("$")
 
@@ -30,6 +29,7 @@ bot.on('message', message => {
     }
        const moment = require("moment");
        const m = require("moment-duration-format");
+       const ms = require("ms");
 
 
        let os = require('os')
