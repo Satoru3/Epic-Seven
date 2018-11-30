@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const { version } = require("discord.js");
 
 var prefix = ("$")
 
@@ -29,14 +28,14 @@ bot.on('message', message => {
     }
        const moment = require("moment");
        const m = require("moment-duration-format");
+       const { version } = require("discord.js");
        const ms = require("ms")
-
 
        let os = require('os')
        let cpuStat = require("cpu-stat")
       exports.run = (bot, message, args) => {
-    let cpuLol;
-    cpuStat.usagePercent(function(err, percent, seconds) {
+       let cpuLol;
+       cpuStat.usagePercent(function(err, percent, seconds) {
         if (err) {
             return console.log(err);
         }
@@ -61,7 +60,6 @@ bot.on('message', message => {
     });
 };
  
-}
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
