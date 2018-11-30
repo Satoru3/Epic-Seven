@@ -29,7 +29,7 @@ bot.on('message', message => {
     }
        const moment = require("moment");
        const m = require("moment-duration-format");
-       const ms = require("ms");
+       const ms = require("ms")
 
 
        let os = require('os')
