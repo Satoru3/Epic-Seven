@@ -27,7 +27,6 @@ bot.on('message', message => {
 	    
     }
 
-exports.run = async (client, message, args) => {
     if (!message.guild.member(client.user).hasPermission("SEND_MESSAGES")) return message.author.send('I don\'t have permission to Send Messages. Please enable send messages for my role!');
 
     let slots = ["🍎", "🍌", "🍒", "🍓", "🍈"];
