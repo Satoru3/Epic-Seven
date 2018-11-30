@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { version } = require("discord.js");
-const moment = require("moment");
 const m = require("moment-duration-format");
 const ms = require("ms");
 
@@ -30,6 +29,8 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	    
     }
+       const moment = require("moment");
+
        let os = require('os')
        let cpuStat = require("cpu-stat")
       exports.run = (bot, message, args) => {
