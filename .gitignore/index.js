@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const { version } = require("discord.js");
+const moment = require("moment");
+const m = require("moment-duration-format");
+const ms = require("ms");
 
 var prefix = ("$")
 
@@ -26,15 +30,35 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	    
     }
-  
-  if(message.content === prefix + "purge"){
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":x: **Tu dois préciser le nombre de messages à supprimer .**");
-  if(!args[0]) return message.channel.send(":x: **Tu dois préciser le nombre de messages à supprimer .**");
-  message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`:pencil2: ${args[0]} messages ont été supprimés.`).then(msg => msg.delete(2000));
-});
- 
-  }
+       let os = require('os')
+       let cpuStat = require("cpu-stat")
+      exports.run = (bot, message, args) => {
+    let cpuLol;
+    cpuStat.usagePercent(function(err, percent, seconds) {
+        if (err) {
+            return console.log(err);
+        }
+        const duration = moment.duration(bot.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+        const embedStats = new Discord.RichEmbed()
+            .setAuthor(bot.user.username)
+            .setTitle("***BOT Stats***")
+            .setColor("RANDOM")
+            .addField("• Mem Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} / ${(os.totalmem() / 1024 / 1024).toFixed(2)} MB`, true)
+            .addField("• Uptime ", `${duration}`, true)
+            .addField("• Users", `${bot.users.size.toLocaleString()}`, true)
+            .addField("• Servers", `${bot.guilds.size.toLocaleString()}`, true)
+            .addField("• Channels ", `${bot.channels.size.toLocaleString()}`, true)
+            .addField("• Discord.js", `v${version}`, true)
+            .addField("• Node", `${process.version}`, true)
+            .addField("• CPU", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
+            .addField("• CPU usage", `\`${percent.toFixed(2)}%\``, true)
+            .addField("• Arch", `\`${os.arch()}\``, true)
+            .addField("• Platform", `\`\`${os.platform()}\`\``, true)
+            .addField("API Latency", `${Math.round(bot.ping)}ms`)  
+        message.channel.send(embedStats)
+    });
+};
+    }
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
