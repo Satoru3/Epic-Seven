@@ -231,7 +231,6 @@ bot.on('message', message => {
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
 	    .addField("Bot créé par : ","@Vanitas#7248", true)
-            .addField("• CPU utilisé", `\`${percent.toFixed(2)}%\``, true)
 
     message.channel.send(botembed)
 	    
