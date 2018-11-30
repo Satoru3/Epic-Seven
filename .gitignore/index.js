@@ -27,7 +27,6 @@ bot.on('message', message => {
 	    
     }
 
-exports.run = (client, message, args) => {
     if (!message.guild) {
       return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Eval;').setDescription(message.author.username + ', bu komutu direkt mesajda kullanamazsın.').setFooter('', client.user.avatarURL).setTimestamp()); }
     let user = message.mentions.users.first();
