@@ -50,7 +50,7 @@ bot.on('message', message => {
             .addField('Result', slots[result1] + slots[result2] + slots[result3], true)
             .setColor("#f4e842");
         message.channel.send(embed);
-    })
+    }
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
