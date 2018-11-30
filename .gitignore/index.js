@@ -37,10 +37,6 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = {
-  name: "clear"
-}
-
 }
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
