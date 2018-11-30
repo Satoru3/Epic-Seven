@@ -27,8 +27,6 @@ bot.on('message', message => {
 	    
     }
 
- exports.run = async (bot, message, args) => {
-
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":x: **Tu dois préciser le nombre de messages à supprimer .**");
   if(!args[0]) return message.channel.send(":x: **Tu dois préciser le nombre de messages à supprimer .**");
   message.channel.bulkDelete(args[0]).then(() => {
