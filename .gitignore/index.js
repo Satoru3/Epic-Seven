@@ -33,7 +33,6 @@ bot.on('message', message => {
   message.channel.send(`:pencil2: ${args[0]} messages on été supprimer.`).then(msg => msg.delete(2000));
 });
 
-}
 
 }
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
