@@ -26,13 +26,15 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	    
     }
-
+  
+  if(message.content === prefix + "purge"){
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(":x: **Tu dois préciser le nombre de messages à supprimer .**");
   if(!args[0]) return message.channel.send(":x: **Tu dois préciser le nombre de messages à supprimer .**");
   message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`:pencil2: ${args[0]} messages on été supprimer.`).then(msg => msg.delete(2000));
+  message.channel.send(`:pencil2: ${args[0]} messages ont été supprimés.`).then(msg => msg.delete(2000));
 });
-
+ 
+  }
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
