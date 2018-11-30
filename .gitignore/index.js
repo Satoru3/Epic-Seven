@@ -32,7 +32,7 @@ bot.on('message', message => {
   if(!args[0]) return message.channel.send(":x: **Tu dois préciser le nombre de messages à supprimer .**");
   message.channel.bulkDelete(args[0]).then(() => {
   message.channel.send(`:pencil2: ${args[0]} messages ont été supprimés.`).then(msg => msg.delete(2000));
-};
+});
  
   }
 
