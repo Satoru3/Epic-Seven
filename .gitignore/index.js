@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `$rps` En dev", true)
+            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `$rps` En dev \n `~~$e7 daily~~` `~~$e7 roll~~` ", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `~~$catalyst~~` Arrivé 02/12 \n `~~$artefacts~~`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
@@ -30,19 +30,6 @@ bot.on('message', message => {
     if (message.content === prefix +"e7"){
     message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
     
-    }
-
-    if(message.content.startsWith(prefix + "purge")){
-        if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
-            
-        let args = message.content.split(" ").slice(1);
-
-        if(args >= 100) return message.channel.send("Je suis désolé, ma capacité de suppression est limitée à 100.")
-            
-        if(!args[0]) return message.channel.send("Précise un nombre, merci !")
-        message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send(`${args[0]} messages ont été supprimés !`);
-        })
     }
      	      
     let rock2 = ["Papier ! J'ai gagné !", "Ciseaux ! Tu gagnes ^_^ !"]
