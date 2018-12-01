@@ -713,4 +713,4 @@ function play(guild, song) {
     serverQueue.textChannel.send(NowEmbed);
  
 
-});
+};
