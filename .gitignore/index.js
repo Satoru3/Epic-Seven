@@ -27,7 +27,7 @@ bot.on('message', message => {
 	    
     }
 
-    if (message.content.startsWith (prefix + "avatar")){
+    if (message.content.startsWith (prefix + "warn")){
 
 module.exports.run = async (bot, message, args) => { // Run the command when a command is called
 
