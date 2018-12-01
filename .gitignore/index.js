@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const ms = require("ms");
 
 var prefix = ("$")
 
@@ -27,9 +28,8 @@ bot.on('message', message => {
 	    
     }
 
-const ms = require("ms");
 
-if (command === "remind") {
+    if (command === "remind") {
 
 
     let reminderTime = args[0];
