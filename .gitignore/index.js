@@ -487,7 +487,7 @@ bot.on("message", function(message) {
 }})
 
 bot.on('message', async msg => {
-    if (msg.author.id === midi || msg.author.id === "338192747754160138" || msg.member.roles.some(r => ["Logan DJ", "The Music Meister"].includes(r.name))) {
+    if (msg.author.id === "338192747754160138" || msg.member.roles.some(r => ["Logan DJ", "The Music Meister"].includes(r.name))) {
         if (!msg.content.startsWith(config.prefix)) return undefined;
         const args = msg.content.split(' ');
         const searchString = args.slice(1).join(' ');
