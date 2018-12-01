@@ -26,6 +26,11 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	
     }
+
+    if (message.content === prefix +"e7"){
+    message.channel.send("Utilisation correcte : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
+    
+    }
      
     module.exports.run = (bot, message, args) => {
 	      
