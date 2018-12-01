@@ -46,22 +46,18 @@ bot.on('message', message => {
   let rock = new Discord.RichEmbed()
   .setAuthor("Rock, Paper, Scissors")
   .setColor("#6b5858")
-  .addField("You Chose", `${args[0]}`)
   .addField("I choose", rock2[rock1])
   
   let paper = new Discord.RichEmbed()
   .setAuthor("Rock, Paper, Scissors")
   .setColor("#6b5858")
-  .addField("You Chose", `${args[0]}`)
   .addField("I choose", paper2[paper1])
   
   let scissors = new Discord.RichEmbed()
   .setAuthor("Rock, Paper, Scissors")
   .setColor("#6b5858")
-  .addField("You Chose", `${args[0]}`)
   .addField("I choose", scissors2[scissors1])
-  
-  
+   
   if (message.content === prefix + "rps rock") message.channel.send(rock)
   if (message.content === prefix + "rps Rock") message.channel.send(rock)
   if (message.content === prefix + "rps r") message.channel.send(rock)
