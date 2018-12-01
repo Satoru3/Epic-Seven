@@ -453,7 +453,7 @@ bot.on("message", function(message) {
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
+            return message.channel.send("Utilisation correcte : $8ball <question> " + message.author.username )};
 
             var replys = [
                 "Oui.",
