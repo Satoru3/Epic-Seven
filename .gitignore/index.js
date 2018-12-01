@@ -72,7 +72,6 @@ module.exports.run = (bot, message, args) => {
   
   if (message.content === "+rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Usage: +rps <option>*")
   }
-    }
 
     if (message.content.startsWith (prefix + "warn")){
 
