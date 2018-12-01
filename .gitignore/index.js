@@ -26,7 +26,9 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	
     }
-      
+     
+    module.exports.run = (bot, message, args) => {
+	      
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
   
@@ -69,7 +71,7 @@ bot.on('message', message => {
   
   
   if (message.content === "+rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Usage: +rps <option>*")
-
+    }
 
     if (message.content.startsWith (prefix + "warn")){
 
