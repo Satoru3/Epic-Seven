@@ -62,20 +62,20 @@ bot.on('message', message => {
   .addField("I choose", scissors2[scissors1])
   
   
-  if (message.content === "+rps rock") message.channel.send(rock)
-  if (message.content === "+rps Rock") message.channel.send(rock)
-  if (message.content === "+rps r") message.channel.send(rock)
+  if (message.content === prefix + "rps rock") message.channel.send(rock)
+  if (message.content === prefix + "rps Rock") message.channel.send(rock)
+  if (message.content === prefix + "rps r") message.channel.send(rock)
   
-  if (message.content === "+rps paper") message.channel.send(paper)
-  if (message.content === "+rps Paper") message.channel.send(paper)
-  if (message.content === "+rps p") message.channel.send(paper)
+  if (message.content === prefix + "rps paper") message.channel.send(paper)
+  if (message.content === prefix + "rps Paper") message.channel.send(paper)
+  if (message.content === prefix + "rps p") message.channel.send(paper)
   
-  if (message.content === "+rps scissors") message.channel.send(scissors)
-  if (message.content === "+rps Scissors") message.channel.send(scissors)
-  if (message.content === "+rps s") message.channel.send(scissors)
+  if (message.content === prefix + "rps scissors") message.channel.send(scissors)
+  if (message.content === prefix + "rps Scissors") message.channel.send(scissors)
+  if (message.content === prefix + "rps s") message.channel.send(scissors)
   
   
-  if (message.content === "+rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Usage: +rps <option>*")
+  if (message.content === prefix + "rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Usage: +rps <option>*")
     }
 
     if (message.content.startsWith (prefix + "warn")){
