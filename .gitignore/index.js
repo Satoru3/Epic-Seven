@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.2 | Multiples corrections / ajouts");
+    bot.user.setActivity("$help | V 1.1.2 | Version bêta du $rps");
     console.log("Je suis connecté !");
 });
 
@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say`", true)
+            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `say` En dev", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
@@ -32,10 +32,10 @@ bot.on('message', message => {
     
     }
      	      
-    let rock2 = ["Papier ! J'ai gagné!", "Ciseaux! Tu gagnes ^_^!"]
+    let rock2 = ["Papier ! J'ai gagné !", "Ciseaux ! Tu gagnes ^_^ !"]
     let rock1 = Math.floor(Math.random() * rock2.length);
   
-    let paper2 = ["Pierre ! Aaaah.. Tu as gagné ! !", "Ciseaux ! Héhé, je gagne ! !"]
+    let paper2 = ["Pierre ! Aaaah.. Tu as gagné !", "Ciseaux ! Héhé, je gagne !"]
     let paper1 = Math.floor(Math.random() * paper2.length);
   
     let scissors2 = ["Pierre ! Désolé, mais cette fois-ci, je gagne !", "Papier ! La prochaine fois, tu ne gagneras pas !"]
