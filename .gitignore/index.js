@@ -44,19 +44,19 @@ bot.on('message', message => {
   let rock = new Discord.RichEmbed()
   .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("Tu as choisi :"," ")
+  .addField("Tu as choisi :","_")
   .addField("J'ai choisi :", rock2[rock1])
   
   let paper = new Discord.RichEmbed()
   .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("Tu as choisi :"," ")
+  .addField("Tu as choisi :","_")
   .addField("Hm... Je prend le :", paper2[paper1])
   
   let scissors = new Discord.RichEmbed()
   .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("Tu as choisi :"," ")
+  .addField("Tu as choisi :","_")
   .addField("Cette fois-ci, je choisi :", scissors2[scissors1])
    
   if (message.content === prefix + "rps pierre") message.channel.send(rock)
