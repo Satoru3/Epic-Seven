@@ -31,6 +31,19 @@ bot.on('message', message => {
     message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
     
     }
+
+    if(message.content.startWith(prefix + "purge")){
+        if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
+            
+        let args = message.content.split(" ").slice(1);
+
+        if(args >= 100) return message.channel.send("Je suis désolé, ma capacité de suppression est limitée à 100.")
+            
+        if(!args[0]) return message.channel.send("Précise un nombre, merci !")
+        message.channel.bulkDelete(args[0]).then(() => {
+            message.channel.send(`${args[0]} messages ont été supprimés !`);
+        })
+    }
      	      
     let rock2 = ["Papier ! J'ai gagné !", "Ciseaux ! Tu gagnes ^_^ !"]
     let rock1 = Math.floor(Math.random() * rock2.length);
