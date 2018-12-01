@@ -173,6 +173,8 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
         user.send(`You have been warned in ${message.guild.name}, Total Warnings: ${num2}\n**Reason**: ${reason}`) .catch(() => message.reply("Cannot Send Direct Message To "+user));
         }}
     }catch(err) {console.log(`Error with Warnings ${err}`)}}
+        console.log("Warnn envoyé suite à la demande de " + message.author.username);
+
     
     }
 
