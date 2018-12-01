@@ -32,41 +32,41 @@ bot.on('message', message => {
     
     }
      	      
-    let rock2 = ["Paper! I win!", "Scissors! You win!"]
+    let rock2 = ["Papier ! J'ai gagné!", "Ciseaux! Tu gagnes ^_^!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
   
-    let paper2 = ["Rock! You win!", "Scissors! I win!"]
+    let paper2 = ["Pierre ! Aaaah.. Tu as gagné ! !", "Ciseaux ! Héhé, je gagne ! !"]
     let paper1 = Math.floor(Math.random() * paper2.length);
   
-    let scissors2 = ["Rock! I win!", "Paper! You win!"]
+    let scissors2 = ["Pierre ! Désolé, mais cette fois-ci, je gagne !", "Papier ! La prochaine fois, tu ne gagneras pas !"]
     let scissors1 = Math.floor(Math.random() * scissors2.length);
   
   let rock = new Discord.RichEmbed()
-  .setAuthor("Rock, Paper, Scissors")
+  .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("I choose", rock2[rock1])
+  .addField("J'ai choisi :", rock2[rock1])
   
   let paper = new Discord.RichEmbed()
-  .setAuthor("Rock, Paper, Scissors")
+  .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("I choose", paper2[paper1])
+  .addField("Hm... Je prend le :", paper2[paper1])
   
   let scissors = new Discord.RichEmbed()
-  .setAuthor("Rock, Paper, Scissors")
+  .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
-  .addField("I choose", scissors2[scissors1])
+  .addField("Cette fois-ci, je choisi :", scissors2[scissors1])
    
-  if (message.content === prefix + "rps rock") message.channel.send(rock)
-  if (message.content === prefix + "rps Rock") message.channel.send(rock)
-  if (message.content === prefix + "rps r") message.channel.send(rock)
+  if (message.content === prefix + "rps pierre") message.channel.send(rock)
+  if (message.content === prefix + "rps Pierre") message.channel.send(rock)
+  if (message.content === prefix + "rps pi") message.channel.send(rock)
   
-  if (message.content === prefix + "rps paper") message.channel.send(paper)
-  if (message.content === prefix + "rps Paper") message.channel.send(paper)
+  if (message.content === prefix + "rps papier") message.channel.send(paper)
+  if (message.content === prefix + "rps Papier") message.channel.send(paper)
   if (message.content === prefix + "rps p") message.channel.send(paper)
   
-  if (message.content === prefix + "rps scissors") message.channel.send(scissors)
-  if (message.content === prefix + "rps Scissors") message.channel.send(scissors)
-  if (message.content === prefix + "rps s") message.channel.send(scissors)
+  if (message.content === prefix + "rps ciseaux") message.channel.send(scissors)
+  if (message.content === prefix + "rps Ciseaux") message.channel.send(scissors)
+  if (message.content === prefix + "rps c") message.channel.send(scissors)
   
   
   if (message.content === prefix + "rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Utilisation correcte: $rps <option>*")
