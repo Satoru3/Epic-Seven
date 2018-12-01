@@ -69,7 +69,7 @@ bot.on('message', message => {
   if (message.content === prefix + "rps c") message.channel.send(scissors)
   
   
-  if (message.content === prefix + "rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Utilisation correcte: $rps <option>*")
+  if (message.content === prefix + "rps") message.channel.send("Options: ``Pierre``, ``Papier``, ``Ciseaux``. *Utilisation correcte: $rps <option>*")
 	    
 
     if (message.content.startsWith (prefix + "warn")){
