@@ -28,7 +28,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix +"e7"){
-    message.channel.send("Utilisation correcte : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
+    message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
     
     }
      
