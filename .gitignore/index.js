@@ -32,7 +32,7 @@ bot.on('message', message => {
     
     }
 
-    if(message.content.startWith(prefix + "purge")){
+    if(message.content.startsWith(prefix + "purge")){
         if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
             
         let args = message.content.split(" ").slice(1);
