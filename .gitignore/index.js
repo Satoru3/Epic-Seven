@@ -28,8 +28,6 @@ bot.on('message', message => {
     }
 
     var args = message.content.substring(prefix.length).split(" ");
-
-        let args = message.content.split(" ").slice(1);
       
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
