@@ -26,8 +26,6 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	
     }
-
-    var args = message.content.substring(prefix.length).split(" ");
       
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
