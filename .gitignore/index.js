@@ -27,6 +27,39 @@ bot.on('message', message => {
 	    
     }
 
+const ms = require("ms");
+
+if (command === "remind") {
+
+
+    let reminderTime = args[0];
+    if (!reminderTime) return message.channel.send("**Specify a time for me to remind you. Usage: /remind 15min any text or code**");
+
+    let reminder = args.slice(1).join(" ");
+
+    let remindEmbed = new Discord.RichEmbed()
+        .setColor('#ffffff')
+        .setAuthor(`${message.author.username}`, message.author.displayAvatarURL)
+        .addField("Reminder", `\`\`\`${reminder}\`\`\``)
+        .addField("Time", `\`\`\`${reminderTime}\`\`\``)
+        .setTimestamp();
+
+    message.channel.send(remindEmbed);
+
+
+    setTimeout(function() {
+        let remindEmbed = new Discord.RichEmbed()
+            .setColor('#ffffff')
+            .setAuthor(`${message.author.username}`, message.author.displayAvatarURL)
+            .addField("Reminder", `\`\`\`${reminder}\`\`\``)
+            .setTimestamp()
+
+        message.channel.send(remindEmbed);
+    }, ms(reminderTime));
+
+}
+
+
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
