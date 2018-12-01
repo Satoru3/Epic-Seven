@@ -26,6 +26,10 @@ bot.on('message', message => {
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	
     }
+
+    var args = message.content.substring(prefix.length).split(" ");
+
+        let args = message.content.split(" ").slice(1);
       
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
@@ -217,7 +221,7 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
         user.send(`You have been warned in ${message.guild.name}, Total Warnings: ${num2}\n**Reason**: ${reason}`) .catch(() => message.reply("Cannot Send Direct Message To "+user));
         }}
     }catch(err) {console.log(`Error with Warnings ${err}`)}}
-        console.log("Warnn envoyé suite à la demande de " + message.author.username);
+        console.log("Warn envoyé suite à la demande de " + message.author.username);
 
     
     }
