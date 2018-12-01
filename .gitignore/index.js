@@ -172,7 +172,6 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
         }}
     }catch(err) {console.log(`Error with Warnings ${err}`)}}
 
-}
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
