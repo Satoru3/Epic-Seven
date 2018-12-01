@@ -25,4 +25,4 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed);
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 
-};
+}
