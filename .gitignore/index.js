@@ -6,7 +6,7 @@ var prefix = ("$")
 bot.on('ready', function() {
     bot.user.setActivity("$help | V 1.1.2 | Multiples corrections / ajouts");
     console.log("Je suis connecté !");
-});
+})
 
 bot.login(process.env.TOKEN);
 
