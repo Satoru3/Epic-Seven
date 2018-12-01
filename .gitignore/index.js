@@ -31,9 +31,7 @@ bot.on('message', message => {
     message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
     
     }
-     
-    module.exports.run = (bot, message, args) => {
-	      
+     	      
     let rock2 = ["Paper! I win!", "Scissors! You win!"]
     let rock1 = Math.floor(Math.random() * rock2.length);
   
@@ -71,8 +69,8 @@ bot.on('message', message => {
   if (message.content === prefix + "rps s") message.channel.send(scissors)
   
   
-  if (message.content === prefix + "rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Usage: +rps <option>*")
-    }
+  if (message.content === prefix + "rps") message.channel.send("Options: ``Rock``, ``Paper``, ``Scissors``. *Utilisation correcte: $rps <option>*")
+	    
 
     if (message.content.startsWith (prefix + "warn")){
 
