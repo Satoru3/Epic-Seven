@@ -51,7 +51,7 @@ bot.on('message', message => {
   .setAuthor("Pierre, Papier, Ciseaux")
   .setColor("#6b5858")
   .addField("Tu as choisi :","_")
-  .addField("Hm... Je prend le :", paper2[paper1])
+  .addField("Hm... Je prend :", paper2[paper1])
   
   let scissors = new Discord.RichEmbed()
   .setAuthor("Pierre, Papier, Ciseaux")
