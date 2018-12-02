@@ -422,7 +422,7 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
     }
 
     if (message.content === prefix + "catalyst"){ //Guide Catalyst
-       message.channel.send("Lien du site : <https://docs.google.com/spreadsheets/d/1UMIduFBIVc9OAoI-BeQ-LjPeihcziqXEzXw8n58bEd0/htmlview?usp=sharing&sle=true>")
+       message.channel.send("Lien du guide des catalysts : <https://docs.google.com/spreadsheets/d/1UMIduFBIVc9OAoI-BeQ-LjPeihcziqXEzXw8n58bEd0/htmlview?usp=sharing&sle=true>")
     }
 
     if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
