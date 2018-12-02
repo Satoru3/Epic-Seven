@@ -412,7 +412,7 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("Lien de la tierlist : <https://docs.google.com/spreadsheets/d/1oy8rZpwc66oC6Zxcrw3DRlMV5CNuO4dq8uOy6Uu3IOs/htmlview?sle=true#>")
+       message.channel.send("Lien de la tierlist : <https://docs.google.com/spreadsheets/d/1lkxK70iBsRzIq3Cw0x7UO15-Y9uR--KAKe4UKUM95iY/htmlview?usp=sharing&sle=true>")
 
     }
 
