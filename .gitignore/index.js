@@ -18,7 +18,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `$rps` En dev \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n ~~$catalyst~~ Arrivé 02/12 \n ~~$artefacts~~", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n $catalyst Sera modifiée par des imgs \n ~~$artefacts~~", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -419,6 +419,10 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
 
     if (message.content === prefix + "site"){ //Site Epic 7 guide
        message.channel.send("Lien du site : <http://epic7guide.pcriot.com>")
+    }
+
+    if (message.content === prefix + "catalyst"){ //Guide Catalyst
+       message.channel.send("Lien du site : <https://docs.google.com/spreadsheets/d/1UMIduFBIVc9OAoI-BeQ-LjPeihcziqXEzXw8n58bEd0/htmlview?usp=sharing&sle=true>")
     }
 
     if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
