@@ -60,6 +60,15 @@ bot.on('message', message => {
            .addBlankField()
            .addField("__**Communauté**__","Questions sur la partie communautaire.")
            .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
+           .addField("Qu'est-ce que les @Guide de Ritania ?","Les @Guide de Ritania sont chargés de vous aider, si vous avez besoin d'aide, n'hésitez pas à leur demander de l'aide grâce au ping du rôle dans le salon #astuces-questions. Tous abus du ping sera sanctionné.")
+           .addField("Il y a t-il des bots disponibles dédié à Epic Seven ?","Oui, il y a actuellement 2 bots sur Epic Seven disponible sur le discord. Le premier est @Iseria Bot qui est mis à jour très souvent, sa seule commande pour le moment est *7character* <NAME>. L'autre est en français mais étant donné la masse de traduction à faire les mises à jour sont plus rares, pour en savoir plus effectuez la commande *$personnages* ou *$help*")
+           .addField("J'ai un compte où je ne joue plus dessus / que j'abandonne, j'aimerais le donner/vendre, est-ce possible ?","Bien ce que ce discord ne soit pas officiel, nous sommes en respect des ToS de Epic Seven, par conséquent, les dons / ventes de compte sont totalement interdites, nous ne voulons rien voir concernant ceux-ci sur le discord.")
+           .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creators. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
+           .addBlankField()
+           .addField("__**Divers**__","Questions diverses sur le jeu, sur la communauté, etc.")
+           .addField("Est-il possible de jouer à Epic 7 sur émulateur ?","Oui, il est possible de jouer au jeu sur la plupart des émulateurs.")
+           .addField("Je joue sur Nox, et j'ai des carrés blanc qui apparaissent, qu'est-ce que je dois faire ?","Il y a actuellement un problème avec tous les émulateurs avec le mode de graphique DirectX, pour régler ce problème vous devez faire tourner votre émulateur sur OpenGL (Cela risque toutefois d'être légèrement moins rapide). Ce bug peut rester même après avoir changé de mode graphique, dans ce cas-là, supprimez cette instance de votre émulateur, et re-créez en une !")
+           .addField("Comment optimisez les FPS et la fluidité de son jeu sur __Android__","Aller dans vos paramètres > Tout en bas 'À propos' > Numéro de version (vous cliquez 7 fois pour activer le mode développeur) > Revenez dans vos paramètres > Options développeurs > Cocher la case 'Forcer MSAA 4x'")
            .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
         message.channel.sendEmbed(embed);
 
