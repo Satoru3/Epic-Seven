@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.2 | Version bêta du $rps");
+    bot.user.setActivity("$help | V 1.1.2 | $rps supprimé suite à certains problèmes.");
     console.log("Je suis connecté !");
 });
 
@@ -31,51 +31,6 @@ bot.on('message', message => {
     message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
     
     }
-     	      
-    let rock2 = ["Papier ! J'ai gagné !", "Ciseaux ! Tu gagnes ^_^ !"]
-    let rock1 = Math.floor(Math.random() * rock2.length);
-  
-    let paper2 = ["Pierre ! Aaaah.. Tu as gagné !", "Ciseaux ! Héhé, je gagne !"]
-    let paper1 = Math.floor(Math.random() * paper2.length);
-  
-    let scissors2 = ["Pierre ! Désolé, mais cette fois-ci, je gagne !", "Papier ! La prochaine fois, tu ne gagneras pas !"]
-    let scissors1 = Math.floor(Math.random() * scissors2.length);
-  
-  let rock = new Discord.RichEmbed()
-  .setAuthor("Pierre, Papier, Ciseaux")
-  .setColor("#6b5858")
-  .addField("Tu as choisi :","_")
-  .addField("J'ai choisi :", rock2[rock1])
-  
-  let paper = new Discord.RichEmbed()
-  .setAuthor("Pierre, Papier, Ciseaux")
-  .setColor("#6b5858")
-  .addField("Tu as choisi :","_")
-  .addField("Hm... Je prend :", paper2[paper1])
-  
-  let scissors = new Discord.RichEmbed()
-  .setAuthor("Pierre, Papier, Ciseaux")
-  .setColor("#6b5858")
-  .addField("Tu as choisi :","_")
-  .addField("Cette fois-ci, je choisi :", scissors2[scissors1])
-   
-  if (message.content === prefix + "rps pierre") message.channel.send(rock)
-  if (message.content === prefix + "rps Pierre") message.channel.send(rock)
-  if (message.content === prefix + "rps pi") message.channel.send(rock)
-  
-  if (message.content === prefix + "rps papier") message.channel.send(paper)
-  if (message.content === prefix + "rps Papier") message.channel.send(paper)
-  if (message.content === prefix + "rps p") message.channel.send(paper)
-  
-  if (message.content === prefix + "rps ciseaux") message.channel.send(scissors)
-  if (message.content === prefix + "rps Ciseaux") message.channel.send(scissors)
-  if (message.content === prefix + "rps c") message.channel.send(scissors)
-  
-  
-  if (message.content === prefix + "rps") message.channel.send("Options: ``Pierre``, ``Papier``, ``Ciseaux``. *Utilisation correcte: $rps <option>*")
-    
-    })
-
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
@@ -352,4 +307,4 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
         console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
 
-})
+    }})
