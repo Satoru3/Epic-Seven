@@ -51,13 +51,13 @@ bot.on('message', message => {
 
    if (message.content === prefix + "E7 faq"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Foire aux Questions [FAQ]__Jeu__")
+           .setTitle("Foire aux Questions [FAQ] __**Jeu**__")
            .addField("Qu'est-ce que la Readiness et l'Effectiveness ?","La Readiness, c'est la vitesse d'attaque que vous trouvez pendant vos combats à gauche (la barre avec les personnages). Plus vous en avez, plus votre personnage tapera souvent (sa vitesse de tour sera supérieure). L'effectiveness est une stat qui réduit la stat 'Effect Resistance' du personnage en face. (Par exemple, si Silk a 80% de chance de proc son débuff sur l'adversaire, et que l'adversaire a 40% d'effect resistance, si celle-ci a 20% d'effectiveness, l'effect resistance de l'adversaire va être diminué de 20%. Ce qui nous donnera donc 80 - 20%, Silk aura 60% de chance d'appliquer son débuff.)")
            .addField("Comment puis-je accéder au rerolling ?","La fonctionnalité de reroll est débloqué après avoir terminé le stage 1-10.")
            .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
            .addField("J'ai reroll plus de 50 fois, mais je n'ai toujours pas eu la fille trop canon avec la faux, que faire ?","C'est tout à fait normal, les unités de type Dark et Light sont réservés à l'end-game. Tant que vous n'avez pas terminé le stage 10-10, vous ne pourrez pas accéder au portail des Dark et Light.")
            .addField("Quelles sont les unités importantes à avoir pour bien commencer le jeu ?","Rendez-vous sur cette page : http://epic7guide.pcriot.com/unites-importantes/")
-           .addField("Communauté","Questions sur la partie communautaire.")
+           .addField("__**Communauté**__","Questions sur la partie communautaire.")
            .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
            .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
         message.channel.sendEmbed(embed);
