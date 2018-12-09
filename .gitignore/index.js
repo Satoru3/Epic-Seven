@@ -74,7 +74,7 @@ bot.on('message', message => {
   
   if (message.content === prefix + "rps") message.channel.send("Options: ``Pierre``, ``Papier``, ``Ciseaux``. *Utilisation correcte: $rps <option>*")
     
-    }
+    })
 
 
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
