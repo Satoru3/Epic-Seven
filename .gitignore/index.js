@@ -73,156 +73,6 @@ bot.on('message', message => {
   
   
   if (message.content === prefix + "rps") message.channel.send("Options: ``Pierre``, ``Papier``, ``Ciseaux``. *Utilisation correcte: $rps <option>*")
-	    
-
-    if (message.content.startsWith (prefix + "warn")){
-
-module.exports.run = async (bot, message, args) => { // Run the command when a command is called
-
-    var Discord = require('discord.js');
-    var db = require('quick.db')
-    var send = require('quick.hook')
-
-    try {
-    if (!message.member.hasPermission('KICK_MEMBERS')) return send(message.channel, "Sorry, but you do not have valid permissions! If you believe this is an error, contact an owner.", {
-        name: 'Warn Error',
-        icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-    })
-    const modlog = message.guild.channels.find(channel => channel.name === 'mod-log');
-    const warnlog = message.guild.channels.find(channel => channel.name === 'warnings');
-    const mod = message.author;
-    let user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if (!args[0]) return send(message.channel, 'Please specify a person & reason for the warn! `-!warn <Zinx#9129> <reason>`', {
-        name: 'Warn Error',
-        icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-    })
-    let reason = message.content.split(" ").slice(2).join(" ");
-    if (!reason) return send(message.channel, 'Please specify a person & reason for the warn!', {
-        name: 'Warn Error',
-        icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-    })
-    const casenumbers = new db.table('CASENUMBERs')
-    const guildcasenumber = await casenumbers.fetch(`case_${message.guild.id}`)
-    const a = guildcasenumber
-    const b = a + 1
-    casenumbers.set(`case_${message.guild.id}`, b)
-    //  console.log(guildcasenumber)
-    const numberwarn = new db.table('WARNNUMBERs')
-    const num1 = await numberwarn.fetch(`user_${user.id}_${message.guild.id}`)
-    const y = 1
-    const m = y + num1
-    numberwarn.set(`user_${user.id}_${message.guild.id}`, m)
-    // console.log(num1)
-
-
-    if(!guildcasenumber == Number) {
-        casenumbers.set(`case_${message.guild.id}`, 1)
-    }
-
-    if(!num1 == Number) {
-        db.set(`user_${user.id}_${message.guild.id}`, 1)
-    }
-
-    if (!modlog) return message.channel.send('**Please create a channel with the name `mod-log`**')
-    if (!warnlog) return message.channel.send('**Please create a channel with the name `warnings`**')
-    
-        //user.kick({ reason: `${reason}`})
-        const userwarn = new db.table('USERWARNINGs')
-        const num2 = await numberwarn.fetch(`user_${user.id}_${message.guild.id}`)
-        const warns = await userwarn.fetch(`warn_${user.id}_${num2}_${message.guild.id}`)
-        userwarn.set(`warn_${user.id}_${num2}_${message.guild.id}`, reason)
-
-    if (user) {
-
-        if (!user) return send(message.channel, "Couldn't find user.", {
-            name: 'Warn Error',
-            icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-        })
-        if (user.hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return send(message.channel, "The user you are trying to warn is either an Admin or someone who has Administration Rights", {
-            name: 'Warn Error',
-            icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-        })
-
-        if (num2 == 3){
-            const kickEmbed = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Has Been Kicked Due To Recieving 3 Warnings.\n**Reason**: ${reason}`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Staff UID ${mod.id} | Staff User ${mod.tag}`)
-            send(modlog, kickEmbed, {
-                name: 'Warn',
-                icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-            }) .catch(() => message.reply("Cannot post in your mod-log! Have you set my permissions correctly?"));
-            const kickEmbedpub = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Has Been Kicked Due To Recieving 3 Warnings.\n**Reason**: ${reason}`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Contact Staff If You Think This Is An Error`)
-            send(warnlog, kickEmbedpub, {
-                name: 'Warn',
-                icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-            }) .catch(() => message.reply("Cannot post in your warn-log! Have you set my permissions correctly?"));
-        user.send(`You have been warned & kicked in ${message.guild.name}\n**Reason**: ${reason}\n\nTotal Warnings: ${num2}`) .catch(() => message.reply("Cannot Send Direct Message To "+user));
-        message.guild.member(user).kick(reason)
-        } else if (num2 >= 4) {
-            const banEmbed = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Has Been Banned Due To Recieving 4 Warnings.\n**Reason**: ${reason}`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Staff UID: ${mod.id} | Staff User: ${mod.tag}`)
-            send(modlog, banEmbed, {
-                name: 'Warn',
-                icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-            }) .catch(() => message.reply("Cannot post in your mod-log! Have you set my permissions correctly?"));
-            const banEmbedpub = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Has Been Banned Due To Recieving 4 Warnings.\n**Reason**: ${reason}\n\n`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Contact Staff If You Think This Is An Error`)
-            send(warnlog, banEmbedpub, {
-                name: 'Warn',
-                icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-            }) .catch(() => message.reply("Cannot post in your warn-log! Have you set my permissions correctly?"));
-        user.send(`You have been banned in ${message.guild.name}\n**Reason**: ${reason}\n\nTotal Warnings: ${num2}`) .catch(() => message.reply("Cannot Send Direct Message To "+user));
-        numberwarn.set(`user_${user.id}_${message.guild.id}`, 0)
-        message.guild.member(user).ban(reason).catch(() => message.reply("Cannot Ban "+user+ "! Give me permissions!"));
-        } else {
-
-        const warnEmbed = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Has Been Warned\n**Reason**: ${reason}\n\nTotal Warnings: ${num2}`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Staff UID: ${mod.id} | Staff User: ${mod.tag}`)
-        send(modlog, warnEmbed, {
-            name: 'Warn',
-            icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-        }) .catch(() => message.reply("Cannot post in your mod-log! Have you set my permissions correctly?"));
-        const warnEmbedpub = new Discord.RichEmbed()
-            .setAuthor('Warn')
-            .setDescription(`**Case Number**: ${guildcasenumber}\n\nUser <@${user.id}> Was Warned\n**Reason**: ${reason}\n\nTotal Warnings: ${num2}`)
-            .setColor('DARK_RED')
-            .setTimestamp()
-            .setThumbnail(user.displayAvatarURL)
-            .setFooter(`Contact Admins If You Think This Is An Error`)
-        send(warnlog, warnEmbedpub, {
-            name: 'Warn',
-            icon: 'https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/denied-512.png'
-        }) .catch(() => message.reply("Cannot post in your warn-log! Have you set my permissions correctly?"));
-        user.send(`You have been warned in ${message.guild.name}, Total Warnings: ${num2}\n**Reason**: ${reason}`) .catch(() => message.reply("Cannot Send Direct Message To "+user));
-        }}
-    }catch(err) {console.log(`Error with Warnings ${err}`)}}
-        console.log("Warn envoyé suite à la demande de " + message.author.username);
-
     
     }
 
@@ -241,6 +91,20 @@ module.exports.run = async (bot, message, args) => { // Run the command when a c
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
+
+    }
+
+   if (message.content === prefix + "E7 faq"){
+       var embed = new Discord.RichEmbed()
+           .setTitle("Foire aux Questions [FAQ]__Jeu__")
+           .addField("Qu'est-ce que la Readiness et l'Effectiveness ?","La Readiness, c'est la vitesse d'attaque que vous trouvez pendant vos combats à gauche (la barre avec les personnages). Plus vous en avez, plus votre personnage tapera souvent (sa vitesse de tour sera supérieure). L'effectiveness est une stat qui réduit la stat 'Effect Resistance' du personnage en face. (Par exemple, si Silk a 80% de chance de proc son débuff sur l'adversaire, et que l'adversaire a 40% d'effect resistance, si celle-ci a 20% d'effectiveness, l'effect resistance de l'adversaire va être diminué de 20%. Ce qui nous donnera donc 80 - 20%, Silk aura 60% de chance d'appliquer son débuff.)")
+           .addField("Comment puis-je accéder au rerolling ?","La fonctionnalité de reroll est débloqué après avoir terminé le stage 1-10.")
+           .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
+           .addField("J'ai reroll plus de 50 fois, mais je n'ai toujours pas eu la fille trop canon avec la faux, que faire ?","C'est tout à fait normal, les unités de type Dark et Light sont réservés à l'end-game. Tant que vous n'avez pas terminé le stage 10-10, vous ne pourrez pas accéder au portail des Dark et Light.")
+           .addField("Quelles sont les unités importantes à avoir pour bien commencer le jeu ?","Rendez-vous sur cette page : http://epic7guide.pcriot.com/unites-importantes/")
+           .addField("Communauté","Questions sur la partie communautaire.")
+           .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
+           .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
 
     }
 	
