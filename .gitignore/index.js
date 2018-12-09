@@ -60,6 +60,7 @@ bot.on('message', message => {
            .addField("Communauté","Questions sur la partie communautaire.")
            .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
            .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
+        message.channel.sendEmbed(embed);
 
     }
 	
