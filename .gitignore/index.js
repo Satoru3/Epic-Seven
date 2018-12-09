@@ -57,7 +57,7 @@ bot.on('message', message => {
            .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
            .addField("J'ai reroll plus de 50 fois, mais je n'ai toujours pas eu la fille trop canon avec la faux, que faire ?","C'est tout à fait normal, les unités de type Dark et Light sont réservés à l'end-game. Tant que vous n'avez pas terminé le stage 10-10, vous ne pourrez pas accéder au portail des Dark et Light.")
            .addField("Quelles sont les unités importantes à avoir pour bien commencer le jeu ?","Rendez-vous sur cette page : http://epic7guide.pcriot.com/unites-importantes/")
-           .setBlank()
+           .addBlank()
            .addField("__**Communauté**__","Questions sur la partie communautaire.")
            .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
            .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
