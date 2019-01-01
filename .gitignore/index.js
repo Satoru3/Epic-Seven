@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.2 | $rps supprimé suite à certains problèmes.");
+    bot.user.setActivity("$help | V 1.1.3 | Commande $tierlist actualisé | Corrections bugs mineurs.");
     console.log("Je suis connecté !");
 });
 
@@ -17,8 +17,8 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `$rps` En dev \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n $catalyst Modif par imgs later \n ~~$artefacts~~", true)
+            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n ~~$artefacts~~", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -245,7 +245,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("Lien de la tierlist : <https://docs.google.com/spreadsheets/d/1lkxK70iBsRzIq3Cw0x7UO15-Y9uR--KAKe4UKUM95iY/htmlview?usp=sharing&sle=true>")
+       message.channel.send("Lien de la tierlist : <https://docs.google.com/spreadsheets/d/1KujBTG5uArk4gJYd4k05hzV8eLbdMUyOhbXZ05DWEWE/htmlview?sle=true#>")
 
     }
 
