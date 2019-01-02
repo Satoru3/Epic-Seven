@@ -70,6 +70,7 @@ bot.on('message', message => {
            .addField("J'ai un compte où je ne joue plus dessus / que j'abandonne, j'aimerais le donner/vendre, est-ce possible ?","Bien ce que ce discord ne soit pas officiel, nous sommes en respect des ToS de Epic Seven, par conséquent, les dons / ventes de compte sont totalement interdites, nous ne voulons rien voir concernant ceux-ci sur le discord.")
            .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creators. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
            .addField("Je cherche le lien de la tierlist / du guide des catalysts, où puis-je les trouver ?","Effectuez les commandes *$tierlist* &/ou *$catalysts*, cela vous procurera les liens !")
+           .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
            .addBlankField()
            .addField("__**Divers**__","Questions diverses sur le jeu, sur la communauté, etc.")
            .addField("Est-il possible de jouer à Epic 7 sur émulateur ?","Oui, il est possible de jouer au jeu sur la plupart des émulateurs.")
