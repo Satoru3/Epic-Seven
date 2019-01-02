@@ -51,7 +51,8 @@ bot.on('message', message => {
 
    if (message.content === prefix + "E7 faq"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Foire aux Questions [FAQ] __**Jeu**__")
+           .setTitle("Foire aux Questions [FAQ] Partie 1")
+           .addField("__**Jeu**__","Questions concernant le jeu en lui-même.")
            .addField("Qu'est-ce que la Readiness et l'Effectiveness ?","La Readiness, c'est la vitesse d'attaque que vous trouvez pendant vos combats à gauche (la barre avec les personnages). Plus vous en avez, plus votre personnage tapera souvent (sa vitesse de tour sera supérieure). L'effectiveness est une stat qui réduit la stat 'Effect Resistance' du personnage en face. (Par exemple, si Silk a 80% de chance de proc son débuff sur l'adversaire, et que l'adversaire a 40% d'effect resistance, si celle-ci a 20% d'effectiveness, l'effect resistance de l'adversaire va être diminué de 20%. Ce qui nous donnera donc 80 - 20%, Silk aura 60% de chance d'appliquer son débuff.)")
            .addField("Comment puis-je accéder au rerolling ?","La fonctionnalité de reroll est débloqué après avoir terminé le stage 1-10.")
            .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
@@ -71,14 +72,18 @@ bot.on('message', message => {
            .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creators. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
            .addField("Je cherche le lien de la tierlist / du guide des catalysts, où puis-je les trouver ?","Effectuez les commandes *$tierlist* &/ou *$catalysts*, cela vous procurera les liens !")
            .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
-           .addBlankField()
+           .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/18. Par @Ran")
+        message.channel.sendEmbed(embed);
+
+       var bembed = new Discord.RichEmbed()
+           .setTitle("Foire aux Questions [FAQ] Partie 2")
            .addField("__**Divers**__","Questions diverses sur le jeu, sur la communauté, etc.")
            .addField("Est-il possible de jouer à Epic 7 sur émulateur ?","Oui, il est possible de jouer au jeu sur la plupart des émulateurs.")
            .addField("Je joue sur Nox, et j'ai des carrés blanc qui apparaissent, qu'est-ce que je dois faire ?","Il y a actuellement un problème avec tous les émulateurs avec le mode de graphique DirectX, pour régler ce problème vous devez faire tourner votre émulateur sur OpenGL (Cela risque toutefois d'être légèrement moins rapide). Ce bug peut rester même après avoir changé de mode graphique, dans ce cas-là, supprimez cette instance de votre émulateur, et re-créez en une !")
            .addField("Comment optimisez les FPS et la fluidité de son jeu sur __Android__","Aller dans vos paramètres > Tout en bas 'À propos' > Numéro de version (vous cliquez 7 fois pour activer le mode développeur) > Revenez dans vos paramètres > Options développeurs > Cocher la case 'Forcer MSAA 4x'")
-           .setFooter("FAQ du Discord Epic Seven FR. Mise à jour le 09/12/18.")
-        message.channel.sendEmbed(embed);
-
+           .setFooter("Partie II FAQ du Discord Epic Seven FR. Mise à jour le 02/01/18. Par @Ran")
+       message.channel.sendEmbed(bembed);
+	   
     }
 	
         // Epic Seven Héros = Ras
