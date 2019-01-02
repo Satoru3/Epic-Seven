@@ -72,7 +72,7 @@ bot.on('message', message => {
            .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creators. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
            .addField("Je cherche le lien de la tierlist / du guide des catalysts, où puis-je les trouver ?","Effectuez les commandes *$tierlist* &/ou *$catalyst*, cela vous procurera les liens !")
            .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
-           .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19. Par @Ran")
+           .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
         message.channel.sendEmbed(embed);
 
        var bembed = new Discord.RichEmbed()
@@ -81,7 +81,7 @@ bot.on('message', message => {
            .addField("Est-il possible de jouer à Epic 7 sur émulateur ?","Oui, il est possible de jouer au jeu sur la plupart des émulateurs.")
            .addField("Je joue sur Nox, et j'ai des carrés blanc qui apparaissent, qu'est-ce que je dois faire ?","Il y a actuellement un problème avec tous les émulateurs avec le mode de graphique DirectX, pour régler ce problème vous devez faire tourner votre émulateur sur OpenGL (Cela risque toutefois d'être légèrement moins rapide). Ce bug peut rester même après avoir changé de mode graphique, dans ce cas-là, supprimez cette instance de votre émulateur, et re-créez en une !")
            .addField("Comment optimisez les FPS et la fluidité de son jeu sur __Android__","Aller dans vos paramètres > Tout en bas 'À propos' > Numéro de version (vous cliquez 7 fois pour activer le mode développeur) > Revenez dans vos paramètres > Options développeurs > Cocher la case 'Forcer MSAA 4x'")
-           .setFooter("Partie II FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19. Par @Ran")
+           .setFooter("Partie II FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
        message.channel.sendEmbed(bembed);
 	   
     }
