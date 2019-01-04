@@ -271,12 +271,44 @@ bot.on('message', message => {
     if (message.content === prefix + "holy"){
         var embed = new Discord.RichEmbed()
             .setTitle("Holy Sacrifice :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:star:")
-            .setDescription("La Statue de la Grâce est donnée aux chevaliers qui gagnent la faveur de la déesse,  celle-ci les sauveras une fois avant de se briser en morçeaux.")
+            .setDescription("La Statue de la Grâce est donnée aux chevaliers qui gagnent la faveur de la déesse,  celle-ci les sauveras une fois avant de se briser en morçeaux. Écrit par Barrett [Trésor du Saint Empire, 15p]")
             .setColor("RANDOM")
             .setFooter("Artefact Holy Sacrifice demandé par " + message.author.username + ". " + "Fiche mise à jour le 05/01/19.")
             .setThumbnail("https://www.zupimages.net/up/19/01/un9a.jpg")
             .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
             .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+	
+				// Epic Seven Artefact = Elbris Ritual Sword
+    if (message.content === prefix + "elbris"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Elbris Ritual Sword :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:star:")
+            .setDescription("Épée de cérémonie transmise par les Elfes depuis des milliers d'années, la lame est imprégnée de plusieurs sources de magie. Celui possédant cette épée devient le roi des Elfes.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Elbris Ritual Sword demandé par " + message.author.username + ". " + "Fiche mise à jour le 05/01/19.")
+            .setThumbnail("https://zupimages.net/up/19/01/d1hj.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "**10%** de chance de contre-attaquer quand un allié est attaqué.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "**20%** de chance de contre-attaquer quand un allié est attaqué.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **15** | Vie : **54**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **195** | Vie : **702**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+	
+			  // Epic Seven Artefact = Noble Oath
+    if (message.content === prefix + "noble"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Noble Oath :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:star:")
+            .setDescription("Un emblème donné aux membres de l'Ordre d'Ezera après qu'ils se soient engagés à consacrer leur vie à la Déesse. Ceux donnés aux chevaliers ressemblent à un écusson, tandis que ceux donnés aux prêtres ressemblent à un chapelet.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Noble Oath demandé par " + message.author.username + ". " + "Fiche mise à jour le 05/01/19.")
+            .setThumbnail("https://zupimages.net/up/19/01/z2z8.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "Quand la vie diminue, la défense et l'effect resistance augmente de **25%**", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "Quand la vie diminue, la défense et l'effect resistance augmente de **50%**", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
 	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
 	message.channel.sendEmbed(embed)
