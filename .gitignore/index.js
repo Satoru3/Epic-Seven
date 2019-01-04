@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.4 | Début ajout artefacts | Reprise ajout héros '| Refonte des commandes soon.");
+    bot.user.setActivity("$help | V 1.1.5 | Ajouts artefacts 5* Knights & de la commande $camp | Soon : Ajouts de 3 Héros.");
     console.log("Je suis connecté !");
 });
 
