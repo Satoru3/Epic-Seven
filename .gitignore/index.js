@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.3 | Commande $tierlist actualisé | Corrections bugs mineurs.");
+    bot.user.setActivity("$help | V 1.1.4 | Début ajout artefacts | Reprise ajout héros '| Refonte des commandes soon.");
     console.log("Je suis connecté !");
 });
 
@@ -18,7 +18,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n ~~$artefacts~~", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -27,26 +27,33 @@ bot.on('message', message => {
 	
     }
 
-    if (message.content === prefix +"e7"){
-    message.channel.send("**Utilisation correcte** : $e7 <personnage> | Si tu ne connais pas les personnages disponible, utilise la commande $personnages.")
-    
-    }
-
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$e7 sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$e7 iseria**","Commande relative a Iseria. En cours. | 5 :star: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
-            .addField("**$e7 yuna**","Fais apparaître la commande relative a Yuna. | 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
-            .addField("**$e7 tywin**","Commande relative a Tywin. En cours. | 5 :star <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
-            .addField("**$e7 karin**","Commande relative a Karin. En cours.", true)
-            .addField("**$e7 ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
+            .addField("**$sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$iseria**","Commande relative a Iseria. En cours. | 5 :star: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
+            .addField("**$yuna**","Fais apparaître la commande relative a Yuna. | 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
+            .addField("**$tywin**","Commande relative a Tywin. En cours. | 5 :star: <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
+            .addField("**$karin**","Commande relative a Karin. En cours.", true)
+            .addField("**$ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Ajout des éléments, et des étoiles.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
 
+    }
+	
+        if (message.content === prefix + "artefacts"){ //Commande relative aux artefacts d'Epic Seven
+        var embed = new Discord.RichEmbed()
+            .setTitle(":black_small_square: **Artefacts** :black_small_square:")
+            .addField("**$sigurd**","Infos sur l'artefact Sigurd Scythe. | 5 :star: <:e7combattant:506111308635308032>", true)
+            .setColor("RANDOM")
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 04/01/19")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
+	message.channel.sendEmbed(embed);
+        console.log("Page de personnage générée suite à une demande de " + message.author.username);
+		
     }
 
    if (message.content === prefix + "E7 faq"){
@@ -201,13 +208,14 @@ bot.on('message', message => {
 
     }
 
+
         // Epic Seven Héros = Karin
     if (message.content === prefix + "e7 karin"){
         var embed = new Discord.RichEmbed()
             .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion ")
-            .setDescription("En traduction.")
+            .setDescription("Alors que le clair de lune révélait un personnage tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Karin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
+            .setFooter("Artefact Sigurd Scythe " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/karin/karin_0000.png")
             .setImage("https://j.gifs.com/kZGmrv.gif")
             .addField(":speech_balloon: Citation :", "Sa Citation n'a pas été dévoilée.", false)
@@ -223,6 +231,23 @@ bot.on('message', message => {
 	})	    
 
     }
+	
+	        // Epic Seven Artefact = Sigurd Scythe
+    if (message.content === prefix + "sigurd"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032>")
+            .setDescription("Alors que le clair de lune révélait une personne tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
+            .setColor("RANDOM")
+            .setFooter("Artefact Sigurd Scythe demandé par " + message.author.username + ". " + "Fiche mise à jour le 04/01/19.")
+            .setThumbnail("https://www.zupimages.net/up/19/01/wchj.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **25%** des dégâts infligés pour les convertir en vie.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **50%** des dégâts infligés pour les convertir en vie.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
