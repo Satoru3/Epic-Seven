@@ -99,7 +99,7 @@ bot.on('message', message => {
     }
 	
         // Epic Seven Héros = Ras
-    if (message.content === prefix + "e7 ras"){
+    if (message.content === prefix + "ras"){
         var embed = new Discord.RichEmbed()
             .setTitle("Ras Elclare :black_small_square: <:elementfeu:506109794608742401> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Balance ")
             .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de __Ras__.")
@@ -119,7 +119,7 @@ bot.on('message', message => {
     }
 
         // Epic Seven Héros = Yuna
-    if (message.content === prefix + "e7 yuna"){
+    if (message.content === prefix + "yuna"){
         var embed = new Discord.RichEmbed()
             .setTitle("Yuna Woo :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
@@ -139,7 +139,7 @@ bot.on('message', message => {
     }
 
         // Epic Seven Héros = Iseria
-    if (message.content === prefix + "e7 iseria"){
+    if (message.content === prefix + "iseria"){
         var embed = new Discord.RichEmbed()
             .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion ")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
@@ -159,7 +159,7 @@ bot.on('message', message => {
     }
 
         // Epic Seven Héros = Sez
-    if (message.content === prefix + "e7 sez"){
+    if (message.content === prefix + "sez"){
         var embed = new Discord.RichEmbed()
             .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge ")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
@@ -179,7 +179,7 @@ bot.on('message', message => {
     }
 
         // Epic Seven Héros = Tywin
-    if (message.content === prefix + "e7 tywin"){
+    if (message.content === prefix + "tywin"){
         var embed = new Discord.RichEmbed()
             .setTitle("Tywin Herad :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Bélier ")
             .setDescription("En traduction.")
@@ -200,7 +200,7 @@ bot.on('message', message => {
 
 
         // Epic Seven Héros = Karin
-    if (message.content === prefix + "e7 karin"){
+    if (message.content === prefix + "karin"){
         var embed = new Discord.RichEmbed()
             .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion ")
             .setDescription("Alors que le clair de lune révélait un personnage tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
@@ -254,7 +254,7 @@ bot.on('message', message => {
 			        // Epic Seven Artefact = Uberious's Tooth
     if (message.content === prefix + "uberius"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Uberius's Tooth:black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:star:")
+            .setTitle("Uberius's Tooth :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:star:")
             .setDescription("Trésor de la famille royale de Wintenberg fabriqué à partir des restes du dragon Uberius. On dit qu'il est capable de déchirer une armure de dragon.")
             .setColor("RANDOM")
             .setFooter("Artefact Uberius's Tooth demandé par " + message.author.username + ". " + "Fiche mise à jour le 04/01/19.")
@@ -263,6 +263,22 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'infliger des dégâts supplémentaires si un coup critique est infligé lors d'une attaque basique. Les dégâts supplémentaires sont proportionnels à l'attaque du lanceur.", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
 	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+	
+				        // Epic Seven Artefact = Holy Sacrifice
+    if (message.content === prefix + "holy"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Holy Sacrifice :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:star:")
+            .setDescription("La Statue de la Grâce est donnée aux chevaliers qui gagnent la faveur de la déesse,  celle-ci les sauveras une fois avant de se briser en morçeaux.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Holy Sacrifice demandé par " + message.author.username + ". " + "Fiche mise à jour le 05/01/19.")
+            .setThumbnail("https://www.zupimages.net/up/19/01/un9a.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
 	message.channel.sendEmbed(embed)
 
     }
