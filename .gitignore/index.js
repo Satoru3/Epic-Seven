@@ -358,6 +358,11 @@ bot.on('message', message => {
     if (message.content === prefix + "catalyst"){ //Guide Catalyst
        message.channel.send("Lien du guide des catalysts : <https://docs.google.com/spreadsheets/d/1UMIduFBIVc9OAoI-BeQ-LjPeihcziqXEzXw8n58bEd0/htmlview?usp=sharing&sle=true>")
     }
+	
+    if (message.content === prefix + "camp"){ //Moral labyrinthe
+       message.channel.send("Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe : http://ulmo18.phps.kr/epic7.php?L=en")
+   
+    }
 
     if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
         let boticon = bot.user.displayAvatarURL;
