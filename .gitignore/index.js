@@ -48,6 +48,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Artefacts** :black_small_square:")
             .addField("**$sigurd**","Infos sur l'artefact Sigurd Scythe. | 5 :star: <:e7combattant:506111308635308032>", true)
+            .addField("**$durandal**","Infos sur l'artefact Durandal. | 5 :star: <:e7combattant:506111308635308032>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 04/01/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -244,6 +245,22 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.Max", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **50%** des dégâts infligés pour les convertir en vie.", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
 	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+	
+		        // Epic Seven Artefact = Durandal
+    if (message.content === prefix + "durandal"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Durandal :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:star:")
+            .setDescription("La lueur émise par l'épée protège son propriétaire de toutes blessures.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Durandal demandé par " + message.author.username + ". " + "Fiche mise à jour le 04/01/19.")
+            .setThumbnail("https://www.zupimages.net/up/19/01/fzpf.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "Si la vie du lanceur est inférieure à 75%, la Combat Readiness augmente de **8%** quand celui-ci est attaqué.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "Si la vie du lanceur est inférieure à 75%, la Combat Readiness augmente de **16%** quand celui-ci est attaqué", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **18** | Vie : **43**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **234** | Vie : **559**", false)
 	message.channel.sendEmbed(embed)
 
     }
