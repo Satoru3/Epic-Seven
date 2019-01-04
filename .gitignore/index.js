@@ -235,7 +235,7 @@ bot.on('message', message => {
 	        // Epic Seven Artefact = Sigurd Scythe
     if (message.content === prefix + "sigurd"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032>")
+            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032> :black_small_square: :star:")
             .setDescription("Alors que le clair de lune révélait une personne tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
             .setColor("RANDOM")
             .setFooter("Artefact Sigurd Scythe demandé par " + message.author.username + ". " + "Fiche mise à jour le 04/01/19.")
