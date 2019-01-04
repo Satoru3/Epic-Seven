@@ -49,6 +49,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Artefacts** :black_small_square:")
             .addField("**$sigurd**","Infos sur l'artefact Sigurd Scythe. | 5 :star: <:e7combattant:506111308635308032>", true)
             .addField("**$durandal**","Infos sur l'artefact Durandal. | 5 :star: <:e7combattant:506111308635308032>", true)
+            .addField("**$uberius**","Infos sur l'artefact Uberius's Tooth. | 5 :star: <:e7combattant:506111308635308032>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 04/01/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -261,6 +262,22 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.Max", "Si la vie du lanceur est inférieure à 75%, la Combat Readiness augmente de **16%** quand celui-ci est attaqué", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **18** | Vie : **43**", false)
 	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **234** | Vie : **559**", false)
+	message.channel.sendEmbed(embed)
+
+    }
+	
+			        // Epic Seven Artefact = Uberious's Tooth
+    if (message.content === prefix + "uberius"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Uberius's Tooth:black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:star:")
+            .setDescription("Trésor de la famille royale de Wintenberg fabriqué à partir des restes du dragon Uberius. On dit qu'il est capable de déchirer une armure de dragon.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Uberius's Tooth demandé par " + message.author.username + ". " + "Fiche mise à jour le 04/01/19.")
+            .setThumbnail("https://zupimages.net/up/19/01/b7ks.jpg")
+            .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'infliger des dégâts supplémentaires si un coup critique est infligé lors d'une attaque basique. Les dégâts supplémentaires sont proportionnels à l'attaque du lanceur.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'infliger des dégâts supplémentaires si un coup critique est infligé lors d'une attaque basique. Les dégâts supplémentaires sont proportionnels à l'attaque du lanceur.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
 	message.channel.sendEmbed(embed)
 
     }
