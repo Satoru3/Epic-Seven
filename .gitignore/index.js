@@ -112,12 +112,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Command Strike", "Attaque l'ennemi à plusieurs reprises, et déclenche une attaque simultanée avec l'allié le plus fort.", false)
             .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
-	console.log("La commande du Héros Ras viens d'être effectuée.");
+	message.channel.sendEmbed(embed)
 
-	})
+	console.log("La commande de l'Héros Ras viens d'être effectuée.");
 
     }
 
@@ -135,12 +132,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
             .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Attaque tous les ennemis avec un puissant canon géant infligeant d'énormes dégâts. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
-	console.log("La commande de l'Héroïne Yuna viens d'être effectuée.");
+	message.channel.sendEmbed(embed)
 
-	})
+	console.log("La commande de l'Héros Yuna viens d'être effectuée.");
 
     }
 
@@ -158,12 +152,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
             .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
-	console.log("La commande de l'Héroïne Iseria viens d'être effectuée.");
+	message.channel.sendEmbed(embed)
 
-	})
+	console.log("La commande de l'Héroïne Iseria viens d'être effectuée.");
 
     }
 
@@ -181,12 +172,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Encroach", "Si la santé d'un ennemi est inférieure à 50% après avoir été attaqué avec 'Dark Shadow', le lanceur effectue une seconde attaque qui frappe tous les ennemis. L'attaque supplémentaire a 50% de chances de rendre les cibles impossible a heal pendant 1 tour. Cet effet ne peut être activé qu'une seule fois au tour du lanceur.", false)
             .addField(":crossed_swords: Compétence 3: Death Sentence", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
-	console.log("La commande de l'Héros Sez viens d'être effectuée.");
+	message.channel.sendEmbed(embed)
 
-	})	    
+	console.log("La commande de l'Héros Sez viens d'être effectuée.");
 
     }
 
@@ -204,13 +192,10 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Commanding Shout", "En traduction.", false)
             .addField(":crossed_swords: Compétence 3: Full-Scale Attack", "En traduction.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
+	message.channel.sendEmbed(embed)
+	    
 	console.log("La commande de l'Héros Tywin viens d'être effectuée.");
-
-	})	    
-
+	    
     }
 
 
@@ -228,12 +213,9 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 2: Blade Art: Flash", "En traduction.", false)
             .addField(":crossed_swords: Compétence 3: Blade Art: Thunder", "En traduction.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed).then(msg => {
-        msg.react('❤')
-        msg.react('💔');
+	message.channel.sendEmbed(embed)
+	    
 	console.log("La commande de l'Héroïne Karin viens d'être effectuée.");
-
-	})	    
 
     }
 	
