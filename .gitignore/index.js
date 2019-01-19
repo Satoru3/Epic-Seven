@@ -360,7 +360,7 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "camp"){ //Moral labyrinthe
-       message.channel.send("Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe : http://ulmo18.phps.kr/epic7.php?L=en")
+       message.channel.send("```Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe :``` \n :arrow_right: https://epic7x.com/friendship-calculator/")
    
     }
 
