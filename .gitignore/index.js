@@ -346,7 +346,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: <https://docs.google.com/spreadsheets/d/1KujBTG5uArk4gJYd4k05hzV8eLbdMUyOhbXZ05DWEWE/htmlview?sle=true#> \n ```Autre tierlist :``` \n <https://epic7x.com/tier-list/>")
+       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: <https://docs.google.com/spreadsheets/d/1KujBTG5uArk4gJYd4k05hzV8eLbdMUyOhbXZ05DWEWE/htmlview?sle=true#> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
 
     }
 
