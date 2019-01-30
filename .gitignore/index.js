@@ -352,7 +352,7 @@ bot.on('message', message => {
 
 
     if (message.content === prefix + "site"){ //Site Epic 7 guide
-       message.channel.send("Lien du site : <http://epic7guide.pcriot.com>")
+       message.channel.send("```Lien du site :``` \n :arrow_right: <http://epicsevenfrance.pcriot.com/>")
     }
 
     if (message.content === prefix + "catalyst"){ //Guide Catalyst
