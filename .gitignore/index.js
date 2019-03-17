@@ -352,7 +352,7 @@ bot.on('message', message => {
 
 
     if (message.content === prefix + "site"){ //Site EpicSevenFrance
-       message.channel.send("```Lien du site :``` \n :arrow_right: <http://epicsevenfrance.pcriot.com/>")
+       message.channel.send("```Lien du site :``` \n :arrow_right: <http://epicsevenfrance.pcriot.com/> \n Site malheureusement fermé, nous verrons pour une possible réouverture.")
     }
 
     if (message.content === prefix + "catalyst"){ //Guide Catalyst
@@ -360,10 +360,14 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "camp"){ //Moral labyrinthe
-       message.channel.send("```Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe :``` \n :arrow_right: <https://epic7x.com/friendship-calculator/>")
+       message.channel.send("```Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe :``` \n :arrow_right: <https://epic7x.com/friendship-calculator/> \n ```Autre calculateur de moral``` \n :arrow_right: (**New**) <http://ulmo18.phps.kr/epic7.php?L=en>")
    
     }
 
+    if (message.content === prefix + "calc"){ //Calculateur équipement
+       message.channel.send("```Calculateur d'équipement :``` \n :arrow_right: <https://epic7.lsdl.kr/index.php/coordinator>")
+
+    }
 	
     if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
         let boticon = bot.user.displayAvatarURL;
