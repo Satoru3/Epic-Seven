@@ -434,20 +434,49 @@ bot.on("message", function(message) {
 
     }})
 
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
 
-bot.on('message', msg => {
-    if(msg.content[0] === prefix) {
-       if(msg.content === prefix + 'PSC') {
-	  let role = msg.guild.roles.find('name', 'Public Security Club (Mod)')
-	  
-	  if(msg.member.roles.find('name', 'Public Security Club (Mod)')) {
-	      msg.member.removeRole(role)
-	      msg.reply(`Rôle retiré mod`)
-	  }
-	   else {
-	      msg.member.addRole(role)
-	      msg.reply(`Ajout du rôle mod`)
-	   }
-       }
-    }
-})
+    if (!message.content.startsWith(prefix)) return;
+
+    var args = message.content.substring(prefix.length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+        case "chaton":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.channel.send("Désolé, tu dois rajouter un argument au pif derrière ta commande pour le moment. :cat:")};
+
+            var replys = [
+                "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
+                "https://www.catizz.com/medias/common/miaulement%20chat%20.jpg",
+                "https://jardinage.lemonde.fr/images/dossiers/2017-02/chaton-161407.jpg",
+                "https://conseils-veto.com/wp-content/uploads/2018/02/chat-malade.png",
+                "http://recueil-de-png.r.e.pic.centerblog.net/22f09c18.png",
+                "https://static.wamiz.fr/images/articles/facebook/article/eduquer-un-chat-fb-59ad52663bd71.jpg",
+                "https://jardinage.lemonde.fr/images/dossiers/2017-08/chaton-161238.jpg",
+                "https://media.giphy.com/media/14v0b6U1vucP1m/giphy.gif",
+                "https://thumbs.gfycat.com/WhirlwindHarshBighorn-size_restricted.gif",
+                "https://img3.grazia.fr/var/grazia/storage/images/media/images/what-s-the-buzz/gifs-chats/gif3/13466158-1-fre-FR/Gif3_width545.gif",
+                "https://static.mmzstatic.com/wp-content/uploads/2013/08/gifchat24.gif",
+                "https://data.photofunky.net/output/image/b/7/9/9/b79903/photofunky.gif",
+                "https://archzine.fr/wp-content/uploads/2016/01/le-plus-mignon-chaton-petit-chaton-mignon-chaton-image.jpg",
+                "http://madame.legorafi.fr/wp-content/uploads/2016/10/iStock_68465967_MEDIUM-800x600.jpg",
+
+       
+            ];
+
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription("Whaow, un petit chat !")
+            .setImage(reponse)
+            .setTimestamp()
+	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
+            
+
+
+        message.channel.sendEmbed(bembed)
+        console.log("La commande chaton viens d'être effectuée avec succès par " + message.author.username);
+
+    }})
