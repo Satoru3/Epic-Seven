@@ -437,16 +437,16 @@ bot.on("message", function(message) {
 
 bot.on('message', msg => {
     if(msg.content[0] === prefix) {
-       if(msg.content === prefix + 'gros château') {
-	  let role = msg.guild.roles.find('name', 'gros château')
+       if(msg.content === prefix + 'PSC') {
+	  let role = msg.guild.roles.find('name', 'Public Security Club (Mod)')
 	  
-	  if(msg.member.roles.find('name', 'gros château')) {
+	  if(msg.member.roles.find('name', 'Public Security Club (Mod)')) {
 	      msg.member.removeRole(role)
-	      msg.reply(`Rôle retiré Gros Château`)
+	      msg.reply(`Rôle retiré mod`)
 	  }
 	   else {
 	      msg.member.addRole(role)
-	      msg.reply(`Ajout du rôle Gros Château`)
+	      msg.reply(`Ajout du rôle mod`)
 	   }
        }
     }
