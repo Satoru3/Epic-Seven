@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.6 | Changement $tierlist | Soon : Ajouts de 3 Héros.");
+    bot.user.setActivity("$help | V 1.1.7 | $tierlist actualisée | Soon : Ajouts de 3 Héros.");
     console.log("Je suis connecté !");
 });
 
@@ -346,7 +346,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: (**New**) <https://docs.google.com/spreadsheets/d/16_LfZATe14-aj504Dqifgyzf7F3eb3A0gKhb4GPJE8A/edit#gid=2048628213> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
+       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: (**Actualisée | Discord EN**) <https://bit.ly/2GgJM1J> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
 
     }
 
