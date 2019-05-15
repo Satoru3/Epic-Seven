@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.1.7 | $tierlist actualisée | Soon : Ajouts de 3 Héros.");
+    bot.user.setActivity("$help | V 1.2.0 | Ajout de la commande $mapraid ");
     console.log("Je suis connecté !");
 });
 
@@ -18,7 +18,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","~~$kick~~", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc`", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -37,7 +37,7 @@ bot.on('message', message => {
             .addField("**$karin**","Commande relative a Karin. En cours.", true)
             .addField("**$ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Ajout des éléments, et des étoiles.")
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
@@ -81,7 +81,7 @@ bot.on('message', message => {
            .addField("Qu'est-ce que les @Guide de Ritania ?","Les @Guide de Ritania sont chargés de vous aider, si vous avez besoin d'aide, n'hésitez pas à leur demander de l'aide grâce au ping du rôle dans le salon #astuces-questions. Tous abus du ping sera sanctionné.")
            .addField("Il y a t-il des bots disponibles dédié à Epic Seven ?","Oui, il y a actuellement 2 bots sur Epic Seven disponible sur le discord. Le premier est @Iseria Bot qui est mis à jour très souvent, sa seule commande pour le moment est *7character* <NAME>. L'autre est en français mais étant donné la masse de traduction à faire les mises à jour sont plus rares, pour en savoir plus effectuez la commande *$personnages* ou *$help*")
            .addField("J'ai un compte où je ne joue plus dessus / que j'abandonne, j'aimerais le donner/vendre, est-ce possible ?","Bien ce que ce discord ne soit pas officiel, nous sommes en respect des ToS de Epic Seven, par conséquent, les dons / ventes de compte sont totalement interdites, nous ne voulons rien voir concernant ceux-ci sur le discord.")
-           .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creators. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
+           .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creative. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
            .addField("Je cherche le lien de la tierlist / du guide des catalysts, où puis-je les trouver ?","Effectuez les commandes *$tierlist* &/ou *$catalyst*, cela vous procurera les liens !")
            .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
            .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
@@ -208,7 +208,7 @@ bot.on('message', message => {
             .setFooter("Artefact Sigurd Scythe " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/karin/karin_0000.png")
             .setImage("https://j.gifs.com/kZGmrv.gif")
-            .addField(":speech_balloon: Citation :", "Sa Citation n'a pas été dévoilée.", false)
+            .addField(":speech_balloon: Citation :", "Non connue.", false)
             .addField(":crossed_swords: Compétence 1: Sequential Cutter", "En traduction.", false)
             .addField(":crossed_swords: Compétence 2: Blade Art: Flash", "En traduction.", false)
             .addField(":crossed_swords: Compétence 3: Blade Art: Thunder", "En traduction.", false)
@@ -367,6 +367,18 @@ bot.on('message', message => {
     if (message.content === prefix + "calc"){ //Calculateur équipement
        message.channel.send("```Calculateur d'équipement :``` \n :arrow_right: <https://epic7.lsdl.kr/index.php/coordinator>")
 
+    }
+
+    if (message.content === prefix + "mapraid"){
+        var embed = new Discord.RichEmbed()
+            .setTitle(":black_small_square: Raid normal :black_small_square:")
+            .setDescription("Une map des monstres, des mini-boss et des boss. La carte pour la version Hell du Raid arrivera bientôt.")
+            .setColor("RANDOM")
+            .setFooter("Carte du labyrinthe demandé par " + message.author.username + ". " + "Commande mise à jour le 15/05/19.")
+            .setThumbnail(user.displayAvatarURL)
+	    .setImage("https://i.imgur.com/CFIBXxY.jpg")
+	message.channel.sendEmbed(embed)
+	    
     }
 	
     if (message.content === prefix + "botinfos"){ //Commande d'infos sur le bot
