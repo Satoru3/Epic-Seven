@@ -435,6 +435,8 @@ bot.on("message", function(message) {
 		".....",
 		"Simple question: Tu peux la mettre en veilleuse ?",
 		"Je n'ai pas envie de répondre à ta question.",
+		"Tu ressembles à Enott...",
+		"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
                 
             ];
 
