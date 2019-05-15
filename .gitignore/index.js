@@ -374,7 +374,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: Raid normal :black_small_square:")
             .setDescription("Une map des monstres, des mini-boss et des boss. La carte pour la version Hell du Raid arrivera bientôt.")
             .setColor("RANDOM")
-            .setFooter("Carte du labyrinthe demandé par " + message.author.username + ". " + "Commande mise à jour le 15/05/19.")
+            .setFooter("Carte du Raid Labyrinth demandé par " + message.author.username + ". " + "Commande mise à jour le 15/05/19.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	    .setImage("https://i.imgur.com/CFIBXxY.jpg")
 	message.channel.sendEmbed(embed)
