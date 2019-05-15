@@ -428,6 +428,13 @@ bot.on("message", function(message) {
                 "Tu sais quoi ? Ferme-la !",
                 "Je suis fatigué de te répondre...",
                 "Tu es si magnifique... Tu m'éblouis !",
+		"Je m'ennuie... Tu es si ennuyant !",
+		".......... Pardon, tu m'as parlé ?",
+		"...Désolé... ce n'est pas que tu ne m'intéresses pas, mais.. malheureusement si.",
+		"Si tu veux, je vend des vies.",
+		".....",
+		"Simple question: Tu peux la mettre en veilleuse ?",
+		"Je n'ai pas envie de répondre à ta question.",
                 
             ];
 
