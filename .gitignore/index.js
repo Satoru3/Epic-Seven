@@ -15,7 +15,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
-            .addField("__**Modération**__","~~$kick~~", true)
+            .addField("__**Modération**__","~~$kick~~ \n ~~$mute~~, true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
@@ -30,12 +30,12 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$sez**","Fais apparaître la commande relative a Sez. | 5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$iseria**","Commande relative a Iseria. En cours. | 5 :star: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
-            .addField("**$yuna**","Fais apparaître la commande relative a Yuna. | 5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
-            .addField("**$tywin**","Commande relative a Tywin. En cours. | 5 :star: <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
-            .addField("**$karin**","Commande relative a Karin. En cours.", true)
-            .addField("**$ras**","Fais apparaître la commande relative a Ras. | 3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
+            .addField("**$sez**","5 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$iseria**","5 :star: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
+            .addField("**$yuna**","5 :star: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
+            .addField("**$tywin**","5 :star: <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
+            .addField("**$karin**","En cours. | 4 :star: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$ras**","3 :star: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -47,14 +47,14 @@ bot.on('message', message => {
         if (message.content === prefix + "artefacts"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Artefacts** :black_small_square:")
-            .addField("**$sigurd**","Infos sur l'artefact Sigurd Scythe. | 5 :star: <:e7combattant:506111308635308032>", true)
-            .addField("**$durandal**","Infos sur l'artefact Durandal. | 5 :star: <:e7combattant:506111308635308032>", true)
-            .addField("**$uberius**","Infos sur l'artefact Uberius's Tooth. | 5 :star: <:e7combattant:506111308635308032>", true)
-	    .addField("**$holy**","Infos sur l'artefact Holy Sacrifice. | 5 :star: <:e7chevalier:506111403489230868>", true)
-            .addField("**$elbris**","Infos sur l'artefact Elbris Ritual Sword. | 5 :star: <:e7chevalier:506111403489230868>", true)
-	    .addField("**$noble**","Infos sur l'artefact Noble Oath | 5 :star: <:e7chevalier:506111403489230868>", true)
+            .addField("**$sigurd**","Sigurd Scythe | 5 :star: <:e7combattant:506111308635308032>", true)
+            .addField("**$durandal**","Durandal | 5 :star: <:e7combattant:506111308635308032>", true)
+            .addField("**$uberius**","Uberius's Tooth | 5 :star: <:e7combattant:506111308635308032>", true)
+	    .addField("**$holy**","Holy Sacrifice | 5 :star: <:e7chevalier:506111403489230868>", true)
+            .addField("**$elbris**","Elbris Ritual Sword | 5 :star: <:e7chevalier:506111403489230868>", true)
+	    .addField("**$noble**","Noble Oath | 5 :star: <:e7chevalier:506111403489230868>", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 04/01/19")
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
@@ -346,7 +346,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: (**Actualisée | Discord EN**) <https://bit.ly/2GgJM1J> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
+       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: <https://bit.ly/2GgJM1J> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
 
     }
 
@@ -360,7 +360,7 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "camp"){ //Moral labyrinthe
-       message.channel.send("```Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe :``` \n :arrow_right: <https://epic7x.com/friendship-calculator/> \n ```Autre calculateur de moral``` \n :arrow_right: (**New**) <http://ulmo18.phps.kr/epic7.php?L=en>")
+       message.channel.send("```Simulateur pour connaître les réponses et maximiser votre moral dans le camp en labyrinthe :``` \n :arrow_right: <https://epic7x.com/friendship-calculator/> \n ```Autre calculateur de moral``` \n :arrow_right: <http://ulmo18.phps.kr/epic7.php?L=en>")
    
     }
 
