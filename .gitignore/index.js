@@ -368,19 +368,6 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed)
 	    
     }
-
-	if(message.content.startsWith(prefix + "del")){
-        if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
-            
-        let args = message.content.split(" ").slice(1);
-
-        if(args >= 100) return message.channel.send("Vous ne pouvez pas supprimé plus de 100 messages en une fois.")
-            
-        if(!args[0]) return message.channel.send("Vous n'avez pas précisé le nombre de messages à supprimer.")
-        message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send('${args[0]} messages ont été supprimés !');
-        })
-    }
 	
 	
 	// Commande d'avatar
