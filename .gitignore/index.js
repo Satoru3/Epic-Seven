@@ -267,6 +267,38 @@ bot.on('message', message => {
 
     }
 	
+				        // Epic Seven Artefact = Border Coin
+    if (message.content === prefix + "border"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Border Coin :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
+            .setDescription("Face, je ferai comme si je n'avais rien vu et te laisserai partir, mais pile... D'innombrables personnes ont mis en jeu leur fortune sur cette ancienne pièce d'or.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Border Coin demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
+            .setThumbnail("https://epic7x.com/wp-content/uploads/2019/03/zFjICyn.png")
+            .addField(":crossed_swords: Compétence Niv.1", "Augmente l'attaque de **7,5%** lors de l'utilisation d'une compétence n'infligeant pas de dégâts. L'effet peut se cumuler jusqu'à 3 fois.", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "Augmente l'attaque de **15%** lors de l'utilisation d'une compétence n'infligeant pas de dégâts. L'effet peut se cumuler jusqu'à 3 fois.", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	message.channel.sendEmbed(embed)
+	    
+    }
+	
+					        // Epic Seven Artefact = Junkyard Dog
+    if (message.content === prefix + "junkyard"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("*Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
+            .setDescription("Une arme créée pour concratiser la capacité de l'Outrage. Il s'agit d'une combinaison du Fireseal et de la Flashing Tooth, qui est l'un des trésors sacrés détenu à l'origine par le Conclave sur la planète de Sol.")
+            .setColor("RANDOM")
+            .setFooter("Artefact Junkyard Dog demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
+            .setThumbnail("https://epic7x.com/wp-content/uploads/2019/04/sol-badguy-artifact-full.png")
+            .addField(":crossed_swords: Compétence Niv.1", "**25%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "**50%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	message.channel.sendEmbed(embed)
+	    
+    }
+	
 				        // Epic Seven Artefact = Holy Sacrifice
     if (message.content === prefix + "holy"){
         var embed = new Discord.RichEmbed()
