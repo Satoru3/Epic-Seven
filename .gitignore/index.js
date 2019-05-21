@@ -368,31 +368,19 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed)
 	    
     }
-	
-	if(command === "play") {
-    if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign: Rejoins le serveur vocal.');
-    if (message.guild.me.voiceChannel) return message.channel.send(':no_entry_sign: Erreur, le bot est déjà dans un serveur vocal ou une musique est déjà en train d"être jouée.');
-    if (!args[0]) return message.channel.send(':no_entry_sign: Erreur, entre une **URL** valide.');
 
-    let validate = await ytdl.validateURL(args[0]);
-   
-    if (!validate) return message.channel.send(':no_entry_sign: Erreur, entre une __URL valide__ derrière la commande.');
+	if(message.content.startWith(prefix + "del")){
+        if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
+            
+        let args = message.content.split(" ").slice(1);
 
-    let info = await ytdl.getInfo(args[0]);
-   
-    let connection = await message.member.voiceChannel.join();
-    let dispatcher = await connection.playStream(ytdl(args[0], {
-        filter: 'audioonly'
-    }));
-
-    let playembed = new Discord.RichEmbed()
-    .setTitle("Now playing")
-    .setDescription(`${info.title}`)
-    
-    message.channel.send(playembed);
-		
-}
-	
+        if(args >= 100) return message.channel.send("Vous ne pouvez pas supprimé plus de 100 messages en une fois.")
+            
+        if(!args[0]) return message.channel.send("Vous n'avez pas précisé le nombre de messages à supprimer.")
+        message.channel.bulkDelete(args[0]).then(() => {
+            message.channel.send(`${args[0]} messages ont été supprimés !`);
+        })
+    }
 	
 	
 	// Commande d'avatar
