@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.2.1 | Ajout de 3 artefacts. ");
+    bot.user.setActivity("$help | V 1.2.2 | Ajout de 3 artefacts. ");
     console.log("Je suis connecté !");
 });
 
