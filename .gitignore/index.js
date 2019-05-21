@@ -234,7 +234,7 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.Max", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **50%** des dégâts infligés pour les convertir en vie.", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
 	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
-	    .addField(":crossed_swords: Notes", "PVE : **S** | Vie : **SS**", false)
+	    .addField(":crossed_swords: Notes", "PVE : **S** | PVP : **SS**", false)
 	    .addField(":crossed_swords: Quelques personnages pouvant l'utiliser", "Ravi, Ken...", false)
 	    .addField(":crossed_swords: Commentaires", "Un des meilleurs artefacts tanky réservé au warrior. Utilisable sur Ravi, et sur les warriors n'ayant pas de vol de vie comme Ken. Ne pas utilisez sur des warrior comme Sigret, Yufine et tous les warriors n'étant pas très résistant à cause de l'exigence des -50% de vie. Bonne synergie avec le set Lifesteal. Peut soigner votre personnage proche de la mort totalement ou presque. Peut faire de gros dégâts. ", false)
 	message.channel.sendEmbed(embed)
