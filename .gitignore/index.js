@@ -369,7 +369,7 @@ bot.on('message', message => {
 	    
     }
 
-	if(message.content.startWith(prefix + "del")){
+	if(message.content.startsWith(prefix + "del")){
         if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande !");
             
         let args = message.content.split(" ").slice(1);
