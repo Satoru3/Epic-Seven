@@ -30,12 +30,12 @@ bot.on('message', message => {
     if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$sez**","5 :étoile: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$iseria**","5 :étoile: <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
-            .addField("**$yuna**","5 :étoile: <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
-            .addField("**$tywin**","5 :star: <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
-            .addField("**$karin**","En cours. 4 :étoile: <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$ras**","3 :étoile: <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
+            .addField("**$sez**","5 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$iseria**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
+            .addField("**$yuna**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
+            .addField("**$tywin**","5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
+            .addField("**$karin**","En cours. 4 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$ras**","3 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -47,12 +47,12 @@ bot.on('message', message => {
         if (message.content === prefix + "artefacts"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Artefacts** :black_small_square:")
-            .addField("**$sigurd**","Sigurd Scythe 5 :étoile: <:e7combattant:506111308635308032>", true)
-            .addField("**$durandal**","Durandal 5 :étoile: <:e7combattant:506111308635308032>", true)
-            .addField("**$uberius**","Uberius's Tooth 5 :étoile: <:e7combattant:506111308635308032>", true)
-	    .addField("**$holy**","Holy Sacrifice 5 :étoile: <:e7chevalier:506111403489230868>", true)
-            .addField("**$elbris**","Elbris Ritual Sword 5 :étoile: <:e7chevalier:506111403489230868>", true)
-	    .addField("**$noble**","Noble Oath 5 :étoile: <:e7chevalier:506111403489230868>", true)
+            .addField("**$sigurd**","Sigurd Scythe 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
+            .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
+	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -101,7 +101,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Ras
     if (message.content === prefix + "ras"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Ras Elclare :black_small_square: <:elementfeu:506109794608742401> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Balance :black_small_square: :étoile:")
+            .setTitle("Ras Elclare :black_small_square: <:elementfeu:506109794608742401> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Balance :black_small_square: 3<:etoile:580331911608664084>")
             .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de __Ras__.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
@@ -121,7 +121,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Yuna
     if (message.content === prefix + "yuna"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Yuna Woo :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: :étoile:")
+            .setTitle("Yuna Woo :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
@@ -141,7 +141,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Iseria
     if (message.content === prefix + "iseria"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: :étoile:")
+            .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héroïne Iseria générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
@@ -161,7 +161,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Sez
     if (message.content === prefix + "sez"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge :black_small_square: :étoile:")
+            .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
@@ -181,7 +181,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Tywin
     if (message.content === prefix + "tywin"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Tywin Herad :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Bélier :black_small_square: :étoile:")
+            .setTitle("Tywin Herad :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Bélier :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("En traduction.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héros Tywin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
@@ -202,7 +202,7 @@ bot.on('message', message => {
         // Epic Seven Héros = Karin
     if (message.content === prefix + "karin"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion :black_small_square: :étoile:")
+            .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion :black_small_square: 4<:etoile:580331911608664084>")
             .setDescription("Alors que le clair de lune révélait un personnage tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
             .setColor("RANDOM")
             .setFooter("Artefact Sigurd Scythe " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
@@ -222,7 +222,7 @@ bot.on('message', message => {
 	        // Epic Seven Artefact = Sigurd Scythe
     if (message.content === prefix + "sigurd"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:étoile:")
+            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Alors que le clair de lune révélait une personne tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
             .setColor("RANDOM")
             .setFooter("Artefact Sigurd Scythe demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
@@ -238,7 +238,7 @@ bot.on('message', message => {
 		        // Epic Seven Artefact = Durandal
     if (message.content === prefix + "durandal"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Durandal :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:étoile:")
+            .setTitle("Durandal :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("La lueur émise par l'épée protège son propriétaire de toutes blessures.")
             .setColor("RANDOM")
             .setFooter("Artefact Durandal demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
@@ -254,7 +254,7 @@ bot.on('message', message => {
 			        // Epic Seven Artefact = Uberious's Tooth
     if (message.content === prefix + "uberius"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Uberius's Tooth :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5:étoile:")
+            .setTitle("Uberius's Tooth :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Trésor de la famille royale de Wintenberg fabriqué à partir des restes du dragon Uberius. On dit qu'il est capable de déchirer une armure de dragon.")
             .setColor("RANDOM")
             .setFooter("Artefact Uberius's Tooth demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
@@ -270,7 +270,7 @@ bot.on('message', message => {
 				        // Epic Seven Artefact = Holy Sacrifice
     if (message.content === prefix + "holy"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Holy Sacrifice :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:étoile:")
+            .setTitle("Holy Sacrifice :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("La Statue de la Grâce est donnée aux chevaliers qui gagnent la faveur de la déesse,  celle-ci les sauveras une fois avant de se briser en morçeaux. Écrit par Barrett [Trésor du Saint Empire, p15]")
             .setColor("RANDOM")
             .setFooter("Artefact Holy Sacrifice demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
@@ -286,7 +286,7 @@ bot.on('message', message => {
 				// Epic Seven Artefact = Elbris Ritual Sword
     if (message.content === prefix + "elbris"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Elbris Ritual Sword :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:étoile:")
+            .setTitle("Elbris Ritual Sword :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Épée de cérémonie transmise par les Elfes depuis des milliers d'années, la lame est imprégnée de plusieurs sources de magie. Celui possédant cette épée devient le roi des Elfes.")
             .setColor("RANDOM")
             .setFooter("Artefact Elbris Ritual Sword demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
@@ -302,7 +302,7 @@ bot.on('message', message => {
 			  // Epic Seven Artefact = Noble Oath
     if (message.content === prefix + "noble"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Noble Oath :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5:étoile:")
+            .setTitle("Noble Oath :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Un emblème donné aux membres de l'Ordre d'Ezera après qu'ils se soient engagés à consacrer leur vie à la Déesse. Ceux donnés aux chevaliers ressemblent à un écusson, tandis que ceux donnés aux prêtres ressemblent à un chapelet.")
             .setColor("RANDOM")
             .setFooter("Artefact Noble Oath demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
