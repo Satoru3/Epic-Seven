@@ -378,7 +378,7 @@ bot.on('message', message => {
             
         if(!args[0]) return message.channel.send("Vous n'avez pas précisé le nombre de messages à supprimer.")
         message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send(`${args[0]} messages ont été supprimés !`);
+            message.channel.send('${args[0]} messages ont été supprimés !');
         })
     }
 	
