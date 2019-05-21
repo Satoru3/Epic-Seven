@@ -288,7 +288,7 @@ bot.on('message', message => {
 					        // Epic Seven Artefact = Junkyard Dog
     if (message.content === prefix + "junkyard"){
         var embed = new Discord.RichEmbed()
-            .setTitle("*Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
+            .setTitle("Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
             .setDescription("Une arme créée pour concratiser la capacité de l'Outrage. Il s'agit d'une combinaison du Fireseal et de la Flashing Tooth, qui est l'un des trésors sacrés détenu à l'origine par le Conclave sur la planète de Sol.")
             .setColor("RANDOM")
             .setFooter("Artefact Junkyard Dog demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
