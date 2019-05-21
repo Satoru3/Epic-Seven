@@ -369,6 +369,31 @@ bot.on('message', message => {
 	    
     }
 	
+	if(command === "play") {
+    if (!message.member.voiceChannel) return message.channel.send(':no_entry_sign: Rejoins le serveur vocal.');
+    if (message.guild.me.voiceChannel) return message.channel.send(':no_entry_sign: Erreur, le bot est déjà dans un serveur vocal ou une musique est déjà en train d"être jouée.');
+    if (!args[0]) return message.channel.send(':no_entry_sign: Erreur, entre une **URL** valide.');
+
+    let validate = await ytdl.validateURL(args[0]);
+   
+    if (!validate) return message.channel.send(':no_entry_sign: Erreur, entre une __URL valide__ derrière la commande.');
+
+    let info = await ytdl.getInfo(args[0]);
+   
+    let connection = await message.member.voiceChannel.join();
+    let dispatcher = await connection.playStream(ytdl(args[0], {
+        filter: 'audioonly'
+    }));
+
+    let playembed = new Discord.RichEmbed()
+    .setTitle("Now playing")
+    .setDescription(`${info.title}`)
+    
+    message.channel.send(playembed);
+		
+}
+	
+	
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
