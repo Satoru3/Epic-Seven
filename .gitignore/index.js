@@ -369,7 +369,7 @@ bot.on('message', message => {
 	    
     }
 	
-	    if (message.content.startsWith(PREFIX + 'userinfo')) {
+	    if (message.content === prefix + "userinfo") {
 
         const UserInfo = new Discord.MessageEmbed()
 
@@ -379,7 +379,6 @@ bot.on('message', message => {
             .setImage(message.author.avatarURL()) //Add Any Image URl || Image
             .setThumbnail(message.author.avatarURL()) //Add Any Image URl || ThumbNail
 
-            //All Feilds Are Just Examples pick Some & add as you like
 
             .addField('Avatar', message.author.avatar, true) //The ID of the user's avatar //Inline True or false
             .addField('AvatarURL', message.author.avatarURL({
@@ -405,7 +404,7 @@ bot.on('message', message => {
             .setFooter('Demandé par ', message.author.tag) //Change To Anything As You Wish
             .setTimestamp() //The timestamp of this embed
 
-        message.channel.sendEmbed(UserInfo);
+        message.channel.send(UserInfo);
  
 	    }
 	
