@@ -57,7 +57,7 @@ bot.on('message', message => {
 	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
 	    .addField("<:arkyriche:528289398521987102>","Artéfact limité, disponible pendant une certaine période.", true)
             .setColor("RANDOM")
-            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
+            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 21/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
