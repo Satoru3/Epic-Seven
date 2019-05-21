@@ -405,7 +405,7 @@ bot.on('message', message => {
             .setFooter('Demandé par ', message.author.tag) //Change To Anything As You Wish
             .setTimestamp() //The timestamp of this embed
 
-        message.channel.send(UserInfo);
+        message.channel.sendEmbed(UserInfo);
  
 	    }
 	
