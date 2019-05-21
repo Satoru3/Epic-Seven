@@ -51,12 +51,12 @@ bot.on('message', message => {
             .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$junkyard**","Junkyard Dog (<:arkyriche:528289398521987102>) 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032> <:arkyriche:528289398521987102>", true)
 	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
             .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
 	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
             .setColor("RANDOM")
-            .setFooter("<:arkyriche:528289398521987102> = Artéfact limité." + "Actualisé le 16/05/19")
+            .setFooter("<:arkyriche:528289398521987102> :arkyriche: = Artéfact limité." + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
