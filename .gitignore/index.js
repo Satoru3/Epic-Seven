@@ -406,8 +406,9 @@ bot.on('message', message => {
             .setTimestamp() //The timestamp of this embed
 
         message.channel.send(UserInfo);
-    }
-});
+ 
+	    }
+	
 
 	
 	// Commande d'avatar
