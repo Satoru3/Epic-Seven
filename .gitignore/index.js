@@ -51,12 +51,12 @@ bot.on('message', message => {
             .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$junkyard**","Junkyard Dog (<:arkyriche:528289398521987102>) 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
 	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
             .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
 	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username + ". " + "Actualisé le 16/05/19")
+            .setFooter("<:arkyriche:528289398521987102> = Artéfact limité." + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
@@ -288,10 +288,10 @@ bot.on('message', message => {
 					        // Epic Seven Artefact = Junkyard Dog
     if (message.content === prefix + "junkyard"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Une arme créée pour concratiser la capacité de l'Outrage. Il s'agit d'une combinaison du Fireseal et de la Flashing Tooth, qui est l'un des trésors sacrés détenu à l'origine par le Conclave sur la planète de Sol.")
+            .setTitle("Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084> :black_small_square: <:arkyriche:528289398521987102>")
+            .setDescription("Une arme créée pour concratiser la capacité de l'Outrage. Il s'agit d'une combinaison du Fireseal et de la Flashing Tooth, qui est l'un des trésors sacrés détenu à l'origine par le Conclave sur la planète de Sol.(**Cet artéfact était limité, et disponible seulement pendant la collaboration avec Guilty Gear**)")
             .setColor("RANDOM")
-            .setFooter("Artefact Junkyard Dog demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
+            .setFooter("Artefact [**Limité**] Junkyard Dog demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
             .setThumbnail("https://epic7x.com/wp-content/uploads/2019/04/sol-badguy-artifact-full.png")
             .addField(":crossed_swords: Compétence Niv.1", "**25%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
             .addField(":crossed_swords: Compétence Niv.Max", "**50%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
