@@ -368,16 +368,7 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed)
 	    
     }
-	
-	
-    if (message.channel.id === '508389383188250624') {
-        if (isNaN(message.content)) {
-            message.delete()
-            message.channel.send('Seules les images sont autorisées dans ce salon.')
-		
-	}
-    }
-	    
+	 
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
