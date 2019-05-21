@@ -349,6 +349,22 @@ bot.on('message', message => {
 
     }
 
+				  // Epic Seven Artefact = Justice for All
+    if (message.content === prefix + "justice"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Justice for All :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
+            .setDescription("Un gant fabriqué l'année de l'adoubement du premier chevalier de la famille Sharon. Il représente la quête de la Justice qui doit être partagé par tout ceux suivant la Déesse et le royaume, plutôt que simplement pour leur propre bien")
+            .setColor("RANDOM")
+            .setFooter("Artefact Justice for All demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
+            .setThumbnail("https://epic7x.com/wp-content/uploads/2019/03/justice-for-all-1.png")
+            .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
+            .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
+            .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	message.channel.sendEmbed(embed)
+	    
+    }
+	
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
