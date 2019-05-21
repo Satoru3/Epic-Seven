@@ -488,9 +488,7 @@ bot.on('message', message => {
 
     message.channel.send(botembed)
 	    
-    }
-
-);
+    };
 
 
 bot.on("message", function(message) {
