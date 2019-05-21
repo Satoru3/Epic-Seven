@@ -372,10 +372,9 @@ bot.on('message', message => {
 
     if (message.channel.id === '508389383188250624') {
         if (isNaN(message.content)) {
-            message.delete()
+            message.delete() }
             message.channel.send('Seules les images sont autorisées dans ce salon.')
 
-	}
     }
 	
 	
