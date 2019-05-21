@@ -57,7 +57,7 @@ bot.on('message', message => {
 	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
 	    .addField("<:arkyriche:528289398521987102>","Artéfact limité, disponible pendant une certaine période.", true)
             .setColor("RANDOM")
-            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 21/05/19")
+            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
         console.log("Page de personnage générée suite à une demande de " + message.author.username);
@@ -368,7 +368,7 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed)
 	    
     }
-
+	
 	
 	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
@@ -449,9 +449,8 @@ bot.on('message', message => {
     message.channel.send(botembed)
 	    
     }
-	
-);
 
+});
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
@@ -555,4 +554,4 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
         console.log("La commande chaton viens d'être effectuée avec succès par " + message.author.username);
 
-    }})
+}})
