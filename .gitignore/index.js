@@ -375,6 +375,7 @@ bot.on('message', message => {
             message.delete()
             message.channel.send('Seules les images sont autorisées dans ce salon.')
 		
+	}
     }
 	    
 	
