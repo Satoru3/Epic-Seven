@@ -490,7 +490,8 @@ bot.on('message', message => {
 	    
     }
 
-});
+);
+
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
