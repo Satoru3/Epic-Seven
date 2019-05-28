@@ -618,19 +618,19 @@ bot.on("message", async message => {
   }
   
   if(command ===  "purge") {
-    // This command removes all messages from all users in the channel, up to 100.
-    
-    // get the delete count, as an actual number.
-    const deleteCount = parseInt(args[0], 10);
-    
-    // Ooooh nice, combined conditions. <3
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("S'il te plaît, rentre un nombre valide entre 2 et 100.");
-    
-    // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Je ne peux pas supprimer ça à cause de : ${error}`));
-    message.channel.send("🗑 Arky viens de faire le ménage et de supprimer **${args[0]}** messages.")
-  }
+
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Désolé, mais tu n'as pas la permission de **gérer les messages** !")
+    if (!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Je n'ai pas la permission de **gérer les messages** dans ce serveur.");
+
+    if (!args[0]) return message.channel.send('Tu dois spécifier un nombre de message.');
+    if (args[0] < 1) return message.channel.send('Tu dois spécifier un nombre de message supérieur à 1.');
+    if (args[0] > 100) return message.channel.send('Tu dois spécifier un nombre de message inférieur à 100.');
+    if (isNaN(args[0])) return message.channel.send("S'il te plaît, rentre un nombre correct.");
+	  
+    message.channel.bulkDelete(args[0]).then(() => {
+        message.channel.send(`🗑 Kyaah ! Arky viens de faire le ménage et à supprimer **${args[0]}** messages.`).then(message => message.delete(3000));
+    }).catch().catch((e) => message.channel.send('Tu ne peux pas supprimer de message de plus de 14 jours.'));
+
+}
+
 });
