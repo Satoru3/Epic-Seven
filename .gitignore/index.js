@@ -19,7 +19,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","`$kick` [**New**] \n ~~$mute~~ \n `$ban` [**New**] \n `$purge` [**New**]", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid` [**New**]", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
