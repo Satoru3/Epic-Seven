@@ -581,9 +581,9 @@ bot.on("message", async message => {
     // We can also support getting the member by ID, which would be args[0]
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
-      return message.reply("S'il vous plaît, mentionnez un utilisateur valide de ce serveur.");
+      return message.reply("s'il vous plaît, mentionnez un utilisateur valide de ce serveur.");
     if(!member.kickable) 
-      return message.reply("Je ne peux pas expulsé cet utilisateur ! Peut-être qu'il a un rôle plus élevé ? Avez-vous la permission d'expulsé ?");
+      return message.reply(", je ne peux pas expulser cet utilisateur ! Peut-être a t-il un rôle plus élevé ? Avez-vous la permission d'expulser ?");
     
     // slice(1) removes the first part, which here should be the user mention or ID
     // join(' ') takes all the various parts to make it a single string.
@@ -592,7 +592,7 @@ bot.on("message", async message => {
     
     // Now, time for a swift kick in the nuts!
     await member.kick(reason)
-      .catch(error => message.reply(`Désolé ${message.author} je ne peux pas expulsé cet utilisateur à cause de : ${error}`));
+      .catch(error => message.reply(`Désolé ${message.author} je ne peux pas expulser cet utilisateur à cause de : ${error}`));
     message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
 
   }
@@ -633,37 +633,3 @@ bot.on("message", async message => {
       .catch(error => message.reply(`Je ne peux pas supprimer ça à cause de : ${error}`));
   }
 });
-
-
-bot.on("message", async message => {
-
-    if (message.content === prefix + "slots"){
-	    
-exports.run = async (client, message, args) => {
-	
-    if (!message.guild.member(client.user).hasPermission("SEND_MESSAGES")) return message.author.send('I don\'t have permission to Send Messages. Please enable send messages for my role!');
-
-    let slots = ["🍎", "🍌", "🍒", "🍓", "🍈"];
-    let result1 = Math.floor((Math.random() * slots.length));
-    let result2 = Math.floor((Math.random() * slots.length));
-    let result3 = Math.floor((Math.random() * slots.length));
-    let name = message.author.displayName;
-    let aicon = message.author.displayAvatarURL;
-
-    if (slots[result1] === slots[result2] && slots[result3]) {
-        let wEmbed = new Discord.RichEmbed()
-            .setFooter("You Won!", aicon)
-            .setTitle(':slot_machine:Slots:slot_machine:')
-            .addField('Result:', slots[result1] + slots[result2] + slots[result3], true)
-            .setColor("#f4e842");
-        message.channel.send(wEmbed);
-    } else {
-        let embed = new Discord.RichEmbed()
-            .setFooter('You Lost!', aicon)
-            .setTitle(':slot_machine:Slots:slot_machine:')
-            .addField('Result', slots[result1] + slots[result2] + slots[result3], true)
-            .setColor("#f4e842");
-        message.channel.send(embed);
-    }
-
-}});
