@@ -631,5 +631,6 @@ bot.on("message", async message => {
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Je ne peux pas supprimer ça à cause de : ${error}`));
+    message.channel.send("La commande de purge viens d'être effectuée.")
   }
 });
