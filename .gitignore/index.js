@@ -601,7 +601,7 @@ bot.on("message", async message => {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
-      return message.reply("Désolé,  tu n'as pas la permission d'effectuer cette action !");
+      return message.reply("Désolé, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
     if(!member)
@@ -617,7 +617,7 @@ bot.on("message", async message => {
     message.reply(`${member.user.tag} à été banni par ${message.author.tag} à cause de : ${reason}`);
   }
   
-  if(message.content  === prefix + "purge") {
+  if(command ===  "purge") {
     // This command removes all messages from all users in the channel, up to 100.
     
     // get the delete count, as an actual number.
@@ -633,3 +633,37 @@ bot.on("message", async message => {
       .catch(error => message.reply(`Je ne peux pas supprimer ça à cause de : ${error}`));
   }
 });
+
+
+bot.on("message", async message => {
+
+    if (message.content === prefix + "slots"){
+	    
+exports.run = async (client, message, args) => {
+	
+    if (!message.guild.member(client.user).hasPermission("SEND_MESSAGES")) return message.author.send('I don\'t have permission to Send Messages. Please enable send messages for my role!');
+
+    let slots = ["🍎", "🍌", "🍒", "🍓", "🍈"];
+    let result1 = Math.floor((Math.random() * slots.length));
+    let result2 = Math.floor((Math.random() * slots.length));
+    let result3 = Math.floor((Math.random() * slots.length));
+    let name = message.author.displayName;
+    let aicon = message.author.displayAvatarURL;
+
+    if (slots[result1] === slots[result2] && slots[result3]) {
+        let wEmbed = new Discord.RichEmbed()
+            .setFooter("You Won!", aicon)
+            .setTitle(':slot_machine:Slots:slot_machine:')
+            .addField('Result:', slots[result1] + slots[result2] + slots[result3], true)
+            .setColor("#f4e842");
+        message.channel.send(wEmbed);
+    } else {
+        let embed = new Discord.RichEmbed()
+            .setFooter('You Lost!', aicon)
+            .setTitle(':slot_machine:Slots:slot_machine:')
+            .addField('Result', slots[result1] + slots[result2] + slots[result3], true)
+            .setColor("#f4e842");
+        message.channel.send(embed);
+    }
+
+}}});
