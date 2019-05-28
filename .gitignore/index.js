@@ -627,7 +627,7 @@ bot.on("message", async message => {
     if (isNaN(args[0])) return message.channel.send("S'il te plaît, rentre un nombre correct.");
 	  
     message.channel.bulkDelete(args[0]).then(() => {
-        message.channel.send(`🗑 Kyaah ! Arky viens de faire le ménage et à supprimer **${args[0]}** messages.`).then(message => message.delete(6000));
+        message.channel.send(`🗑 Kyaah ! Arky viens de faire le ménage et à supprimer **${args[0]}** messages.`).then(message => message.delete(10000));
     }).catch().catch((e) => message.channel.send('Tu ne peux pas supprimer de message de plus de 14 jours.'));
 
 }
