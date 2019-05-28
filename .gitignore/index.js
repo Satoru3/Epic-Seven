@@ -605,16 +605,16 @@ bot.on("message", async message => {
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.reply("Please mention a valid member of this server");
+      return message.reply("S'il te plaît, mentionne un utilisateur valide présent sur le serveur.");
     if(!member.bannable) 
-      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+      return message.reply("Je ne peux pas bannir cet utilisateur ! Peut-être a t-il un rôle supérieur ? Avez-vous la permission de bannir ?");
 
     let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason provided";
+    if(!reason) reason = "Aucune raison donnée.";
     
     await member.ban(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+      .catch(error => message.reply(`Désolé ${message.author} je ne peux pas le ban à cause de : ${error}`));
+    message.reply(`${member.user.tag} à été banni par ${message.author.tag} à cause de : ${reason}`);
   }
   
   if(message.content  === prefix + "purge") {
@@ -625,11 +625,11 @@ bot.on("message", async message => {
     
     // Ooooh nice, combined conditions. <3
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+      return message.reply("S'il te plaît, mets un nombre valide entre 2 et 100.");
     
     // So we get our messages, and delete them. Simple enough, right?
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+      .catch(error => message.reply(`Je ne peux pas supprimer ça à cause de : ${error}`));
   }
 });
