@@ -570,27 +570,19 @@ bot.on("message", async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
   
   if(command === "kick") {
-    // This command must be limited to mods and admins. In this example we just hardcode the role names.
-    // Please read on Array.some() to understand this bit: 
-    // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
+
     if(!message.member.roles.some(r=>["Public Security Club (Mod)", "Moderator"].includes(r.name)) )
       return message.reply("Désolé, vous n'avez pas la permission d'effectuer cette action !");
-    
-    // Let's first check if we have a member and if we can kick them!
-    // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
-    // We can also support getting the member by ID, which would be args[0]
+
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
       return message.reply("s'il vous plaît, mentionnez un utilisateur valide de ce serveur.");
     if(!member.kickable) 
       return message.reply(", je ne peux pas expulser cet utilisateur ! Peut-être a t-il un rôle plus élevé ? Avez-vous la permission d'expulser ?");
     
-    // slice(1) removes the first part, which here should be the user mention or ID
-    // join(' ') takes all the various parts to make it a single string.
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Aucune raison donnée.";
     
-    // Now, time for a swift kick in the nuts!
     await member.kick(reason)
       .catch(error => message.reply(`Désolé ${message.author} je ne peux pas expulser cet utilisateur à cause de : ${error}`));
     message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
@@ -598,8 +590,7 @@ bot.on("message", async message => {
   }
   
   if(command === "ban") {
-    // Most of this command is identical to kick, except that here we'll only let admins do it.
-    // In the real world mods could ban too, but this is just an example, right? ;)
+   
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
       return message.reply("Désolé, tu n'as pas la permission d'effectuer cette action !");
     
