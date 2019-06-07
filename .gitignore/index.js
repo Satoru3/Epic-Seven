@@ -612,7 +612,7 @@ bot.on("message", async message => {
     message.reply(`${member.user.tag} à été banni par ${message.author.tag} pour : ${reason}`);
   }
   
-  if(command ===  "purge") {
+  if(message.content === prefix + "purge") {
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Désolé, mais tu n'as pas la permission de **gérer les messages** !")
 
