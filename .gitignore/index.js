@@ -571,9 +571,10 @@ bot.on("message", async message => {
   if(message.author.bot) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);  
+  const command = $
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-  if (message.content === prefix + "kick") {
+  if (command === "kick") {
 
     if(!message.member.roles.some(r=>["Public Security Club (Mod)", "Moderator"].includes(r.name)) )
       return message.reply("Désolé, vous n'avez pas la permission d'effectuer cette action !");
@@ -593,7 +594,7 @@ bot.on("message", async message => {
 
   }
   
-  if(message.content === prefix + "ban") {
+  if(command === "ban") {
    
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
       return message.reply("Désolé ${message.author}, tu n'as pas la permission d'effectuer cette action !");
@@ -612,7 +613,7 @@ bot.on("message", async message => {
     message.reply(`${member.user.tag} à été banni par ${message.author.tag} pour : ${reason}`);
   }
   
-  if(message.content === prefix + "purge") {
+  if(command === "purge") {
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Désolé, mais tu n'as pas la permission de **gérer les messages** !")
 
