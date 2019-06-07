@@ -426,7 +426,7 @@ bot.on('message', message => {
 
     if (msg.includes('privatepage')) {
        message.delete();
-       message.channel.send('Ce lien est **interdit** ${message.author}!')
+       message.channel.send(`Ce lien est **interdit** ${message.author}!`)
 	    
     }
 
@@ -583,7 +583,7 @@ bot.on("message", async message => {
     if(!member)
       return message.reply("s'il vous plaît, mentionnez un utilisateur valide de ce serveur.");
     if(!member.kickable) 
-      return message.reply(", je ne peux pas expulser cet utilisateur ! Peut-être a t-il un rôle plus élevé ? Avez-vous la permission d'expulser ?");
+      return message.reply("je ne peux pas expulser cet utilisateur ! Peut-être a t-il un rôle plus élevé ? Avez-vous la permission d'expulser ?");
     
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Aucune raison donnée.";
@@ -603,7 +603,7 @@ bot.on("message", async message => {
     if(!member)
       return message.reply("S'il te plaît, mentionne un utilisateur valide présent sur le serveur.");
     if(!member.bannable) 
-      return message.reply("Je ne peux pas bannir cet utilisateur ! Peut-être a t-il un rôle supérieur ? Avez-vous la permission de bannir ?");
+      return message.reply("je ne peux pas bannir cet utilisateur ! Peut-être a t-il un rôle supérieur ? Avez-vous la permission de bannir ?");
 
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Aucune raison donnée.";
