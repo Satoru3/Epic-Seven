@@ -426,7 +426,7 @@ bot.on('message', message => {
 
     if (msg.includes('privatepage')) {
        message.delete();
-       message.channel.send('Ce lien est **interdit** !' + message.author.username)
+       message.channel.send('Ce lien est **interdit** ${message.author}!')
 	    
     }
 
@@ -588,7 +588,7 @@ bot.on("message", async message => {
     if(!reason) reason = "Aucune raison donnée.";
     
     await member.kick(reason)
-      .catch(error => message.reply(`Désolé ${message.author} je ne peux pas expulser cet utilisateur à cause de : ${error}`));
+      .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
     message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
 
   }
@@ -596,7 +596,7 @@ bot.on("message", async message => {
   if(message.content === prefix + "ban") {
    
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
-      return message.reply("Désolé, tu n'as pas la permission d'effectuer cette action !");
+      return message.reply("Désolé ${message.author}, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
     if(!member)
@@ -609,7 +609,7 @@ bot.on("message", async message => {
     
     await member.ban(reason)
       .catch(error => message.reply(`Désolé ${message.author} je ne peux pas le ban à cause de : ${error}`));
-    message.reply(`${member.user.tag} à été banni par ${message.author.tag} à cause de : ${reason}`);
+    message.reply(`${member.user.tag} à été banni par ${message.author.tag} pour : ${reason}`);
   }
   
   if(command ===  "purge") {
