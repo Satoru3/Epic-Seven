@@ -571,7 +571,7 @@ bot.on("message", async message => {
   if(message.author.bot) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);  
-  const command = $
+  const command = ("$")
   // Let's go with a few common example commands! Feel free to delete or change those.
   
   if (command === "kick") {
