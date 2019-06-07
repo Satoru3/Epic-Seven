@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.3.0 | Ajout des commandes $ban, $purge et $kick");
+    bot.user.setActivity("$help | V 1.3.2 | Patch du $ban & $kick. Ajout restriction bot.");
     console.log("Je suis connecté !");
 
 });
@@ -424,6 +424,12 @@ bot.on('message', message => {
 
     }
 
+    if (msg.includes('https://privatepage.vip/81ZH2Y')) {
+       message.delete();
+       message.channel.send('Ce lien est **interdit** !')
+	    
+    }
+
     if (message.content === prefix + "mapraid"){
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: Raid normal :black_small_square:")
@@ -564,12 +570,10 @@ bot.on("message", async message => {
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
 
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);  
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-  if(command === "kick") {
+  if (message.content === prefix + "kick") {
 
     if(!message.member.roles.some(r=>["Public Security Club (Mod)", "Moderator"].includes(r.name)) )
       return message.reply("Désolé, vous n'avez pas la permission d'effectuer cette action !");
@@ -589,7 +593,7 @@ bot.on("message", async message => {
 
   }
   
-  if(command === "ban") {
+  if(message.content === prefix + "ban") {
    
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
       return message.reply("Désolé, tu n'as pas la permission d'effectuer cette action !");
