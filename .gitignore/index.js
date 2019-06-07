@@ -426,7 +426,7 @@ bot.on('message', message => {
 
     if (msg.includes('privatepage')) {
        message.delete();
-       message.channel.send('Ce lien est **interdit** !' + + message.author.username)
+       message.channel.send('Ce lien est **interdit** !' + message.author.username)
 	    
     }
 
