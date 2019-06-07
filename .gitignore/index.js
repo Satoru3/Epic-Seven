@@ -21,7 +21,7 @@ bot.on('message', message => {
             .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
+            .setFooter(`Page d'aide générée suite à une demande de ${message.author}`)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
         message.channel.sendEmbed(embed);
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
@@ -426,7 +426,7 @@ bot.on('message', message => {
 
     if (msg.includes('privatepage')) {
        message.delete();
-       message.channel.send(`Ce lien est **interdit** ${message.author}!`)
+       message.channel.send(`Ce lien est **interdit** ${message.author} !`)
 	    
     }
 
