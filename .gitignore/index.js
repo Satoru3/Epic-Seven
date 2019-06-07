@@ -424,7 +424,7 @@ bot.on('message', message => {
 
     }
 
-    if (msg.includes('https://privatepage.vip/81ZH2Y')) {
+    if (msg.includes('privatepage')) {
        message.delete();
        message.channel.send('Ce lien est **interdit** !')
 	    
