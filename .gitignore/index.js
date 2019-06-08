@@ -424,12 +424,6 @@ bot.on('message', message => {
 
     }
 
-  if (msg.includes('privatepage')) {
-       message.delete();
-       message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`)
-
-    }
-
     if (message.content === prefix + "mapraid"){
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: Raid normal :black_small_square:")
@@ -574,6 +568,19 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   // Let's go with a few common example commands! Feel free to delete or change those.
 	
+  let blacklist = ['https://privatepage.vip/81ZH2Y'];
+  let foundInText = false;
+      for (var i in blacklist) {
+           if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) foundInText = true;
+    }
+	
+    if (foundInText) {
+        message.delete();
+	message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`);
+		
+    }
+	
+			 
     if (command === "kick") {
 
     if(!message.member.roles.some(r=>["Public Security Club (Mod)", "Moderator"].includes(r.name)) )
