@@ -580,7 +580,8 @@ bot.on("message", async message => {
 	    
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Bot";
-    
+    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+
     await member.kick(reason)
       .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
     message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
