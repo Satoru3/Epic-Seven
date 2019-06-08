@@ -569,10 +569,9 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   // Let's go with a few common example commands! Feel free to delete or change those.
 	
-  if (msg.includes('privatepage')) {
+  if (message.includes('privatepage')) {
        message.delete();
        message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`)
-    let msg = message.content.toLowerCase();
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Bot";
     
