@@ -560,7 +560,7 @@ bot.on("message", function(message) {
 
 bot.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
-  
+
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
@@ -572,6 +572,7 @@ bot.on("message", async message => {
   if (msg.includes('privatepage')) {
        message.delete();
        message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`)
+    let msg = message.content.toLowerCase();
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Bot";
     
