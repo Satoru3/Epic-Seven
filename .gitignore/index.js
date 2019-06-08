@@ -576,9 +576,9 @@ bot.on("message", async message => {
 	
     if (foundInText) {
         message.delete();
-	message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`);
+	message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`).then(message => message.delete(15000));
         message.member.kick('Arky expulse les méchants bots !');
-	message.channel.send(`Arky fais le ménage et à expulser le méchant bot ${message.author.tag} !`);
+	message.channel.send(`Arky fais le ménage et à expulser le méchant bot ${message.author.tag} !`).then(message => message.delete(20000));
 		
     }
 	
