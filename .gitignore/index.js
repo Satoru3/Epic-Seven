@@ -577,6 +577,13 @@ bot.on("message", async message => {
     if (foundInText) {
         message.delete();
 	message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`);
+	    
+    let reason = args.slice(1).join(' ');
+    if(!reason) reason = "Bot";
+    
+    await member.kick(reason)
+      .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
+    message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
 		
     }
 	
