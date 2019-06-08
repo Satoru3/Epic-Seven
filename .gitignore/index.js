@@ -424,11 +424,6 @@ bot.on('message', message => {
 
     }
 
-    if (msg.includes('privatepage')) {
-       message.delete();
-       message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`)
-	    
-    }
 
     if (message.content === prefix + "mapraid"){
         var embed = new Discord.RichEmbed()
@@ -573,6 +568,18 @@ bot.on("message", async message => {
   const args = message.content.slice(prefix.length).trim().split(/ +/g);  
   const command = args.shift().toLowerCase();
   // Let's go with a few common example commands! Feel free to delete or change those.
+	
+  if (msg.includes('privatepage')) {
+       message.delete();
+       message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`)
+    let reason = args.slice(1).join(' ');
+    if(!reason) reason = "Bot";
+    
+    await member.kick(reason)
+      .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
+    message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
+	    
+    }
   
   if (command === "kick") {
 
