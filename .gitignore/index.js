@@ -569,12 +569,12 @@ bot.on("message", async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
 	
   let blacklist = ['https://privatepage.vip'];
-  let foundInText = false;
+  let Texte = false;
       for (var i in blacklist) {
-           if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) foundInText = true;
+           if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) Texte = true;
     }
 	
-    if (foundInText) {
+    if (Texte) {
         message.delete();
 	message.channel.send(`Ce lien est **interdit** ${message.author.tag} !`).then(message => message.delete(15000));
         message.member.kick('Arky expulse les méchants bots !');
