@@ -568,7 +568,7 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   // Let's go with a few common example commands! Feel free to delete or change those.
 	
-  let blacklist = ['https://privatepage.vip/81ZH2Y'];
+  let blacklist = ['https://privatepage.vip'];
   let foundInText = false;
       for (var i in blacklist) {
            if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) foundInText = true;
@@ -580,7 +580,7 @@ bot.on("message", async message => {
 	    
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Bot";
-    let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+    let member = message.author;
 
     await member.kick(reason)
       .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
