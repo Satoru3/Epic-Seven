@@ -568,7 +568,7 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   // Let's go with a few common example commands! Feel free to delete or change those.
 	
-  let blacklist = ['https://privatepage.vip'];
+  let blacklist = ['https://privatepage.vip','https://nakedphotos.club','81ZH2Y'];
   let Texte = false;
       for (var i in blacklist) {
            if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) Texte = true;
