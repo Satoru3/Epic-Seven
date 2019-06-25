@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.3.2 | Patch du $ban & $kick. Ajout restriction bot.");
+    bot.user.setActivity("$help | V 1.3.5 | Ajout commande $quizz (en dev)");
     console.log("Je suis connecté !");
 
 });
@@ -607,7 +607,7 @@ bot.on("message", async message => {
     let collected = await message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
     let winnerMessage = collected.first();
     return message.channel.send({embed: new Discord.RichEmbed()
-                                  .setAuthor("**Gagnant**: ${winnerMessage.author.tag}", winnerMessage.author.displayAvatarURL)
+                                  .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
                                   .setFooter(`Question: ${item.q}`)
                                   .setColor('RANDOM')
