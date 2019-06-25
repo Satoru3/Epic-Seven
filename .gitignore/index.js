@@ -581,7 +581,46 @@ bot.on("message", async message => {
 	message.channel.send(`Arky fais le ménage et à expulser le méchant bot ${message.author.tag} !`).then(message => message.delete(20000));
 		
     }
-	
+
+    if(message.content === prefix + "quizz"){
+ 
+ let quiz = [
+    { q: 'De quel personnage cette phrase est-elle issue: Is it already over ? So boring.', a: ['Haste', 'haste'] },
+    { q: 'De quel personnage cette phrase est-elle issue: I will... never miss !', a: ['Tywin', 'tywin'] },
+    { q: 'De quel personnage cette phrase est-elle issue: You pitiful beings... death is your repentance !', a: ['Diene', 'diene'] },
+    { q: 'De quel personnage cette phrase est-elle issue: The path once tread by the Goddess... **will be covered with your blood !**', a: ['Clarissa', 'clarissa'] },
+    { q: "De quel personnage cette phrase est-elle issue: I'll kill you, and you, and you ! HAAHAHAHAHAHAHA", a: ['Clarissa', 'clarissa'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Dancing blade !', a: ['Vildred', 'vildred'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Bones to sand... Blood to dust.', a: ['Baal & Sezan', 'Baal & sezan', 'baal & sezan', 'baal et sezan'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Look at me... I said look at me !', a: ['Challenger Dominiel', 'Challenger dominiel', 'ML Dominiel', 'ml domi', 'challenger dominiel', 'ml dominiel'] },
+
+  ];
+  let options = {
+    max: 1,
+    time: 25050,
+    errors: ['time'],
+  };
+
+  let item = quiz[Math.floor(Math.random() * quiz.length)];
+  await message.channel.send(item.q);
+  try {
+    let collected = await message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
+    let winnerMessage = collected.first();
+    return message.channel.send({embed: new Discord.RichEmbed()
+                                  .setAuthor(`**Gagnant**: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
+                                  .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
+                                  .setFooter(`Question: ${item.q}`)
+                                  .setColor('RANDOM')
+                                })
+
+  } catch (_) {
+    return message.channel.send({embed: new Discord.RichEmbed()
+                                  .setAuthor("La bonne réponse n'a pas été trouvée à temps.")
+                                  .setTitle(`Réponse correcte(s): \`${item.a}\``)
+                                  .setFooter(`Question: ${item.q}`)
+                                })
+
+  }	
 			 
     if (command === "kick") {
 
