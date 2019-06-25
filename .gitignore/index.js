@@ -597,7 +597,7 @@ bot.on("message", async message => {
   ];
   let options = {
     max: 1,
-    time: 25050,
+    time: 25000,
     errors: ['time'],
   };
 
@@ -607,7 +607,7 @@ bot.on("message", async message => {
     let collected = await message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
     let winnerMessage = collected.first();
     return message.channel.send({embed: new Discord.RichEmbed()
-                                  .setAuthor(`**Gagnant**: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
+                                  .setAuthor("**Gagnant**: ${winnerMessage.author.tag}", winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
                                   .setFooter(`Question: ${item.q}`)
                                   .setColor('RANDOM')
@@ -617,7 +617,7 @@ bot.on("message", async message => {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor("La bonne réponse n'a pas été trouvée à temps.")
                                   .setTitle(`Réponse correcte(s): \`${item.a}\``)
-                                  .setFooter(`Question: ${item.q}`)
+                                  .setFooter("Question: ${item.q}")
                                 })
   }
 	    
