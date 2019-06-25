@@ -619,8 +619,10 @@ bot.on("message", async message => {
                                   .setTitle(`Réponse correcte(s): \`${item.a}\``)
                                   .setFooter(`Question: ${item.q}`)
                                 })
+  }
+	    
+    }
 
-  }	
 			 
     if (command === "kick") {
 
@@ -674,4 +676,6 @@ bot.on("message", async message => {
         message.channel.send(`🗑 Kyaah ! Arky viens de faire le ménage et à supprimer **${args[0]}** messages.`).then(message => message.delete(10000));
     }).catch().catch((e) => message.channel.send('Tu ne peux pas supprimer de message de plus de 14 jours.'));
 
-	
+}
+
+});
