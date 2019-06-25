@@ -595,7 +595,7 @@ bot.on("message", async message => {
     { q: 'De quel personnage cette phrase est-elle issue: Look at me... I said look at me !', a: ['Challenger Dominiel', 'Challenger dominiel', 'ML Dominiel', 'ml domi', 'challenger dominiel', 'ml dominiel'] },
     { q: "De quel personnage cette phrase est-elle issue: I can feel my strength overflowing... This is amazing ! **I feel so stroooooong !!**", a: ['Guider Aither', 'ML Aither', 'guider aither', 'Guider aither', 'ML Trap', 'ml aither'] },
     { q: 'De quel personnage cette phrase est-elle issue: This will be the last moon they see.', a: ['Kise', 'kise'] },
-    { q: "De quel personnage cette phrase est-elle issue: I can't stow now !", a: ['Sez', 'sez'] },
+    { q: "De quel personnage cette phrase est-elle issue: I can't stop now !", a: ['Sez', 'sez'] },
     { q: "De quel personnage cette phrase est-elle issue: A roaming heart, forever wandering.", a: ['Kayron', 'kayron'] },
     { q: 'De quel personnage cette phrase est-elle issue: Ashes to ashes, dust to dust.', a: ['Kayron', 'kayron'] },
     { q: "De quel personnage cette phrase est-elle issue: I present to you, the greatest magic.", a: ['Bellona', 'bellona'] },
@@ -605,6 +605,20 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: I wanna save the world with the mercy of healing", a: ['Achates', 'achates'] },
     { q: "De quel personnage cette phrase est-elle issue: I'm still not strong enough but i'll keep doing my best.", a: ['Achates', 'achates'] },
     { q: "De quel personnage cette phrase est-elle issue: A new friendship begins with one, two, three, tada !", a: ['Shooting Star Achates', 'ML Achates', 'shooting star achates', 'Shooting Star achates', 'Ml Achates', 'ml achates'] },
+    { q: "De quel personnage cette phrase est-elle issue: The lady of the swamp has arrived !", a: ['Charlotte', 'charlotte'] },
+    { q: "De quel personnage cette phrase est-elle issue: My Goddess... give me the power to vanquish the evil.", a: ['Diene', 'diene'] },
+    { q: 'De quel personnage cette phrase est-elle issue: May these evils... be punished.', a: ['Diene', 'diene'] },
+    { q: "De quel personnage cette phrase est-elle issue: My lady... Stop calling me **fool** !", a: ['Baal & Sezan', 'Baal & sezan', 'baal & sezan', 'baal et sezan'] },
+    { q: "De quel personnage cette phrase est-elle issue: There is no salvation for those who fall in battle.", a: ['Kayron', 'kayron'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Everything disappears.', a: ['Kayron', 'kayron'] },
+    { q: "De quel personnage cette phrase est-elle issue: You can't hide from my gun.", a: ['Schuri', 'schuri'] },
+    { q: "De quel personnage cette phrase est-elle issue: Shadows, fall.", a: ['Ludwig', 'ludwig'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Shall we begin the fireworks show ?', a: ['Serila', 'serila'] },
+    { q: "De quel personnage cette phrase est-elle issue: The hell scythe will slice you in two !", a: ['Haste', 'haste'] },
+    { q: "De quel personnage cette phrase est-elle issue: Kal ! It's your turn !", a: ['Celestial Mercedes', 'ML Mercedes', 'celestial mercedes', 'Ml Mercedes', 'ML mercedes', 'ml mercedes'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Ah ah ! Victory is mine !', a: ['Ravi', 'ravi'] },
+
+// Total = 32
 
   ];
   let options = {
