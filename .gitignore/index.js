@@ -558,15 +558,12 @@ bot.on("message", function(message) {
 }});
 
 bot.on("message", async message => {
-  // This event will run on every single message received, from any channel or DM.
-
-  // It's good practice to ignore other bots. This also makes your bot ignore itself
-  // and not get into a spam loop (we call that "botception").
+ 
   if(message.author.bot) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);  
   const command = args.shift().toLowerCase();
-  // Let's go with a few common example commands! Feel free to delete or change those.
+ 
 	
   let blacklist = ['https://privatepage.vip','https://nakedphotos.club','81ZH2Y'];
   let Texte = false;
