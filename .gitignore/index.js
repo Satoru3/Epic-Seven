@@ -593,11 +593,23 @@ bot.on("message", async message => {
     { q: 'De quel personnage cette phrase est-elle issue: Dancing blade !', a: ['Vildred', 'vildred'] },
     { q: 'De quel personnage cette phrase est-elle issue: Bones to sand... Blood to dust.', a: ['Baal & Sezan', 'Baal & sezan', 'baal & sezan', 'baal et sezan'] },
     { q: 'De quel personnage cette phrase est-elle issue: Look at me... I said look at me !', a: ['Challenger Dominiel', 'Challenger dominiel', 'ML Dominiel', 'ml domi', 'challenger dominiel', 'ml dominiel'] },
+    { q: "De quel personnage cette phrase est-elle issue: I can feel my strength overflowing... This is amazing ! **I feel so stroooooong !!**", a: ['Guider Aither', 'ML Aither', 'guider aither', 'Guider aither', 'ML Trap', 'ml aither'] },
+    { q: 'De quel personnage cette phrase est-elle issue: This will be the last moon they see.', a: ['Kise', 'kise'] },
+    { q: "De quel personnage cette phrase est-elle issue: I can't stow now !", a: ['Sez', 'sez'] },
+    { q: "De quel personnage cette phrase est-elle issue: A roaming heart, forever wandering.", a: ['Kayron', 'kayron'] },
+    { q: 'De quel personnage cette phrase est-elle issue: Ashes to ashes, dust to dust.', a: ['Kayron', 'kayron'] },
+    { q: "De quel personnage cette phrase est-elle issue: I present to you, the greatest magic.", a: ['Bellona', 'bellona'] },
+    { q: "De quel personnage cette phrase est-elle issue: Hello ! It's me, ||Yuna|| !", a: ['Yuna', 'yuna'] },
+    { q: 'De quel personnage cette phrase est-elle issue: With the light, disappear.', a: ['Ludwig', 'Ludwig'] },
+    { q: "De quel personnage cette phrase est-elle issue: Didn't I tell you? Just put your faith in me.", a: ['Vildred', 'vildred'] },
+    { q: "De quel personnage cette phrase est-elle issue: I wanna save the world with the mercy of healing", a: ['Achates', 'achates'] },
+    { q: "De quel personnage cette phrase est-elle issue: I'm still not strong enough but i'll keep doing my best.", a: ['Achates', 'achates'] },
+    { q: "De quel personnage cette phrase est-elle issue: A new friendship begins with one, two, three, tada !", a: ['Shooting Star Achates', 'ML Achates', 'shooting star achates', 'Shooting Star achates', 'Ml Achates', 'ml achates'] },
 
   ];
   let options = {
     max: 1,
-    time: 25000,
+    time: 35000,
     errors: ['time'],
   };
 
