@@ -617,7 +617,7 @@ bot.on("message", async message => {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor("La bonne réponse n'a pas été trouvée à temps.")
                                   .setTitle(`Réponse correcte(s): \`${item.a}\``)
-                                  .setFooter("Question: ${item.q}")
+                                  .setFooter(`Question: ${item.q}`)
                                 })
   }
 	    
