@@ -617,7 +617,6 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Are you prepare to die ?", a: ['Sez'] },
     { q: "De quel personnage cette phrase est-elle issue: My turn to fight !", a: ['Sez'] },
     { q: "De quel personnage cette phrase est-elle issue: I'm already prepared.", a: ['Sez'] },
-    { q: "De quel personnage cette phrase est-elle issue: This is my justice !", a: ['Vildred'] },
 
   ]; // Total = 32 -> 77 (40)
   let options = {
