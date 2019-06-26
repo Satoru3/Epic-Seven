@@ -622,13 +622,9 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: It's my turn !", a: ['Vildred'] },
     { q: "De quel personnage cette phrase est-elle issue: Did you have nothing left to say ?", a: ['Vildred'] },
 
-
-
-// Total = 32 -> 77 (40)
-
-  ];
+  ]; // Total = 32 -> 77 (40)
   let options = {
-    max: 1,
+    max: 3,
     time: 35000,
     errors: ['time'],
   };
