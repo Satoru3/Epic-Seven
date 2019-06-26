@@ -621,7 +621,6 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Alright. Shall we clean up.", a: ['Vildred'] },
     { q: "De quel personnage cette phrase est-elle issue: It's my turn !", a: ['Vildred'] },
     { q: "De quel personnage cette phrase est-elle issue: Did you have nothing left to say ?", a: ['Vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Aaaah ! This is my victory.", a: ['Vildred'] },
 
 
 
