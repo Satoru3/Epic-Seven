@@ -629,7 +629,7 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Oh ! You need my help ! Cool let's go !", a: ['Yufine', 'yufine'] },
     { q: "De quel personnage cette phrase est-elle issue: Victory is always mine !", a: ['Yufine', 'yufine'] },
     { q: "De quel personnage cette phrase est-elle issue: Burn ! Bye bye !", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: Rest in peace.", a: ['Aramintha'; 'aramintha'] },
+    { q: "De quel personnage cette phrase est-elle issue: Rest in peace.", a: ['Aramintha', 'aramintha'] },
     { q: "De quel personnage cette phrase est-elle issue: Please to meet you. Let's work together.", a: ['Aramintha', 'aramintha'] },
     { q: "De quel personnage cette phrase est-elle issue: Leave it to me!", a: ['Aramintha', 'Tywin'] },
     { q: "De quel personnage cette phrase est-elle issue: Bring in on.", a: ['Aramintha', 'aramintha'] },
