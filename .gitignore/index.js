@@ -641,7 +641,7 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: I am ||Cecilia||, please feel free call me ||Ceci||.", a: ['Cecilia', 'cecilia'] },
     { q: "De quel personnage cette phrase est-elle issue: I will break you, I won’t be defeated", a: ['Cecilia', 'cecilia'] },
     { q: "De quel personnage cette phrase est-elle issue: Lance of Steel, now it’s time of judgment !", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: Dissapear, get out of my way !", a: ['Cecilia', 'cecilia'] },
+    { q: "De quel personnage cette phrase est-elle issue: Disappear, get out of my way !", a: ['Cecilia', 'cecilia'] },
     { q: "De quel personnage cette phrase est-elle issue: I will be victorious.", a: ['Cecilia', 'cecilia'] },
     { q: "De quel personnage cette phrase est-elle issue: Now it's the time of judgment.", a: ['Cecilia', 'cecilia'] },
     { q: "De quel personnage cette phrase est-elle issue: Light. Life.", a: ['Angelica', 'angelica'] },
@@ -660,7 +660,7 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Yameteeeee !", a: ['Dizzy', 'dizzy'] },
     { q: "De quel personnage cette phrase est-elle issue: Look at my sword, not my face.", a: ['Violet', 'violet'] },
     { q: "De quel personnage cette phrase est-elle issue: I know I’m beautiful.", a: ['Violet', 'violet'] },
-    { q: "De quel personnage cette phrase est-elle issue: Be greatfull that you can fight with me.", a: ['Violet', 'violet'] },
+    { q: "De quel personnage cette phrase est-elle issue: Be grateful that you can fight with me.", a: ['Violet', 'violet'] },
     { q: "De quel personnage cette phrase est-elle issue: My sword will pierce your heart.", a: ['Violet', 'violet'] },
 
 
