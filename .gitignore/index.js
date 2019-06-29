@@ -668,7 +668,7 @@ bot.on("message", async message => {
   ];
   let options = {
     max: 2,
-    time: 35000,
+    time: 34000,
     errors: ['time'],
   };
 
