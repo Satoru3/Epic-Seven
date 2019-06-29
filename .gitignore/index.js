@@ -579,7 +579,7 @@ bot.on("message", async message => {
 		
     }
 
-    if(message.content === prefix + "quizz"){
+    if(message.content === prefix + "quizz"){ //Total 77 questions.
  
  let quiz = [
     { q: 'De quel personnage cette phrase est-elle issue: Is it already over ? So boring.', a: ['Haste'] },
@@ -615,11 +615,10 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Kal ! It's your turn !", a: ['Celestial Mercedes', 'ML Mercedes'] },
     { q: 'De quel personnage cette phrase est-elle issue: Ah ah ! Victory is mine !', a: ['Ravi'] },
 
-
-  ]; // Total = 32 -> 77 (40)
+  ];
   let options = {
-    max: 3,
-    time: 30000,
+    max: 1,
+    time: 30050, // 30050 = 30 seconds and a half ms
     errors: ['time'],
   };
 
@@ -638,9 +637,10 @@ bot.on("message", async message => {
   } catch (_) {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor("La bonne réponse n'a pas été trouvée à temps.")
-                                  .setTitle(`Réponse correcte(s): \`${item.a}\``)
+                                  .setTitle(`Réponse(s) correcte(s): \`${item.a}\``)
                                   .setFooter(`Question: ${item.q}`)
                                 })
+
   }
 	    
     }
