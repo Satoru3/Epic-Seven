@@ -618,8 +618,8 @@ bot.on("message", async message => {
 
   ]; // Total = 32 -> 77 (40)
   let options = {
-    max: 1,
-    time: 35000,
+    max: 3,
+    time: 30000,
     errors: ['time'],
   };
 
