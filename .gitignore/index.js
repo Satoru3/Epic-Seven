@@ -652,7 +652,7 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: I'll do my best !", a: ['Montmorancy', 'montmorancy'] },
     { q: "De quel personnage cette phrase est-elle issue: Do you need some help ?", a: ['Montmorancy', 'montmorancy'] },
     { q: "De quel personnage cette phrase est-elle issue: We still have time to recover. Let's try again !", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: By my command... Victory", a: ['Ras', 'ras'] },
+    { q: "De quel personnage cette phrase est-elle issue: By my command... Victory !", a: ['Ras', 'ras'] },
     { q: "De quel personnage cette phrase est-elle issue: You can't escape !", a: ['Ras', 'ras'] },
     { q: "De quel personnage cette phrase est-elle issue: I can't lose !", a: ['Ras', 'ras'] },
     { q: "De quel personnage cette phrase est-elle issue: I take you on.", a: ['Ras', 'ras'] },
