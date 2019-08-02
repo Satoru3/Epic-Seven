@@ -579,7 +579,7 @@ bot.on("message", async message => {
 		
     }
 
-    if(message.content === prefix + "quizz"){ //Total 77 questions.
+    if(message.content === prefix + "quizz"){ //Total 85 questions.
  
  let quiz = [
     { q: 'De quel personnage cette phrase est-elle issue: Is it already over ? So boring.', a: ['Haste', 'haste'] },
@@ -662,6 +662,14 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: I know I’m beautiful.", a: ['Violet', 'violet'] },
     { q: "De quel personnage cette phrase est-elle issue: Be grateful that you can fight with me.", a: ['Violet', 'violet'] },
     { q: "De quel personnage cette phrase est-elle issue: My sword will pierce your heart.", a: ['Violet', 'violet'] },
+    { q: "De quel personnage cette phrase est-elle issue: Run ~ before it's too late.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: Now. Bring in on.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: Fine. I let you win, this time.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: This is what you get ; for ruining my vacation !", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: Well. Shall we go back to the beach ?", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: Let's start with something light.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: It's too late to backup now.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: I'm getting tired of you. Bye bye now !", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
 
 
 
@@ -747,6 +755,7 @@ bot.on("message", async message => {
     message.channel.bulkDelete(args[0]).then(() => {
         message.channel.send(`🗑 Kyaah ! Arky viens de faire le ménage et à supprimer **${args[0]}** messages.`).then(message => message.delete(10000));
     }).catch().catch((e) => message.channel.send('Tu ne peux pas supprimer de message de plus de 14 jours.'));
+    message.delete();
 
 }
 
