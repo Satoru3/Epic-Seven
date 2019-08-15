@@ -706,7 +706,7 @@ bot.on("message", async message => {
 			 
     if (command === "kick") {
 
-    if(!message.member.roles.some(r=>["Public Security Club (Mod)", "Moderator"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Club de Sécurité Publique (Mod)", "Moderator"].includes(r.name)) )
       return message.reply("Désolé, vous n'avez pas la permission d'effectuer cette action !");
 
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
@@ -726,7 +726,7 @@ bot.on("message", async message => {
   
   if(command === "ban") {
    
-    if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
+    if(!message.member.roles.some(r=>["Club de Sécurité Publique (Mod)"].includes(r.name)) )
       return message.reply(" désolé, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
