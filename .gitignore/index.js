@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.3.5 | Correction $quizz (en dev)");
+    bot.user.setActivity("$help | V 1.3.5 | $e7 daily (en dev)");
     console.log("Je suis connecté !");
 
 });
@@ -727,7 +727,7 @@ bot.on("message", async message => {
   if(command === "ban") {
    
     if(!message.member.roles.some(r=>["Public Security Club (Mod)"].includes(r.name)) )
-      return message.reply("Désolé ${message.author}, tu n'as pas la permission d'effectuer cette action !");
+      return message.reply(" désolé, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
     if(!member)
@@ -739,7 +739,7 @@ bot.on("message", async message => {
     if(!reason) reason = "Aucune raison donnée.";
     
     await member.ban(reason)
-      .catch(error => message.reply(`Désolé ${message.author} je ne peux pas le ban à cause de : ${error}`));
+      .catch(error => message.reply(`désolé, je ne peux pas le ban à cause de : ${error}`));
     message.reply(`${member.user.tag} à été banni par ${message.author.tag} pour : ${reason}`);
   }
   
