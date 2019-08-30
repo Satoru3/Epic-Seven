@@ -18,7 +18,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$27ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
+            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
@@ -499,16 +499,16 @@ bot.on("message", function(message) {
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
-            .setDescription(":two: :six: 26ball :two: :six:")
+            .setDescription(" :<a:aPeepoCheer:422063843938926602>: 26ball :<a:aPeepoCheer:422063843938926602>:")
             .addField(message.author.username + " :", tte)
             .addField("Epic Bot :", reponse)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
-	    .setFooter("Demandé par " + message.author.username + message.author.avatarURL)
+	    .setFooter("Demandé par " + message.author.username + message.author.avatar)
             
 
         message.channel.sendEmbed(bembed)
-        console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
+        console.log("La commande 26ball viens d'être effectuée avec succès par " + message.author.username);
 
     }})
 
