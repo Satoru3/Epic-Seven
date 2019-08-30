@@ -504,7 +504,7 @@ bot.on("message", function(message) {
             .addField("Epic Bot :", reponse)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
-	    .setFooter("Demandé par " + message.author.username + message.author.avatar)
+	    .setFooter("Demandé par " + message.author.username + user.displayAvatar)
             
 
         message.channel.sendEmbed(bembed)
