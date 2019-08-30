@@ -18,7 +18,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$8ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
+            .addField("__**Fun**__","`$27ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
             .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
@@ -461,11 +461,11 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "8ball":
+        case "27ball":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.channel.send("Utilisation correcte : $8ball <question> " )};
+            return message.channel.send("Utilisation correcte : $27ball <question> " )};
 
             var replys = [
                 "Oui.",
@@ -492,6 +492,9 @@ bot.on("message", function(message) {
 		"Je n'ai pas envie de répondre à ta question.",
 		"Tu ressembles à Enott...",
 		"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
+                "Je pense que cela n'a pas d'importance.",
+                "Tu n'avais vraiment rien d'autre à me demander ?",
+                "Aucune idée. Et toi, connais-tu le synonyme de synonyme ?",
                 
             ];
 
