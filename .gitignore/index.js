@@ -461,11 +461,11 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "27ball":
+        case "26ball":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.channel.send("Utilisation correcte : $27ball <question> " )};
+            return message.channel.send("Utilisation correcte : $26ball <question> " )};
 
             var replys = [
                 "Oui.",
@@ -489,7 +489,6 @@ bot.on("message", function(message) {
 		"Si tu veux, je vend des vies.",
 		".....",
 		"Simple question: Tu peux la mettre en veilleuse ?",
-		"Je n'ai pas envie de répondre à ta question.",
 		"Tu ressembles à Enott...",
 		"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
                 "Je pense que cela n'a pas d'importance.",
@@ -500,12 +499,12 @@ bot.on("message", function(message) {
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
-            .setDescription(":8ball: 8ball :8ball:")
+            .setDescription(":two: :six: 26ball :two: :six:")
             .addField(message.author.username + " :", tte)
             .addField("Epic Bot :", reponse)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
-	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506281367286448129/Screenshot_10.png")
+	    .setFooter("Demandé par " + message.author.username + message.author.avatarURL)
             
 
         message.channel.sendEmbed(bembed)
