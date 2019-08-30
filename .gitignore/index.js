@@ -499,7 +499,7 @@ bot.on("message", function(message) {
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
-            .setDescription(" :<a:aPeepoCheer:422063843938926602>: 26ball :<a:aPeepoCheer:422063843938926602>:")
+            .setDescription(" <a:aPeepoCheer:422063843938926602> 26ball <a:aPeepoCheer:422063843938926602>")
             .addField(message.author.username + " :", tte)
             .addField("Epic Bot :", reponse)
             .setThumbnail(message.author.avatarURL)
