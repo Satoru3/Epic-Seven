@@ -709,7 +709,7 @@ bot.on("message", async message => {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
-                                  .setFooter(`Question: ${item.q}`, "Il y a 95 questions au total.")
+                                  .setFooter(`Question: ${item.q}`)
                                   .setColor('RANDOM')
                                 })
 
