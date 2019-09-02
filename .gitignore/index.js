@@ -581,7 +581,7 @@ bot.on("message", async message => {
 		
     }
 
-    if(message.content === prefix + "quizz"){ //Total 93 questions.
+    if(message.content === prefix + "quizz"){ //Total 95 questions.
  
  let quiz = [
     { q: 'De quel personnage cette phrase est-elle issue: Is it already over ? So boring.', a: ['Haste', 'haste'] },
@@ -680,6 +680,11 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: All is done !", a: ['Vivian', 'vivian'] },
     { q: "De quel personnage cette phrase est-elle issue: You regret facing me !", a: ['Vivian', 'vivian'] },
     { q: "De quel personnage cette phrase est-elle issue: Can't you handle this ?", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: ||Destina's|| protection !", a: ['Destina', 'destina'] },
+    { q: "De quel personnage cette phrase est-elle issue: Luminescence... glory.", a: ['Destina', 'destina'] },
+
+
+
 
 
 
@@ -704,7 +709,7 @@ bot.on("message", async message => {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
-                                  .setFooter(`Question: ${item.q}`. "Il y a 93 questions au total.")
+                                  .setFooter(`Question: ${item.q}`, "Il y a 93 questions au total.")
                                   .setColor('RANDOM')
                                 })
 
