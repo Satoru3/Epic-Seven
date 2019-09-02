@@ -581,7 +581,7 @@ bot.on("message", async message => {
 		
     }
 
-    if(message.content === prefix + "quizz"){ //Total 85 questions.
+    if(message.content === prefix + "quizz"){ //Total 93 questions.
  
  let quiz = [
     { q: 'De quel personnage cette phrase est-elle issue: Is it already over ? So boring.', a: ['Haste', 'haste'] },
@@ -672,6 +672,20 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: Let's start with something light.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
     { q: "De quel personnage cette phrase est-elle issue: It's too late to backup now.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
     { q: "De quel personnage cette phrase est-elle issue: I'm getting tired of you. Bye bye now !", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
+    { q: "De quel personnage cette phrase est-elle issue: Unleash... my power !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: Distraction... answer my call !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: Forbidden spell... destroy all !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: Very... interesting.", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: How dare you !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: All is done !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: You regret facing me !", a: ['Vivian', 'vivian'] },
+    { q: "De quel personnage cette phrase est-elle issue: Can't you handle this ?", a: ['Vivian', 'vivian'] },
+
+
+
+
+
+
 
 
 
@@ -690,7 +704,7 @@ bot.on("message", async message => {
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
-                                  .setFooter(`Question: ${item.q}`)
+                                  .setFooter(`Question: ${item.q}`. "Il y a 93 questions au total.")
                                   .setColor('RANDOM')
                                 })
 
