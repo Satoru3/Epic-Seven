@@ -806,7 +806,5 @@ bot.on('message', message => {
                                     message.reply(`Aucune réponse après 25 secondes, l'action a été abandonnée.`);
                             });
 
-                    break;
-            }  
     }
 });
