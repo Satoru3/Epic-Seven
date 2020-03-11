@@ -459,7 +459,7 @@ bot.on('message', message => {
                     // First argument is a filter function - which is made of conditions
                     // m is a 'Message' object
                     message.channel.awaitMessages(m => m.author.id == message.author.id,
-                            {max: 1, time: 30000}).then(collected => {
+                            {max: 1, time: 20000}).then(collected => {
                                     // only accept messages by the user who sent the command
                                     // accept only 1 message, and return the promise after 30000ms = 30s
 
@@ -472,7 +472,7 @@ bot.on('message', message => {
                                     else
                                             message.reply(`L'action a été annulée.`);      
                             }).catch(() => {
-                                    message.reply(`Aucune réponse après 30 secondes, l'action a été abandonnée.`);
+                                    message.reply(`Aucune réponse après 20 secondes, l'action a été abandonnée.`);
                             });
             }  
 });
