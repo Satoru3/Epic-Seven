@@ -474,7 +474,6 @@ bot.on('message', message => {
                             }).catch(() => {
                                     message.reply(`Aucune réponse après 20 secondes, l'action a été abandonnée.`);
                             });
-            }  
 });
 
 bot.on("message", function(message) {
