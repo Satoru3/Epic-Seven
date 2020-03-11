@@ -784,8 +784,7 @@ bot.on("message", async message => {
 
 bot.on('message', message => {
     // Command handler, seen previously
-    switch (command) {
-            case 'stop': {
+	if (message.content === prefix + "stop"){
                     message.reply(`Le bot va s'éteindre.\n`
                             + `Confirme avec la réaction :FeelsBaguetteMan:, ou annule l'action avec la réaction :oof:`);
 
