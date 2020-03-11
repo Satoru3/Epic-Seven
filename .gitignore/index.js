@@ -802,7 +802,7 @@ bot.on('message', message => {
                                             client.destroy();
                                     }
                                     else
-                                            message.reply('L`action a été annulée.`);
+                                            message.reply(`L'action a été annulée.`);
                             }).catch(() => {
                                     message.reply(`Aucune réponse après 25 secondes, l'action a été abandonnée.`);
                             });
