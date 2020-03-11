@@ -781,3 +781,33 @@ bot.on("message", async message => {
 }
 
 });
+
+bot.on('message', message => {
+    // Command handler, seen previously
+    switch (command) {
+            case 'stop': {
+                    message.reply(`Le bot va s'éteindre.\n`
+                            + `Confirme avec la réaction :FeelsBaguetteMan:, ou annule l'action avec la réaction :oof:`);
+
+                    // Reacts so the user only have to click the emojis
+                    message.react(':FeelsBaguetteMan:').then(r => {
+                            message.react(':oof:');
+                    });
+
+                    // First argument is a filter function
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == ':oof:'),
+                            { max: 1, time: 25000 }).then(collected => {
+                                    if (collected.first().emoji.name == '👍') {
+                                            message.reply('Extinction des feux...');
+                                            client.destroy();
+                                    }
+                                    else
+                                            message.reply('L`action a été annulée.`);
+                            }).catch(() => {
+                                    message.reply(`Aucune réponse après 25 secondes, l'action a été abandonnée.`);
+                            });
+
+                    break;
+            }  
+    }
+});
