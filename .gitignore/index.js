@@ -450,30 +450,7 @@ bot.on('message', message => {
     message.channel.send(botembed)
 	    
     }
-	
-	if (message.content === prefix + "stop"){
 
-                    message.reply(`Le bot va s'éteindre.\n`
-                            + `Confirmez l'action avec 'Oui' ou arrêtez celle-ci avec 'Non'.`);
-
-                    // First argument is a filter function - which is made of conditions
-                    // m is a 'Message' object
-                    message.channel.awaitMessages(m => m.author.id == message.author.id,
-                            {max: 1, time: 20000}).then(collected => {
-                                    // only accept messages by the user who sent the command
-                                    // accept only 1 message, and return the promise after 30000ms = 30s
-
-                                    // first (and, in this case, only) message of the collection
-                                    if (collected.first().content.toLowerCase() == 'Oui') {
-                                            message.reply('Extinction des feux...');
-                                            client.destroy();
-                                    }
-
-                                    else
-                                            message.reply(`L'action a été annulée.`);      
-                            }).catch(() => {
-                                    message.reply(`Aucune réponse après 20 secondes, l'action a été abandonnée.`);
-                            });
 });
 
 bot.on("message", function(message) {
