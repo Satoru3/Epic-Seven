@@ -794,9 +794,9 @@ bot.on('message', message => {
                     });
 
                     // First argument is a filter function
-                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '<:FeelsBaguetteMan:507319697587568641>' || reaction.emoji.name == '<:oof:493119921257971760>'),
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '507319697587568641' || reaction.emoji.name == '493119921257971760'),
                             { max: 1, time: 25000 }).then(collected => {
-                                    if (collected.first().emoji.name == '<:FeelsBaguetteMan:507319697587568641>') {
+                                    if (collected.first().emoji.name == '507319697587568641') {
                                             message.reply('Extinction des feux...');
                                             client.destroy();
                                     }
