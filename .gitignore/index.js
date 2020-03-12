@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 1.3.5 | $e7 daily (en dev)");
+    bot.user.setActivity("$help | V 1.3.7 | Ajout du $restart");
     console.log("Je suis connecté !");
 
 });
@@ -17,9 +17,9 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
-            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n `$restart` En cas de problème. \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
+            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$restart` En cas de problème. \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
