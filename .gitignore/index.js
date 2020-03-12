@@ -789,8 +789,8 @@ bot.on('message', message => {
                             + `Confirme avec la réaction <:FeelsBaguetteMan:507319697587568641>, ou annule l'action avec la réaction <:oof:493119921257971760>`);
 
                     // Reacts so the user only have to click the emojis
-                    message.react('<:FeelsBaguetteMan:507319697587568641>').then(r => {
-                            message.react('<:oof:493119921257971760>');
+                    message.react('507319697587568641').then(r => {
+                            message.react('493119921257971760');
                     });
 
                     // First argument is a filter function
