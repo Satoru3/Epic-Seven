@@ -786,10 +786,10 @@ bot.on('message', message => {
     // Command handler, seen previously
 	if (message.content === prefix + "stop"){
                     message.reply(`Le bot va s'éteindre.\n`
-                            + `Confirme avec la réaction :FeelsBaguetteMan:, ou annule l'action avec la réaction :oof:`);
+                            + `Confirme avec la réaction <:FeelsBaguetteMan:507319697587568641>, ou annule l'action avec la réaction :oof:`);
 
                     // Reacts so the user only have to click the emojis
-                    message.react(':FeelsBaguetteMan:').then(r => {
+                    message.react('<:FeelsBaguetteMan:507319697587568641>').then(r => {
                             message.react(':oof:');
                     });
 
