@@ -786,17 +786,17 @@ bot.on('message', message => {
     // Command handler, seen previously
 	if (message.content === prefix + "stop"){
                     message.reply(`Le bot va s'éteindre.\n`
-                            + `Confirme avec la réaction <:FeelsBaguetteMan:507319697587568641>, ou annule l'action avec la réaction <:oof:493119921257971760>`);
+                            + `Confirme avec la réaction 👍, ou annule l'action avec la réaction 👎`);
 
                     // Reacts so the user only have to click the emojis
-                    message.react('507319697587568641').then(r => {
-                            message.react('493119921257971760');
+                    message.react('👍').then(r => {
+                            message.react('👎');
                     });
 
                     // First argument is a filter function
-                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '507319697587568641' || reaction.emoji.name == '493119921257971760'),
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 25000 }).then(collected => {
-                                    if (collected.first().emoji.name == '507319697587568641') {
+                                    if (collected.first().emoji.name == '👍') {
                                             message.reply('Extinction des feux...');
                                             client.destroy();
                                     }
