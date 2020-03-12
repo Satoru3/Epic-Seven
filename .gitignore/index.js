@@ -798,7 +798,7 @@ bot.on('message', message => {
                             { max: 1, time: 25000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
                                             message.reply('Extinction des feux...');
-                                            client.destroy();
+                                            bot.destroy();
                                     }
                                     else
                                             message.reply(`L'action a été annulée.`);
