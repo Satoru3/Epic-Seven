@@ -781,30 +781,3 @@ bot.on("message", async message => {
 }
 
 });
-
-bot.on('message', message => {
-    // Command handler, seen previously
-	if (message.content === prefix + "restart"){
-                    message.reply(`Le bot va redémarrer.\n`
-                            + `Confirme avec la réaction 👍, ou annule l'action avec 👎`);
-
-                    // Reacts so the user only have to click the emojis
-                    message.react('👍').then(r => {
-                            message.react('👎');
-                    });
-
-                    // First argument is a filter function
-                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
-                            { max: 1, time: 20000 }).then(collected => {
-                                    if (collected.first().emoji.name == '👍') {
-                                            message.reply('Redémarrage forcé...');
-                                            bot.destroy();
-                                    }
-                                    else
-                                            message.reply(`L'action a été annulée.`);
-                            }).catch(() => {
-                                    message.reply(`Aucune réponse après 20 secondes, l'action a été abandonnée.`);
-                            });
-
-    }
-});
