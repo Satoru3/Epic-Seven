@@ -68,20 +68,15 @@ bot.on('message', message => {
         if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Sorties** :black_small_square:")
-            .addField("**Uriah**","Recevoir les notifications d'Uriah <:UriahMilk:711978620242886736>", true)
+            .addField("<:UriahMilk:711978620242886736> **Uriah**","", true)
             .addField("**Born from Death**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**OOPARTS**","Recevoir les notifications d'OOPARTS <:Ooparts:711972771214655660>", true)
             .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032> <:arkyriche:528289398521987102>", true)
-	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-            .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-	    .addField("<:arkyriche:528289398521987102>","Artéfact limité, disponible pendant une certaine période.", true)
             .setColor("RANDOM")
-            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
+            .setFooter("Réagissez à l'émote approprié pour être notifié d'une sortie spécifique.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
 	message.channel.sendEmbed(embed);
-        console.log("Page de personnage générée suite à une demande de " + message.author.username);
+        console.log("Page d'abonnement générée par" + message.author.username);
 
    }
 
