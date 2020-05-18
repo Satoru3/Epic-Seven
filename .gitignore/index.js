@@ -65,6 +65,26 @@ bot.on('message', message => {
 		
     }
 
+        if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
+        var embed = new Discord.RichEmbed()
+            .setTitle(":black_small_square: **Sorties** :black_small_square:")
+            .addField("**$sigurd**","Sigurd Scythe 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032> <:arkyriche:528289398521987102>", true)
+	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
+            .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
+	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
+	    .addField("<:arkyriche:528289398521987102>","Artéfact limité, disponible pendant une certaine période.", true)
+            .setColor("RANDOM")
+            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
+	message.channel.sendEmbed(embed);
+        console.log("Page de personnage générée suite à une demande de " + message.author.username);
+
+   }
+
    if (message.content === prefix + "E7 faq"){
        var embed = new Discord.RichEmbed()
            .setTitle("Foire aux Questions [FAQ] Partie 1")
