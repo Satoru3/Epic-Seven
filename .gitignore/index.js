@@ -67,7 +67,7 @@ bot.on('message', message => {
 
         if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
-            .setTitle(":black_small_square: **Sorties** :black_small_square:")
+            .setTitle(":black_small_square: **Sorties** :black_small_square:","<:UriahMilk:711978620242886736> **Uriah**")
             .addField("<:UriahMilk:711978620242886736> **Uriah**")
             .addField("**Born from Death**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**OOPARTS**","Recevoir les notifications d'OOPARTS <:Ooparts:711972771214655660>", true)
