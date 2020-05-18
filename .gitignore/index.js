@@ -68,9 +68,9 @@ bot.on('message', message => {
         if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Sorties** :black_small_square:")
-            .addField("**$sigurd**","Sigurd Scythe 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**Uriah**","Recevoir les notifications d'Uriah <:UriahMilk:711978620242886736>", true)
+            .addField("**Born from Death**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("**OOPARTS**","Recevoir les notifications d'OOPARTS <:Ooparts:711972771214655660>", true)
             .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
             .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032> <:arkyriche:528289398521987102>", true)
 	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
