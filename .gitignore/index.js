@@ -68,8 +68,7 @@ bot.on('message', message => {
         if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Sorties** :black_small_square:")
-            .addField("Réagissez à la réaction appropriée pour recevoir une notification lors de la sortie d'un projet spécifique !","<:UriahMilk:711978620242886736> **Uriah** \n <:BFD2:711980026865778800> **Born from Death** \n <:Ooparts:711972771214655660> **OOPARTS**", true)
-            .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .addField("Réagissez à la réaction appropriée pour recevoir une notification lors de la sortie d'un projet spécifique !","<:UriahMilk:711978620242886736> **Uriah** \n <:BFD2:711980026865778800> **Born from Death** \n <:Ooparts:711972771214655660> **OOPARTS** \n <:artwhaow:711970468676239440> **The Beginning After the End**", true)
             .setColor("RANDOM")
             .setFooter("Réagissez à l'émote approprié pour être notifié d'une sortie spécifique.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
